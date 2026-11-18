@@ -4,41 +4,35 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.30",
-  "base_version": "1.5.6.29",
-  "minimum_supported_version": "1.5.6.29",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.30_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.30_UPDATE.zip",
-  "asset_size": 699146,
-  "asset_sha256": "e1cc4d7a438bf3ad179450f097998d75decdd889798bda40364a291c81ce2695",
-  "release_notes": "# Góc Review Phim Video Studio v1.5.6.30\n\n## Sửa lag và đơ khi làm Mask / quét lớp phủ\n- Brush/Eraser cache polygon clip-mask và chỉ áp dụng phép giao trên vùng ROI đã khoanh, không tạo lại mask toàn khung hình cho từng điểm rê chuột.\n- Tự tách nét giới hạn ảnh làm việc của GrabCut ở mức tối đa 1280 px mỗi chiều lớn; kết quả vẫn được đưa về đúng độ phân giải video.\n- Khi OpenCV không giải mã đủ ảnh mẫu, Overlay Detector dùng một tiến trình FFmpeg duy nhất thay vì mở tiến trình riêng cho từng mốc.\n- Giảm tần suất thông báo tiến độ gửi lên giao diện.\n\n## CTA Subscribe\n- Thêm nút **Xóa tất cả** để xóa mọi ứng viên và cache CTA của video hiện tại sau khi xác nhận.\n- Gom cập nhật live theo nhịp 450 ms và dựng lại bảng theo lô để hạn chế giật/đơ khi có nhiều ứng viên.\n\n## Giữ nguyên\n- CTA quét hai lượt, OCR Anh/Việt, Pause/Resume, Stop, quét bổ sung và duyệt thủ công trước khi cắt.\n- Overlay Detector độc lập, duyệt vùng trước khi đưa vào Mask.\n- Undo/Redo, Smart Mask, Mask theo phân cảnh, lưu/mở dự án, Auto Save, Branding, Downloader, Batch Processing, QC và xuất video.\n\n## Nâng cấp\n- Gói UPDATE dành cho v1.5.6.29.\n- Payload không bao gồm dữ liệu dự án, cài đặt, .venv, video nguồn, downloads hoặc renders.\n- Bổ sung kiểm thử hồi quy tĩnh cho thao tác xóa CTA, refresh theo lô, cache ROI của Mask và fallback FFmpeg một tiến trình.\n",
+  "version": "1.5.6.31",
+  "base_version": "1.5.6.30",
+  "minimum_supported_version": "1.5.6.30",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.31_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.31_UPDATE.zip",
+  "asset_size": 308603,
+  "asset_sha256": "d7ae97749c781c7ad082bf2f9cbb6b179a8e7d9acd20d1a01d0326db656ef294",
+  "release_notes": "# Góc Review Phim Video Studio v1.5.6.31\n\n## Sửa tình trạng đứng khi tạo Mask\n- Chuyển **Tự tách nét (GrabCut)** và **Dùng toàn bộ vùng khoanh** sang tác vụ nền riêng; Tk Engine không phải chờ phép xử lý ảnh hoàn tất.\n- Tạo undo snapshot ở luồng nền; chỉ áp dụng kết quả và cập nhật trạng thái trên luồng Tk.\n- Khóa thao tác thay đổi video/vùng Mask trong lúc chạy; loại bỏ kết quả cũ nếu video hoặc vùng khoanh thay đổi.\n- Giao diện hiển thị trạng thái xử lý và tự bật lại công cụ khi hoàn tất hoặc báo lỗi.\n- Preview được thu nhỏ trước khi trộn mask đỏ, giảm cấp phát mảng kích thước toàn khung hình trên video 4K.\n\n## Giữ nguyên\n- Brush/Eraser ROI cache, Smart Mask, Undo/Redo, CTA Detector và nút Xóa tất cả, Overlay Detector, Branding, Auto Save, Batch, QC và xuất video.\n- Mask lưu/xử lý vẫn giữ độ phân giải gốc; chỉ ảnh preview giao diện được thu nhỏ.\n\n## Nâng cấp\n- UPDATE dành riêng cho v1.5.6.30.\n- Gói không chứa video nguồn, dự án, .venv, downloads hoặc renders.\n- Thêm kiểm thử hồi quy cho Mask background task và preview độ phân giải cao.\n",
   "files": [
     {
       "path": "qt_app.py",
-      "size": 229584,
-      "sha256": "b21583071bb64885a872a894c2c107c194a03cbb0299c551b5745da93c44e73f",
-      "action": "replace"
-    },
-    {
-      "path": "app.py",
-      "size": 399637,
-      "sha256": "be46a64484fff7ba363e29821670e45486ac3fd6dd37f96e3da0140e02b2c30c",
+      "size": 232165,
+      "sha256": "79ee7059512a8a0af9c358c283adfa973ef8d5ffd4cd09ce5ae1a1f0a7ab2cc4",
       "action": "replace"
     },
     {
       "path": "engine_worker.py",
-      "size": 69332,
-      "sha256": "28024703d7b5bf055ffe217c3600ea5ef0e90212423657546a44c12aa02211c0",
+      "size": 75968,
+      "sha256": "402d8f8520e7f8e5994cc2b45a3c616330cb42033f3d10149dd025a35528c61f",
       "action": "replace"
     },
     {
       "path": "PHIEN_BAN.txt",
-      "size": 115,
-      "sha256": "89ef404c76d00fc9d23b4a08ebb07116bb026771d9e81fb0e4fbbcffc8fe8991",
+      "size": 96,
+      "sha256": "7e825a12a09065780fa97984668f5faa3c2c2080dc7641ea077133a08ba0f3e7",
       "action": "replace"
     }
   ],
   "supported_base_versions": [
-    "1.5.6.29"
+    "1.5.6.30"
   ]
 }
