@@ -9,8 +9,8 @@
   "minimum_supported_version": "1.5.6.30",
   "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.31_UPDATE.zip",
   "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.31_UPDATE.zip",
-  "asset_size": 308603,
-  "asset_sha256": "d7ae97749c781c7ad082bf2f9cbb6b179a8e7d9acd20d1a01d0326db656ef294",
+  "asset_size": 308749,
+  "asset_sha256": "840e6452ac54153632d94b0ebe457876af45271f9568123c69efb18414beda02",
   "release_notes": "# Góc Review Phim Video Studio v1.5.6.31\n\n## Sửa tình trạng đứng khi tạo Mask\n- Chuyển **Tự tách nét (GrabCut)** và **Dùng toàn bộ vùng khoanh** sang tác vụ nền riêng; Tk Engine không phải chờ phép xử lý ảnh hoàn tất.\n- Tạo undo snapshot ở luồng nền; chỉ áp dụng kết quả và cập nhật trạng thái trên luồng Tk.\n- Khóa thao tác thay đổi video/vùng Mask trong lúc chạy; loại bỏ kết quả cũ nếu video hoặc vùng khoanh thay đổi.\n- Giao diện hiển thị trạng thái xử lý và tự bật lại công cụ khi hoàn tất hoặc báo lỗi.\n- Preview được thu nhỏ trước khi trộn mask đỏ, giảm cấp phát mảng kích thước toàn khung hình trên video 4K.\n\n## Giữ nguyên\n- Brush/Eraser ROI cache, Smart Mask, Undo/Redo, CTA Detector và nút Xóa tất cả, Overlay Detector, Branding, Auto Save, Batch, QC và xuất video.\n- Mask lưu/xử lý vẫn giữ độ phân giải gốc; chỉ ảnh preview giao diện được thu nhỏ.\n\n## Nâng cấp\n- UPDATE dành riêng cho v1.5.6.30.\n- Gói không chứa video nguồn, dự án, .venv, downloads hoặc renders.\n- Thêm kiểm thử hồi quy cho Mask background task và preview độ phân giải cao.\n",
   "files": [
     {
@@ -21,8 +21,8 @@
     },
     {
       "path": "engine_worker.py",
-      "size": 75968,
-      "sha256": "402d8f8520e7f8e5994cc2b45a3c616330cb42033f3d10149dd025a35528c61f",
+      "size": 76114,
+      "sha256": "e96050943899424d9fd6e5638b7fe016d8ccdced27acf57582b921c528bf5c8e",
       "action": "replace"
     },
     {
