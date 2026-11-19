@@ -4,51 +4,44 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.35",
-  "base_version": "1.5.6.30",
-  "minimum_supported_version": "1.5.6.30",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.35_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.35_UPDATE.zip",
-  "asset_size": 366540,
-  "asset_sha256": "30da68e3a06b9886734363fa244380a0b44fb1b3e40728936bb1c56b4342c31c",
-  "release_notes": "# Góc Review Phim Video Studio v1.5.6.35\n\n## CTA Detector được tổ chức lại\n- Quét OCR từ khóa, lấy 1 khung hình mỗi 2 giây trên toàn video trong một lượt.\n- Chỉ nhận các từ hoàn chỉnh LIKE, SHARE, SUB/SUBSCRIBE và biến thể trạng thái; hỗ trợ cụm CTA tiếng Việt THÍCH, CHIA SẺ, ĐĂNG KÝ.\n- Không phân loại cảnh phim, không nhận diện chuyển động làm căn cứ tạo kết quả và không phân tích âm thanh.\n- Gộp những lần nhận diện gần nhau thành khoảng thời gian CTA để bạn kiểm tra và chọn cắt.\n\n## Xem ảnh trước khi cắt\n- Mỗi dòng kết quả có thumbnail của khung hình thực tế mà OCR đã đọc.\n- Chọn một dòng để xem ảnh lớn bên phải, nội dung chữ OCR, từ khóa, độ tin cậy và mốc thời gian.\n- Có bộ lọc riêng LIKE, SHARE và SUBSCRIBE.\n- Chỉ những khoảng bạn tick và xác nhận mới được cắt; video nguồn không bị ghi đè.\n\n## Luồng làm việc\n- Giữ Pause/Resume/Stop, Quét tiếp, cache, chỉnh mốc bắt đầu/kết thúc, phát thử và xuất video đã loại các khoảng được chọn.\n- ID kết quả của lượt Quét tiếp được tách riêng, tránh ghi đè các ứng viên đã lưu.\n- Ảnh mẫu được tạo sau khi quét để không tranh tài nguyên giải mã với OCR.\n\n## Nâng cấp\n- UPDATE tương thích trực tiếp từ v1.5.6.30 đến v1.5.6.34.\n- Có kèm sửa retry updater: sau lần tải/xác minh thất bại, thử lại sẽ lấy manifest mới.\n- Gói không chứa video nguồn, project, .venv, downloads hoặc renders.\n\n## Lưu ý lấy mẫu\n- CTA hiển thị ngắn hoàn toàn giữa hai khung hình lấy mẫu 2 giây có thể bị bỏ qua; kiểm tra ảnh mẫu và quét bổ sung khi cần.",
+  "version": "1.5.6.36",
+  "base_version": "1.5.6.35",
+  "minimum_supported_version": "1.5.6.35",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.36_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.36_UPDATE.zip",
+  "asset_size": 762057,
+  "asset_sha256": "2f0a3af2cfb2797c540282a35e2201c4b42d8f85d221bacca818df6a06a0600c",
+  "release_notes": "# Góc Review Phim Video Studio v1.5.6.36\n\n## CTA Detector — ảnh bằng chứng trực tiếp\n- Tạo ảnh JPEG từ chính khung hình đã được đọc để OCR, khoanh vùng phần chữ CTA và gửi kèm từng ứng viên ngay khi phát hiện.\n- Bảng kết quả và khung xem lớn cập nhật ảnh bằng chứng trong lúc quét; không cần chạy thêm một tiến trình FFmpeg cho mỗi ứng viên mới.\n- Ảnh mẫu được chọn theo lần nhận diện OCR có điểm cao nhất của ứng viên, đồng thời mốc thời gian ảnh được giữ chính xác.\n- Kết quả cũ chưa có ảnh vẫn dùng cơ chế trích xuất dự phòng sau khi quét.\n\n## An toàn khi duyệt và cắt\n- Ứng viên có độ tin cậy OCR dưới 50/100 được tô cảnh báo và yêu cầu xác nhận thêm khi tick chọn cắt.\n- Người dùng vẫn phải tự chọn khoảng CTA; không tự động cắt theo kết quả nhận diện.\n- Lỗi tạo ảnh của một ứng viên được ghi riêng, không làm hỏng toàn bộ lượt quét hoặc các ứng viên khác.\n\n## Giao diện\n- Rút gọn tiêu đề cột để không bị cắt chữ ở vùng bảng hẹp.\n- Bỏ nhãn đơn vị “phút” gây nhầm; trường thời gian cho phép nhập giây hoặc phút:giây.\n- Trạng thái ảnh phân biệt rõ đang trích xuất, có ảnh và ảnh lỗi.\n\n## Giữ nguyên phạm vi CTA\n- Chỉ nhận diện từ khóa CTA hiển thị trong hình ảnh/video như LIKE, SHARE, SUBSCRIBE và các biến thể tiếng Việt hiện có.\n- Không mở rộng sang phân loại cảnh phim, không phân tích lời nói hoặc âm thanh.\n- Giữ mật độ lấy mẫu đã chọn (mặc định 2 giây/ảnh), Pause/Resume, Quét tiếp, cache và duyệt thủ công.\n\n## Nâng cấp\n- UPDATE tương thích từ v1.5.6.35.\n- Gói chỉ chứa các file mã ứng dụng thay đổi và metadata phiên bản; không chứa video nguồn, dự án, autosave, settings, downloads hoặc renders.\n",
   "files": [
     {
       "path": "cta_detector.py",
-      "size": 42732,
-      "sha256": "ed8235947713193ecefd40d9c12d237fcfa2655763b505006277233b03d49068",
+      "size": 45309,
+      "sha256": "ce9a58de672cfa586bbf59de6752bce6bf96a9bead4f68f1318caceffae09b05",
       "action": "replace"
     },
     {
       "path": "engine_worker.py",
-      "size": 77985,
-      "sha256": "cc6517456ad84d624b3b209088b070716d6771a92cc248428a365ee4153dc22f",
+      "size": 79704,
+      "sha256": "73564bb099ff0a1da87c6d30ee07dcf3068afa095712a0d9f407648642ee2192",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 233635,
-      "sha256": "0577f9f4ea4fd9e8e30d225558494f18e7f9432522fc2db3e6a16c1900fe2fe1",
+      "size": 236676,
+      "sha256": "92c582d10af97bcab93496926297922fea08d7fab77629b877295e39a33be9d9",
+      "action": "replace"
+    },
+    {
+      "path": "app.py",
+      "size": 399638,
+      "sha256": "35f1a0039d55905f76632e323af32ef1bb8c208da85638cacdefcb52c181a34e",
       "action": "replace"
     },
     {
       "path": "PHIEN_BAN.txt",
-      "size": 98,
-      "sha256": "c50e193ef36cf289e83a8edb6bf9cd4ea099bd7e6bfd65660de7898cdc855fa8",
-      "action": "replace"
-    },
-    {
-      "path": "updater/qt_ui.py",
-      "size": 11470,
-      "sha256": "aa5940334fa1ff3e7fc81333b4cfb56bee84416ca15070830f587ef5f68988d4",
+      "size": 130,
+      "sha256": "1ffa2e8ae26402c04863ccc05f89656dfde7f49878d0d11465f297a175e74624",
       "action": "replace"
     }
-  ],
-  "supported_base_versions": [
-    "1.5.6.30",
-    "1.5.6.31",
-    "1.5.6.32",
-    "1.5.6.33",
-    "1.5.6.34"
   ]
 }
