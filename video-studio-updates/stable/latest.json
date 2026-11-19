@@ -4,42 +4,43 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.32",
+  "version": "1.5.6.33",
   "base_version": "1.5.6.30",
   "minimum_supported_version": "1.5.6.30",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.32_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.32_UPDATE.zip",
-  "asset_size": 358882,
-  "asset_sha256": "5d86f307b16b75f601a6191a6dc17c396fff17cddf38f9cc4676981ca92de280",
-  "release_notes": "# Góc Review Phim Video Studio v1.5.6.32\n\n## Giảm bỏ sót CTA trên video dài\n- Sửa giới hạn 1.800/7.200 mẫu khiến mật độ quét tự giãn trên video nhiều giờ. Mật độ đã chọn nay được giữ đến giới hạn an toàn rõ ràng 120.000 mẫu.\n- Bổ sung **Rất dày · 0,25 giây/ảnh**; giữ các mức 0,5 / 1 / 2 giây và Quét kỹ.\n- Tăng kích thước ảnh đầu vào OCR khi quét dày/kỹ.\n- Hạ ngưỡng loại token OCR nhưng vẫn yêu cầu cụm từ Subscribe/Đăng ký khớp ngữ nghĩa; giữ ứng viên chữ rõ nghĩa chỉ xuất hiện trong một mẫu với điểm OCR thấp để người dùng xem lại.\n- Thêm giới hạn lượt 2 riêng 60.000 mẫu; nếu chạm giới hạn, giao diện báo rõ.\n- Hiển thị riêng mật độ thực tế lượt 1/lượt 2, không dùng lượt 2 để che việc lượt 1 đã thưa.\n\n## Workflow\n- Làm rõ **Quét bổ sung** chỉ tiếp tục phần video chưa quét theo key đã lưu; muốn chạy lại toàn bộ bằng mật độ mới thì dùng **Quét CTA Subscribe**.\n\n## Giữ nguyên\n- Chỉ nhận diện CTA hiển thị trong hình ảnh/video; không phân tích lời nói hoặc âm thanh.\n- OCR Anh/Việt, Pause/Resume, Stop, cache, thumbnail, hai lượt quét, duyệt thủ công và Xóa tất cả.\n- Không thay đổi Mask/Brush/Eraser, Overlay Detector, Branding, Auto Save, Batch, QC và xuất video.\n\n## Nâng cấp\n- UPDATE tương thích trực tiếp với v1.5.6.30 và v1.5.6.31.\n- Không chứa video nguồn, dự án, .venv, downloads hoặc renders.\n- Kiểm thử lập kế hoạch mẫu đúng thời lượng 227 phút, giới hạn an toàn và OCR một mẫu.\n",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.33_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.33_UPDATE.zip",
+  "asset_size": 361932,
+  "asset_sha256": "09c548cf60055a6405e9a16450c94811ed50b5f1a5908409025be6aee0833bdc",
+  "release_notes": "# Góc Review Phim Video Studio v1.5.6.33\n\n## Ba chế độ CTA cho video dài\n1. **Nhanh · 1 giây/ảnh:** rà toàn video; lượt 2 kiểm tra vùng nghi vấn khoảng 0,35 giây.\n2. **Khuyến nghị · 0,5 giây/ảnh:** mặc định cho video 2–3 tiếng; lượt 2 kiểm tra vùng nghi vấn khoảng 0,25 giây.\n3. **Quét kỹ · 0,5 giây/ảnh + OCR sâu:** giữ mật độ lượt 1 như Khuyến nghị, tăng độ phân giải/tiền xử lý OCR, mở rộng vùng nghi vấn và kiểm tra lượt 2 khoảng 0,125 giây.\n\n## Giảm nghẽn khi quét video dài\n- Đọc tuần tự giữa các ảnh mẫu bằng grab/read; chỉ seek khi bắt đầu hoặc chuyển sang vùng nghi vấn cách xa.\n- Giới hạn gửi tiến độ khoảng 2 lần/giây; live candidate/thumbnail khoảng 1 lần/giây.\n- Giới hạn tính lại snapshot ứng viên khoảng 1 lần/giây thay vì mỗi ba ảnh mẫu.\n- Giữ giới hạn an toàn, Pause/Resume, Stop, cache và duyệt thủ công.\n\n## Quy mô video 2–3 tiếng\n- Nhanh: khoảng 7.200–10.800 mẫu lượt 1.\n- Khuyến nghị/Quét kỹ: khoảng 14.400–21.600 mẫu lượt 1.\n- Video 227 phút: 13.620 mẫu ở Nhanh; 27.240 mẫu ở Khuyến nghị/Quét kỹ.\n- Quét kỹ dành thời gian thêm cho OCR sâu và lượt 2, không tăng mật độ lượt 1.\n\n## Giữ nguyên\n- CTA hiển thị trong video, OCR Anh/Việt, nhận diện đồ họa/chuyển động; không phân tích âm thanh.\n- Duyệt thủ công trước khi cắt, Xóa tất cả và các cải tiến Mask v1.5.6.30–32.\n\n## Nâng cấp\n- UPDATE tương thích với v1.5.6.30, v1.5.6.31 và v1.5.6.32.\n- Không chứa video nguồn, dự án, .venv, downloads hoặc renders.\n- Bổ sung kiểm thử nguồn 2–3 tiếng, đọc tuần tự và seek khi chuyển vùng.\n",
   "files": [
     {
       "path": "cta_detector.py",
-      "size": 47561,
-      "sha256": "8584354bf200229e761bc44cff29a4b71ac99eee3b6d270ee88ebe157ba9e20b",
+      "size": 49728,
+      "sha256": "b3c7390bd7e2109c8299742b8e45d1e3655c7adc3ecd3b0584f2f180a62e35f0",
       "action": "replace"
     },
     {
       "path": "engine_worker.py",
-      "size": 76726,
-      "sha256": "e7562bfb74aa7fd33d0aab8fddfabeee534289dd413766cf7b5dae3973b4f596",
+      "size": 77581,
+      "sha256": "4d4b63ba4a9f2c47f44dfcfa78dcb83095d6279710b01e023d09adf61369161c",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 234006,
-      "sha256": "4f405004c87d4a752ecd785457df4fda8acc2be3e55a77bba9549bf5536322d1",
+      "size": 234031,
+      "sha256": "62723280ad3655c301fae430a6e0a05506ccb4e14bf53f61b6dc0cb11032a009",
       "action": "replace"
     },
     {
       "path": "PHIEN_BAN.txt",
-      "size": 93,
-      "sha256": "5f582664f9814e6ed87e905ae362879ec6ed1c17d29a52f8008678a0a32c1589",
+      "size": 96,
+      "sha256": "2fab8a8eb3ceb4f19e31a0785372b65d8ca12cdcb7a94799293dce5d0927bddb",
       "action": "replace"
     }
   ],
   "supported_base_versions": [
     "1.5.6.30",
-    "1.5.6.31"
+    "1.5.6.31",
+    "1.5.6.32"
   ]
 }
