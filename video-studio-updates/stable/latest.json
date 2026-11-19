@@ -4,37 +4,37 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.34",
+  "version": "1.5.6.35",
   "base_version": "1.5.6.30",
   "minimum_supported_version": "1.5.6.30",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.34_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.34_UPDATE.zip",
-  "asset_size": 374139,
-  "asset_sha256": "bb0e4fc39ddfd8908a6f0ebd3da10ee120b7df84df5494519cf196b5ec039d97",
-  "release_notes": "# Góc Review Phim Video Studio v1.5.6.34\n\n## Giảm tải CTA Detector\n- Chế độ Nhẹ CPU · 2 giây/ảnh; Khuyến nghị · 1 giây/ảnh; Quét kỹ · 0,5 giây/ảnh + OCR sâu.\n- Giới hạn Tesseract OpenMP một luồng để giảm tranh chấp CPU.\n- Tiến độ khoảng 1 lần/giây; ứng viên CTA khoảng 1 lần/3 giây; bảng kết quả làm mới khoảng 2,5 giây/lần.\n- Không giải mã thumbnail riêng trong lúc quét; thumbnail được tạo sau khi quét hoàn tất.\n- Giảm tần suất đánh giá snapshot ứng viên.\n\n## Video 2–3 tiếng (ước lượng lượt 1)\n- Nhẹ CPU: khoảng 3.600–5.400 ảnh mẫu.\n- Khuyến nghị: khoảng 7.200–10.800 ảnh mẫu.\n- Quét kỹ: khoảng 14.400–21.600 ảnh mẫu và OCR sâu hơn.\n\n## Giữ nguyên\n- CTA Subscribe hiển thị, OCR tiếng Anh/Việt, nhận diện hình ảnh/chuyển động; không phân tích âm thanh.\n- Pause/Resume/Stop, cache, duyệt thủ công và chỉ cắt khoảng người dùng chọn.\n- Giữ các cải tiến Mask/Workspace trước đó.\n\n## Nâng cấp\n- UPDATE hỗ trợ v1.5.6.30, .31, .32 và .33.\n- Nút thử lại tự lấy manifest mới sau lỗi tải/xác minh.\n- Không chứa video nguồn, project, .venv, downloads hoặc renders.",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.35_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.35_UPDATE.zip",
+  "asset_size": 366540,
+  "asset_sha256": "30da68e3a06b9886734363fa244380a0b44fb1b3e40728936bb1c56b4342c31c",
+  "release_notes": "# Góc Review Phim Video Studio v1.5.6.35\n\n## CTA Detector được tổ chức lại\n- Quét OCR từ khóa, lấy 1 khung hình mỗi 2 giây trên toàn video trong một lượt.\n- Chỉ nhận các từ hoàn chỉnh LIKE, SHARE, SUB/SUBSCRIBE và biến thể trạng thái; hỗ trợ cụm CTA tiếng Việt THÍCH, CHIA SẺ, ĐĂNG KÝ.\n- Không phân loại cảnh phim, không nhận diện chuyển động làm căn cứ tạo kết quả và không phân tích âm thanh.\n- Gộp những lần nhận diện gần nhau thành khoảng thời gian CTA để bạn kiểm tra và chọn cắt.\n\n## Xem ảnh trước khi cắt\n- Mỗi dòng kết quả có thumbnail của khung hình thực tế mà OCR đã đọc.\n- Chọn một dòng để xem ảnh lớn bên phải, nội dung chữ OCR, từ khóa, độ tin cậy và mốc thời gian.\n- Có bộ lọc riêng LIKE, SHARE và SUBSCRIBE.\n- Chỉ những khoảng bạn tick và xác nhận mới được cắt; video nguồn không bị ghi đè.\n\n## Luồng làm việc\n- Giữ Pause/Resume/Stop, Quét tiếp, cache, chỉnh mốc bắt đầu/kết thúc, phát thử và xuất video đã loại các khoảng được chọn.\n- ID kết quả của lượt Quét tiếp được tách riêng, tránh ghi đè các ứng viên đã lưu.\n- Ảnh mẫu được tạo sau khi quét để không tranh tài nguyên giải mã với OCR.\n\n## Nâng cấp\n- UPDATE tương thích trực tiếp từ v1.5.6.30 đến v1.5.6.34.\n- Có kèm sửa retry updater: sau lần tải/xác minh thất bại, thử lại sẽ lấy manifest mới.\n- Gói không chứa video nguồn, project, .venv, downloads hoặc renders.\n\n## Lưu ý lấy mẫu\n- CTA hiển thị ngắn hoàn toàn giữa hai khung hình lấy mẫu 2 giây có thể bị bỏ qua; kiểm tra ảnh mẫu và quét bổ sung khi cần.",
   "files": [
     {
       "path": "cta_detector.py",
-      "size": 49727,
-      "sha256": "28ddf37e498164f3a0e1f75601397bd4a8369ac2e8a8e783a0c675c99b9e1ce9",
+      "size": 42732,
+      "sha256": "ed8235947713193ecefd40d9c12d237fcfa2655763b505006277233b03d49068",
       "action": "replace"
     },
     {
       "path": "engine_worker.py",
-      "size": 78010,
-      "sha256": "4a605987034a1fc3230a81b7418e1beb3b3e51e57d8fca175c8435aa5d5a0c6f",
+      "size": 77985,
+      "sha256": "cc6517456ad84d624b3b209088b070716d6771a92cc248428a365ee4153dc22f",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 234212,
-      "sha256": "22180ee5f8bac97e7d486faac5dee0f388ac90d9ab8e6590b8e8ef4294365b1c",
+      "size": 233635,
+      "sha256": "0577f9f4ea4fd9e8e30d225558494f18e7f9432522fc2db3e6a16c1900fe2fe1",
       "action": "replace"
     },
     {
       "path": "PHIEN_BAN.txt",
-      "size": 100,
-      "sha256": "92bb1ee5597787cd383fa2d71ec9212ecebca891bed2ef8a713f366521e5fa58",
+      "size": 98,
+      "sha256": "c50e193ef36cf289e83a8edb6bf9cd4ea099bd7e6bfd65660de7898cdc855fa8",
       "action": "replace"
     },
     {
@@ -48,6 +48,7 @@
     "1.5.6.30",
     "1.5.6.31",
     "1.5.6.32",
-    "1.5.6.33"
+    "1.5.6.33",
+    "1.5.6.34"
   ]
 }
