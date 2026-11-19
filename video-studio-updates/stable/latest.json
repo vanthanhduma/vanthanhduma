@@ -4,47 +4,43 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.37",
+  "version": "1.5.6.36",
   "base_version": "1.5.6.35",
-  "supported_base_versions": [
-    "1.5.6.35",
-    "1.5.6.36"
-  ],
   "minimum_supported_version": "1.5.6.35",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.37_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.37_UPDATE.zip",
-  "asset_size": 764236,
-  "asset_sha256": "694c68d9dcdf32a28531ee7c827170c9cb8b0178d4b51cd63c5eef91345a93fb",
-  "release_notes": "## Góc Review Phim Video Studio v1.5.6.37\n\n### CTA Detector — tăng khả năng nhận diện\n- Bổ sung OCR dự phòng PSM 11 trong lượt quét bình thường khi PSM 6 không nhận ra chữ; thử thêm ảnh nhị phân Otsu.\n- Ghép các mảnh từ bị OCR tách như SUB SCRIBE, SH ARE, L IKE và chuẩn hóa một số nhầm lẫn ký tự phổ biến.\n- Tăng độ phân giải xử lý để giữ nét chữ CTA nhỏ.\n- Giữ mặc định 2 giây/ảnh; bổ sung lựa chọn 0,5 giây/ảnh để lấy mẫu dày gấp bốn lần.\n\n### Giữ nguyên workflow\n- Chỉ dò từ khóa LIKE, SHARE, SUBSCRIBE và cụm tương đương tiếng Việt hiển thị trong hình.\n- Không phân loại cảnh phim, không phân tích âm thanh/lời nói.\n- Hiển thị ảnh bằng chứng; người dùng tự duyệt và chọn khoảng cần cắt, không tự động xóa.\n\n### Nâng cấp\n- Gói UPDATE cộng dồn, hỗ trợ nâng cấp trực tiếp từ v1.5.6.35 và v1.5.6.36.\n- Gói chứa các thay đổi từ v1.5.6.36 và v1.5.6.37 để không bỏ qua bản vá trung gian.\n",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.36_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.36_UPDATE.zip",
+  "asset_size": 762057,
+  "asset_sha256": "2f0a3af2cfb2797c540282a35e2201c4b42d8f85d221bacca818df6a06a0600c",
+  "release_notes": "# Góc Review Phim Video Studio v1.5.6.36\n\n## CTA Detector — ảnh bằng chứng trực tiếp\n- Tạo ảnh JPEG từ chính khung hình đã được đọc để OCR, khoanh vùng phần chữ CTA và gửi kèm từng ứng viên ngay khi phát hiện.\n- Bảng kết quả và khung xem lớn cập nhật ảnh bằng chứng trong lúc quét; không cần chạy thêm một tiến trình FFmpeg cho mỗi ứng viên mới.\n- Ảnh mẫu được chọn theo lần nhận diện OCR có điểm cao nhất của ứng viên, đồng thời mốc thời gian ảnh được giữ chính xác.\n- Kết quả cũ chưa có ảnh vẫn dùng cơ chế trích xuất dự phòng sau khi quét.\n\n## An toàn khi duyệt và cắt\n- Ứng viên có độ tin cậy OCR dưới 50/100 được tô cảnh báo và yêu cầu xác nhận thêm khi tick chọn cắt.\n- Người dùng vẫn phải tự chọn khoảng CTA; không tự động cắt theo kết quả nhận diện.\n- Lỗi tạo ảnh của một ứng viên được ghi riêng, không làm hỏng toàn bộ lượt quét hoặc các ứng viên khác.\n\n## Giao diện\n- Rút gọn tiêu đề cột để không bị cắt chữ ở vùng bảng hẹp.\n- Bỏ nhãn đơn vị “phút” gây nhầm; trường thời gian cho phép nhập giây hoặc phút:giây.\n- Trạng thái ảnh phân biệt rõ đang trích xuất, có ảnh và ảnh lỗi.\n\n## Giữ nguyên phạm vi CTA\n- Chỉ nhận diện từ khóa CTA hiển thị trong hình ảnh/video như LIKE, SHARE, SUBSCRIBE và các biến thể tiếng Việt hiện có.\n- Không mở rộng sang phân loại cảnh phim, không phân tích lời nói hoặc âm thanh.\n- Giữ mật độ lấy mẫu đã chọn (mặc định 2 giây/ảnh), Pause/Resume, Quét tiếp, cache và duyệt thủ công.\n\n## Nâng cấp\n- UPDATE tương thích từ v1.5.6.35.\n- Gói chỉ chứa các file mã ứng dụng thay đổi và metadata phiên bản; không chứa video nguồn, dự án, autosave, settings, downloads hoặc renders.\n",
   "files": [
     {
       "path": "cta_detector.py",
-      "size": 46819,
-      "sha256": "de21e47a543b2cdb69b933c9d3ea46889176246f42969acedc1c511c756ed5d6",
+      "size": 45309,
+      "sha256": "ce9a58de672cfa586bbf59de6752bce6bf96a9bead4f68f1318caceffae09b05",
       "action": "replace"
     },
     {
       "path": "engine_worker.py",
       "size": 79704,
-      "sha256": "81a837899a5113c079e47cb2520619995502e2d71831804e385faa2a341cb3d0",
+      "sha256": "73564bb099ff0a1da87c6d30ee07dcf3068afa095712a0d9f407648642ee2192",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 237377,
-      "sha256": "a4dd78727171b1dc9263c5ab609945db7961265bd2e70ddabedcf384f14bb585",
+      "size": 236676,
+      "sha256": "92c582d10af97bcab93496926297922fea08d7fab77629b877295e39a33be9d9",
       "action": "replace"
     },
     {
       "path": "app.py",
       "size": 399638,
-      "sha256": "9ea6179d8c052d37138f7b9c4e21a8a63a77356d6cd012c537182237a4c35098",
+      "sha256": "35f1a0039d55905f76632e323af32ef1bb8c208da85638cacdefcb52c181a34e",
       "action": "replace"
     },
     {
       "path": "PHIEN_BAN.txt",
-      "size": 108,
-      "sha256": "875a3e9d77d149a0e72c9f924d157516524dd40d286bb3e4b904d33dbd4777d1",
+      "size": 130,
+      "sha256": "1ffa2e8ae26402c04863ccc05f89656dfde7f49878d0d11465f297a175e74624",
       "action": "replace"
     }
   ]
