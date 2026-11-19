@@ -9,9 +9,9 @@
   "minimum_supported_version": "1.5.6.30",
   "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.34_UPDATE.zip",
   "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.34_UPDATE.zip",
-  "asset_size": 362545,
-  "asset_sha256": "0fa17e0631cb81441920c25884c15d1c1769131d333af31c3fbfe2940ed0ae4a",
-  "release_notes": "# Góc Review Phim Video Studio v1.5.6.34\n\n## Giảm tải CTA Detector\n- Chế độ Nhẹ CPU · 2 giây/ảnh; Khuyến nghị · 1 giây/ảnh; Quét kỹ · 0,5 giây/ảnh + OCR sâu.\n- Giới hạn Tesseract OpenMP một luồng để giảm tranh chấp CPU.\n- Tiến độ khoảng 1 lần/giây; ứng viên CTA khoảng 1 lần/3 giây; bảng kết quả làm mới khoảng 2,5 giây/lần.\n- Không giải mã thumbnail riêng trong lúc quét; thumbnail được tạo sau khi quét hoàn tất.\n- Giảm tần suất đánh giá snapshot ứng viên.\n\n## Video 2–3 tiếng (ước lượng lượt 1)\n- Nhẹ CPU: khoảng 3.600–5.400 ảnh mẫu.\n- Khuyến nghị: khoảng 7.200–10.800 ảnh mẫu.\n- Quét kỹ: khoảng 14.400–21.600 ảnh mẫu và OCR sâu hơn.\n\n## Giữ nguyên\n- CTA Subscribe hiển thị, OCR tiếng Anh/Việt, nhận diện hình ảnh/chuyển động; không phân tích âm thanh.\n- Pause/Resume/Stop, cache, duyệt thủ công và chỉ cắt khoảng người dùng chọn.\n- Giữ các cải tiến Mask/Workspace trước đó.\n\n## Nâng cấp\n- UPDATE hỗ trợ v1.5.6.30, .31, .32 và .33.\n- Không chứa video nguồn, project, .venv, downloads hoặc renders.",
+  "asset_size": 374139,
+  "asset_sha256": "bb0e4fc39ddfd8908a6f0ebd3da10ee120b7df84df5494519cf196b5ec039d97",
+  "release_notes": "# Góc Review Phim Video Studio v1.5.6.34\n\n## Giảm tải CTA Detector\n- Chế độ Nhẹ CPU · 2 giây/ảnh; Khuyến nghị · 1 giây/ảnh; Quét kỹ · 0,5 giây/ảnh + OCR sâu.\n- Giới hạn Tesseract OpenMP một luồng để giảm tranh chấp CPU.\n- Tiến độ khoảng 1 lần/giây; ứng viên CTA khoảng 1 lần/3 giây; bảng kết quả làm mới khoảng 2,5 giây/lần.\n- Không giải mã thumbnail riêng trong lúc quét; thumbnail được tạo sau khi quét hoàn tất.\n- Giảm tần suất đánh giá snapshot ứng viên.\n\n## Video 2–3 tiếng (ước lượng lượt 1)\n- Nhẹ CPU: khoảng 3.600–5.400 ảnh mẫu.\n- Khuyến nghị: khoảng 7.200–10.800 ảnh mẫu.\n- Quét kỹ: khoảng 14.400–21.600 ảnh mẫu và OCR sâu hơn.\n\n## Giữ nguyên\n- CTA Subscribe hiển thị, OCR tiếng Anh/Việt, nhận diện hình ảnh/chuyển động; không phân tích âm thanh.\n- Pause/Resume/Stop, cache, duyệt thủ công và chỉ cắt khoảng người dùng chọn.\n- Giữ các cải tiến Mask/Workspace trước đó.\n\n## Nâng cấp\n- UPDATE hỗ trợ v1.5.6.30, .31, .32 và .33.\n- Nút thử lại tự lấy manifest mới sau lỗi tải/xác minh.\n- Không chứa video nguồn, project, .venv, downloads hoặc renders.",
   "files": [
     {
       "path": "cta_detector.py",
@@ -35,6 +35,12 @@
       "path": "PHIEN_BAN.txt",
       "size": 100,
       "sha256": "92bb1ee5597787cd383fa2d71ec9212ecebca891bed2ef8a713f366521e5fa58",
+      "action": "replace"
+    },
+    {
+      "path": "updater/qt_ui.py",
+      "size": 11470,
+      "sha256": "aa5940334fa1ff3e7fc81333b4cfb56bee84416ca15070830f587ef5f68988d4",
       "action": "replace"
     }
   ],
