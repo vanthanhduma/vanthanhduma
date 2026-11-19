@@ -1,0 +1,143 @@
+name: Publish CTA OCR recovery UPDATE v1.5.6.37
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publish-cta-v1-5-6-37.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout update feed
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Checkout application source
+        uses: actions/checkout@v4
+        with:
+          repository: vanthanhduma/Goc-Review-Phim-Video-Studio
+          ref: main
+          path: app-source
+
+      - name: Build and verify UPDATE package
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib
+          import io
+          import json
+          import zipfile
+          from pathlib import Path
+
+          version = "1.5.6.37"
+          base_version = "1.5.6.36"
+          source = Path("app-source")
+          stable = Path("video-studio-updates/stable")
+          assets = stable / "assets"
+          assets.mkdir(parents=True, exist_ok=True)
+
+          version_text = (source / "PHIEN_BAN.txt").read_text(encoding="utf-8").strip()
+          if version not in version_text:
+              raise SystemExit(f"Source version mismatch: {version_text!r}")
+
+          # Runtime files changed by v1.5.6.37 compared with v1.5.6.36.
+          names = ["cta_detector.py", "qt_app.py", "PHIEN_BAN.txt"]
+          payloads = {}
+          records = []
+          for name in names:
+              path = source / name
+              data = path.read_bytes()
+              payloads[name] = data
+              records.append({
+                  "path": name,
+                  "size": len(data),
+                  "sha256": hashlib.sha256(data).hexdigest(),
+                  "action": "replace",
+              })
+
+          asset_name = f"Goc_Review_Phim_Video_Studio_v{version}_UPDATE.zip"
+          asset_path = assets / asset_name
+          buffer = io.BytesIO()
+          with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as package:
+              for name in names:
+                  info = zipfile.ZipInfo(f"payload/{name}", date_time=(2026, 11, 19, 0, 0, 0))
+                  info.compress_type = zipfile.ZIP_DEFLATED
+                  info.create_system = 0
+                  info.external_attr = 0
+                  package.writestr(info, payloads[name])
+
+          archive = buffer.getvalue()
+          with zipfile.ZipFile(io.BytesIO(archive), "r") as check:
+              bad = check.testzip()
+              expected = {f"payload/{name}" for name in names}
+              actual = set(check.namelist())
+              if bad:
+                  raise SystemExit(f"ZIP CRC validation failed at {bad}")
+              if actual != expected:
+                  raise SystemExit(f"ZIP entry mismatch: expected={expected}, actual={actual}")
+              # Re-read every entry and compare its bytes to the source payload.
+              for name in names:
+                  if check.read(f"payload/{name}") != payloads[name]:
+                      raise SystemExit(f"ZIP payload mismatch: {name}")
+
+          asset_path.write_bytes(archive)
+          manifest_path = stable / "latest.json"
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          current = manifest.get("version", "")
+          if current not in (base_version, version):
+              raise SystemExit(f"Refusing to replace unexpected stable version: {current}")
+          manifest.update({
+              "schema_version": 1,
+              "app_id": "goc-review-phim-video-studio",
+              "channel": "stable",
+              "trust_mode": "https-sha256-v1",
+              "package_type": "UPDATE",
+              "version": version,
+              "base_version": base_version,
+              "supported_base_versions": [base_version],
+              "minimum_supported_version": base_version,
+              "asset_name": asset_name,
+              "asset_url": (
+                  "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/"
+                  f"video-studio-updates/stable/assets/{asset_name}"
+              ),
+              "asset_size": len(archive),
+              "asset_sha256": hashlib.sha256(archive).hexdigest(),
+              "release_notes": (source / "RELEASE_NOTES_V1_5_6_37.md").read_text(encoding="utf-8"),
+              "files": records,
+          })
+          manifest_path.write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          print(json.dumps({
+              "version": version,
+              "base_version": base_version,
+              "asset_name": asset_name,
+              "asset_size": len(archive),
+              "asset_sha256": manifest["asset_sha256"],
+              "files": records,
+              "zip_test": "PASS",
+              "entry_test": "PASS",
+              "payload_byte_test": "PASS",
+          }, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit verified package and stable manifest
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add video-studio-updates/stable/latest.json video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.37_UPDATE.zip
+          git diff --cached --check
+          git commit -m "Publish v1.5.6.37 CTA OCR recovery UPDATE"
+          git push origin HEAD:main
