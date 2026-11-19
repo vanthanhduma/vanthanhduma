@@ -1,0 +1,214 @@
+{
+  "product": "Goc Review Phim Video Studio",
+  "version": "1.5.6.38",
+  "package_type": "FULL",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.38_FULL.zip",
+  "asset_size": 2305377,
+  "asset_sha256": "12e9d6bf6686a5f6be88aad2e2ae757b58f6fae13746848f5f12697b988ffe90",
+  "files": [
+    {
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "size": 5106,
+      "sha256": "c6ce276895cc2e83bc4f21e2497e07b4a227940b0c7d5990a7a6ef3c7404ff34",
+      "crc32": "71e8caf1"
+    },
+    {
+      "path": "CAI_TESSERACT_OCR.bat",
+      "size": 1581,
+      "sha256": "9454d10e280dcd31eaf97f19ee302c3c6a0c25d3a0898cbe2ad0c46c3bf810b8",
+      "crc32": "f173778e"
+    },
+    {
+      "path": "CAP_NHAT_THU_VIEN.bat",
+      "size": 750,
+      "sha256": "1713b61e1f18e2a75ab669e34f88a18601d8b6f4852b48371e0065718d121be5",
+      "crc32": "8576e9d3"
+    },
+    {
+      "path": "CHAY_TOOL.bat",
+      "size": 420,
+      "sha256": "2d24086a28d829d98b4f028d9d7b5a9d74030eb012613b0c2bf4c7782ce389a2",
+      "crc32": "07cf56d4"
+    },
+    {
+      "path": "KIEM_TRA_TANG_TOC_GPU.bat",
+      "size": 326,
+      "sha256": "02ae427f148a1a010d201e50de56c393bd752ec49568d8d5446e11760f37b341",
+      "crc32": "ad596e5a"
+    },
+    {
+      "path": "MO_GOC_REVIEW_PHIM.vbs",
+      "size": 1346,
+      "sha256": "01eef4df6b3799c8b482f0cae1e5458624290662a423189b3659a104449de402",
+      "crc32": "7466adb1"
+    },
+    {
+      "path": "MO_GOC_REVIEW_PHIM_LEGACY.vbs",
+      "size": 605,
+      "sha256": "ea237bd6707bc4d3a8f0309997e198a1dfd93513a58d227d0826588dc772213f",
+      "crc32": "3afcb497"
+    },
+    {
+      "path": "MO_TRANG_TAI_FFMPEG_GPU.bat",
+      "size": 57,
+      "sha256": "0cac98b359d325136c9c44a6aa91271e03ce68bb1c360131a8046007c837694b",
+      "crc32": "2c0ce2f7"
+    },
+    {
+      "path": "PHIEN_BAN.txt",
+      "size": 95,
+      "sha256": "8746a838afad391c212c6e73dd3e9d6892f22ee7394f37476601838f5624725a",
+      "crc32": "29e12eca"
+    },
+    {
+      "path": "TAO_LOI_TAT_DESKTOP.vbs",
+      "size": 1283,
+      "sha256": "d9e431b1efa05ef5b85779b25090a1d3149065d52f7063c1a2e4ccaadef42d27",
+      "crc32": "a944ec20"
+    },
+    {
+      "path": "app.py",
+      "size": 399638,
+      "sha256": "35f1a0039d55905f76632e323af32ef1bb8c208da85638cacdefcb52c181a34e",
+      "crc32": "975be650"
+    },
+    {
+      "path": "cta_detector.py",
+      "size": 49384,
+      "sha256": "96f4edb3f8f6c4c85cf01aea3d3f09b454585263cb60003a3733ebc3b71cb0e4",
+      "crc32": "069ba043"
+    },
+    {
+      "path": "download_engine.py",
+      "size": 7695,
+      "sha256": "2ac991bba695a3880ff3ccfeb1d866f14f92c9f8c0c9e3d18d84190acd2f08d3",
+      "crc32": "73a342e9"
+    },
+    {
+      "path": "engine_worker.py",
+      "size": 79704,
+      "sha256": "73564bb099ff0a1da87c6d30ee07dcf3068afa095712a0d9f407648642ee2192",
+      "crc32": "6f88a6a0"
+    },
+    {
+      "path": "gpu_check.py",
+      "size": 1482,
+      "sha256": "2f67a23bc2444320ff6a9378c29487ff7741f80cff9a70d38ec3e0f42d66a306",
+      "crc32": "d7f198ea"
+    },
+    {
+      "path": "launcher.py",
+      "size": 2678,
+      "sha256": "3137f38d67f4329cbf5a9fdafca1a3213bfbd89beb245eee51cc67a8f671193e",
+      "crc32": "f92ea5e3"
+    },
+    {
+      "path": "qt_app.py",
+      "size": 236751,
+      "sha256": "cdb5507082b7ac8bd3cc2652b5ff328185dad0dc37316853b10346e86721bbb9",
+      "crc32": "d3bf257b"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 195,
+      "sha256": "809e69b611fc6b0b9c5ee80feecb2b297d506d55d59fd2c6491de9a2cf670da7",
+      "crc32": "f717d4db"
+    },
+    {
+      "path": "timeline_seek.py",
+      "size": 1970,
+      "sha256": "8177a0c9e8b2b3c66cba22cb88056762376ff8d5f2588611862a02000960c16d",
+      "crc32": "fe6c4e62"
+    },
+    {
+      "path": "updater/__init__.py",
+      "size": 90,
+      "sha256": "42800bbe591007c04a8dc013d0814eca28afddce5402046376f2a1383723931e",
+      "crc32": "b9ac9eb4"
+    },
+    {
+      "path": "updater/apply_helper.py",
+      "size": 16113,
+      "sha256": "9f8a4e4bd8f6357205940a15f9ae7cfbf1709e78b74ef1eb83c63cb2c446b88e",
+      "crc32": "9083f784"
+    },
+    {
+      "path": "updater/core.py",
+      "size": 21175,
+      "sha256": "09172baee95787f7a7fc0e9296cb52d55a84aa98d41767b9c6cb684f7e3e3f4c",
+      "crc32": "ac591c0f"
+    },
+    {
+      "path": "updater/qt_ui.py",
+      "size": 11470,
+      "sha256": "aa5940334fa1ff3e7fc81333b4cfb56bee84416ca15070830f587ef5f68988d4",
+      "crc32": "3fcf7220"
+    },
+    {
+      "path": "updater/state.py",
+      "size": 1257,
+      "sha256": "604cc57ca1768bb016373765f61dc12b04d3f4db5c39d335acde297b78fd1f37",
+      "crc32": "e22e451f"
+    },
+    {
+      "path": "updater/keys/update-public-key.pem",
+      "size": 113,
+      "sha256": "09c36db869369cf9ca4ace43f416a9ccfadc1c102a41c354bf032aa69437740f",
+      "crc32": "b4e893fe"
+    },
+    {
+      "path": "updater/keys/update-public-key-legacy.pem",
+      "size": 113,
+      "sha256": "bea28e21d60a08a6992f465da660c420c9ff73cbbfa2fb76a3e540ed9d162c13",
+      "crc32": "267a4d67"
+    },
+    {
+      "path": "assets/tessdata/LICENSE-Apache-2.0.txt",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "crc32": "86e2b4b4"
+    },
+    {
+      "path": "TESSDATA_NOTICE.md",
+      "size": 619,
+      "sha256": "60f3314c5b8fe5542076f504b752a8a9703a4f941c74bfbbcb8b8fc377dbe332",
+      "crc32": "c387c3bc"
+    },
+    {
+      "path": "TESSERACT_OCR_FIX.md",
+      "size": 972,
+      "sha256": "83e3485d8b15dc47ca11e1a546961657d385d5b54972dc9b37d923588a052c05",
+      "crc32": "7466f7a5"
+    },
+    {
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "size": 1325,
+      "sha256": "5ef15fe87236fb73c9f8a25422cc65a0034c24599fbc5e5db91c5334612543f1",
+      "crc32": "acee86fb"
+    },
+    {
+      "path": "assets/Goc_Review_Phim_Logo.png",
+      "size": 69065,
+      "sha256": "1691b109a995e99706d9bb1fc59ab9a67cbdbec23c46072df28df17f7013d738",
+      "crc32": "5f282f02"
+    },
+    {
+      "path": "assets/app_icon.ico",
+      "size": 52509,
+      "sha256": "6dbc6f581eda9f54b096787e7c916825109b09de090e1d7118180baf599f261a",
+      "crc32": "c1b12220"
+    },
+    {
+      "path": "assets/tessdata/eng.traineddata",
+      "size": 786443,
+      "sha256": "7a79f0d5eb44db48ae5abd2dca35c602d6d3a8667cc401ad61479cbfa8139ee8",
+      "crc32": "f0e75ac7"
+    },
+    {
+      "path": "assets/tessdata/vie.traineddata",
+      "size": 531275,
+      "sha256": "79df64caf7bcfb2a27df5042ecb6121e196eada34da774956995747636d5bfa1",
+      "crc32": "bab509e5"
+    }
+  ]
+}
