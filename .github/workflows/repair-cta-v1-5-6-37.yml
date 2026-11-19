@@ -1,0 +1,117 @@
+name: Repair stable v1.5.6.37 UPDATE package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repair-cta-v1-5-6-37.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feed
+        uses: actions/checkout@v4
+      - name: Rebuild ZIP with Python standard library and refresh SHA-256
+        shell: bash
+        run: |
+          python - <<'PY'
+          import binascii
+          import hashlib
+          import io
+          import json
+          import struct
+          import zipfile
+          from pathlib import Path
+
+          root = Path("video-studio-updates/stable")
+          manifest_path = root / "latest.json"
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          assert manifest["version"] == "1.5.6.37"
+          archive_path = root / "assets" / manifest["asset_name"]
+          raw = archive_path.read_bytes()
+
+          entries = []
+          offset = 0
+          signature = b"PK\\x03\\x04"
+          while offset + 30 <= len(raw) and raw[offset:offset+4] == signature:
+              (sig, version, flags, method, mtime, mdate, crc, compressed_size,
+               uncompressed_size, name_len, extra_len) = struct.unpack_from("<IHHHHHIIIHH", raw, offset)
+              if sig != 0x04034B50 or flags != 0 or method != 0:
+                  raise RuntimeError("Unexpected ZIP local header flags or compression")
+              name_start = offset + 30
+              data_start = name_start + name_len + extra_len
+              name = raw[name_start:name_start+name_len].decode("utf-8")
+              data = raw[data_start:data_start+compressed_size]
+              if len(data) != compressed_size or compressed_size != uncompressed_size:
+                  raise RuntimeError("Truncated or inconsistent local ZIP entry: " + name)
+              if (binascii.crc32(data) & 0xffffffff) != crc:
+                  raise RuntimeError("CRC32 mismatch in local ZIP entry: " + name)
+              if not name.startswith("payload/"):
+                  raise RuntimeError("Missing required payload/ prefix: " + name)
+              entries.append((name, data))
+              offset = data_start + compressed_size
+
+          expected = {
+              "payload/cta_detector.py",
+              "payload/engine_worker.py",
+              "payload/qt_app.py",
+              "payload/app.py",
+              "payload/PHIEN_BAN.txt",
+          }
+          if {name for name, _ in entries} != expected:
+              raise RuntimeError("Payload entries do not match expected cumulative UPDATE files")
+
+          output = io.BytesIO()
+          with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_STORED) as package:
+              for name, data in entries:
+                  info = zipfile.ZipInfo(name, date_time=(2026, 11, 19, 0, 0, 0))
+                  info.compress_type = zipfile.ZIP_STORED
+                  info.create_system = 0
+                  package.writestr(info, data)
+
+          rebuilt = output.getvalue()
+          # Re-open with Python's zipfile and read every entry from the central directory.
+          with zipfile.ZipFile(io.BytesIO(rebuilt), "r") as check:
+              bad = check.testzip()
+              if bad:
+                  raise RuntimeError("Rebuilt ZIP failed testzip(): " + bad)
+              if set(check.namelist()) != expected:
+                  raise RuntimeError("Rebuilt ZIP central directory has incorrect entries")
+              file_records = []
+              for name in sorted(check.namelist()):
+                  data = check.read(name)
+                  file_records.append({
+                      "path": name[len("payload/"):],
+                      "size": len(data),
+                      "sha256": hashlib.sha256(data).hexdigest(),
+                      "action": "replace",
+                  })
+
+          archive_path.write_bytes(rebuilt)
+          manifest["asset_size"] = len(rebuilt)
+          manifest["asset_sha256"] = hashlib.sha256(rebuilt).hexdigest()
+          manifest["files"] = file_records
+          manifest["base_version"] = "1.5.6.35"
+          manifest["supported_base_versions"] = ["1.5.6.35", "1.5.6.36"]
+          manifest["minimum_supported_version"] = "1.5.6.35"
+          manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+          print(json.dumps({
+              "version": manifest["version"],
+              "asset_size": manifest["asset_size"],
+              "asset_sha256": manifest["asset_sha256"],
+              "files": file_records,
+              "zip_test": "PASS",
+          }, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit repaired UPDATE package and manifest
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add video-studio-updates/stable/latest.json video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.37_UPDATE.zip
+          git commit -m "Repair v1.5.6.37 UPDATE package"
+          git push
