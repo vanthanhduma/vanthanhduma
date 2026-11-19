@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/repair-cta-v1-5-6-37.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - ".repair-trigger"
+      - ".github/workflows/repair-cta-v1-5-6-37.yml"
 
 permissions:
   contents: write
@@ -13,8 +18,11 @@ jobs:
   repair:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout feed
+      - name: Checkout PR branch
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Rebuild ZIP with Python standard library and refresh SHA-256
         shell: bash
         run: |
@@ -114,4 +122,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add video-studio-updates/stable/latest.json video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.37_UPDATE.zip
           git commit -m "Repair v1.5.6.37 UPDATE package"
-          git push
+          git push origin HEAD:${GITHUB_HEAD_REF:-main}
