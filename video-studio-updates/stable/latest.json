@@ -5,13 +5,13 @@
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
   "version": "1.5.6.32",
-  "base_version": "1.5.6.31",
-  "minimum_supported_version": "1.5.6.31",
+  "base_version": "1.5.6.30",
+  "minimum_supported_version": "1.5.6.30",
   "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.32_UPDATE.zip",
   "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.32_UPDATE.zip",
   "asset_size": 358882,
   "asset_sha256": "5d86f307b16b75f601a6191a6dc17c396fff17cddf38f9cc4676981ca92de280",
-  "release_notes": "# Góc Review Phim Video Studio v1.5.6.32\n\n## Giảm bỏ sót CTA trên video dài\n- Sửa giới hạn 1.800/7.200 mẫu khiến mật độ quét tự giãn trên video nhiều giờ. Mật độ đã chọn nay được giữ đến giới hạn an toàn rõ ràng 120.000 mẫu.\n- Bổ sung **Rất dày · 0,25 giây/ảnh**; giữ các mức 0,5 / 1 / 2 giây và Quét kỹ.\n- Tăng kích thước ảnh đầu vào OCR khi quét dày/kỹ.\n- Hạ ngưỡng loại token OCR nhưng vẫn yêu cầu cụm từ Subscribe/Đăng ký khớp ngữ nghĩa; giữ ứng viên chữ rõ nghĩa chỉ xuất hiện trong một mẫu với điểm OCR thấp để người dùng xem lại.\n- Thêm giới hạn lượt 2 riêng 60.000 mẫu; nếu chạm giới hạn, giao diện báo rõ.\n- Hiển thị riêng mật độ thực tế lượt 1/lượt 2, không dùng lượt 2 để che việc lượt 1 đã thưa.\n\n## Workflow\n- Làm rõ **Quét bổ sung** chỉ tiếp tục phần video chưa quét theo key đã lưu; muốn chạy lại toàn bộ bằng mật độ mới thì dùng **Quét CTA Subscribe**.\n\n## Giữ nguyên\n- Chỉ nhận diện CTA hiển thị trong hình ảnh/video; không phân tích lời nói hoặc âm thanh.\n- OCR Anh/Việt, Pause/Resume, Stop, cache, thumbnail, hai lượt quét, duyệt thủ công và Xóa tất cả.\n- Không thay đổi Mask/Brush/Eraser, Overlay Detector, Branding, Auto Save, Batch, QC và xuất video.\n\n## Nâng cấp\n- UPDATE dành cho v1.5.6.31.\n- Không chứa video nguồn, dự án, .venv, downloads hoặc renders.\n- Kiểm thử lập kế hoạch mẫu đúng thời lượng 227 phút, giới hạn an toàn và OCR một mẫu.\n",
+  "release_notes": "# Góc Review Phim Video Studio v1.5.6.32\n\n## Giảm bỏ sót CTA trên video dài\n- Sửa giới hạn 1.800/7.200 mẫu khiến mật độ quét tự giãn trên video nhiều giờ. Mật độ đã chọn nay được giữ đến giới hạn an toàn rõ ràng 120.000 mẫu.\n- Bổ sung **Rất dày · 0,25 giây/ảnh**; giữ các mức 0,5 / 1 / 2 giây và Quét kỹ.\n- Tăng kích thước ảnh đầu vào OCR khi quét dày/kỹ.\n- Hạ ngưỡng loại token OCR nhưng vẫn yêu cầu cụm từ Subscribe/Đăng ký khớp ngữ nghĩa; giữ ứng viên chữ rõ nghĩa chỉ xuất hiện trong một mẫu với điểm OCR thấp để người dùng xem lại.\n- Thêm giới hạn lượt 2 riêng 60.000 mẫu; nếu chạm giới hạn, giao diện báo rõ.\n- Hiển thị riêng mật độ thực tế lượt 1/lượt 2, không dùng lượt 2 để che việc lượt 1 đã thưa.\n\n## Workflow\n- Làm rõ **Quét bổ sung** chỉ tiếp tục phần video chưa quét theo key đã lưu; muốn chạy lại toàn bộ bằng mật độ mới thì dùng **Quét CTA Subscribe**.\n\n## Giữ nguyên\n- Chỉ nhận diện CTA hiển thị trong hình ảnh/video; không phân tích lời nói hoặc âm thanh.\n- OCR Anh/Việt, Pause/Resume, Stop, cache, thumbnail, hai lượt quét, duyệt thủ công và Xóa tất cả.\n- Không thay đổi Mask/Brush/Eraser, Overlay Detector, Branding, Auto Save, Batch, QC và xuất video.\n\n## Nâng cấp\n- UPDATE tương thích trực tiếp với v1.5.6.30 và v1.5.6.31.\n- Không chứa video nguồn, dự án, .venv, downloads hoặc renders.\n- Kiểm thử lập kế hoạch mẫu đúng thời lượng 227 phút, giới hạn an toàn và OCR một mẫu.\n",
   "files": [
     {
       "path": "cta_detector.py",
@@ -39,6 +39,7 @@
     }
   ],
   "supported_base_versions": [
+    "1.5.6.30",
     "1.5.6.31"
   ]
 }
