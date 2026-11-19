@@ -4,35 +4,36 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.37",
+  "version": "1.5.6.38",
   "base_version": "1.5.6.36",
   "minimum_supported_version": "1.5.6.36",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.37_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.37_UPDATE.zip",
-  "asset_size": 284676,
-  "asset_sha256": "5ec30ff02ada6d6e573eb4317c495458a06c5573290d34000a6db4f3381b351b",
-  "release_notes": "# v1.5.6.37 – CTA OCR Recall Improvement\n\n## Cải thiện nhận diện CTA\n- Bật OCR dự phòng PSM 11 ngay trong lượt quét thông thường khi PSM 6 không tìm thấy từ khóa.\n- OCR dự phòng đọc lại ảnh tăng tương phản và ảnh nhị phân Otsu; chế độ thorough bổ sung ngưỡng thích nghi.\n- Ghép các mảnh chữ liền kề do OCR tách như `SUB SCRIBE`, `SH ARE`, `L IKE`; xử lý thêm một số nhầm lẫn ký tự thường gặp.\n- Tăng độ phân giải xử lý OCR để giữ chi tiết của CTA nhỏ.\n\n## Mật độ quét\n- Giữ mặc định 2 giây/ảnh.\n- Thêm lựa chọn 0,5 giây/ảnh để tăng mật độ lấy mẫu gấp 4 lần, phù hợp CTA xuất hiện ngắn; thời gian quét sẽ lâu hơn.\n\n## Giữ nguyên nguyên tắc an toàn\n- Chỉ dò từ khóa CTA LIKE, SHARE, SUBSCRIBE và cụm tương đương tiếng Việt.\n- Không phân loại cảnh phim, không phân tích âm thanh/lời nói.\n- Kết quả vẫn cần người dùng xem ảnh bằng chứng và tự chọn khoảng cần cắt; không tự động xóa.\n",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.38_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.38_UPDATE.zip",
+  "asset_size": 286602,
+  "asset_sha256": "85d67b0c4727c998157bb24c9edec363c93b3ce69009407efb8f2e3427c3ccb9",
+  "release_notes": "# v1.5.6.38 – CTA OCR đọc chữ tốt hơn, không quét dày hơn\n\n## Tập trung chất lượng đọc chữ\n- Giữ cố định lấy mẫu 1 ảnh mỗi 2 giây; bỏ lựa chọn 0,5 giây/ảnh vì tăng thời gian nhưng không cải thiện khả năng đọc của OCR trên từng ảnh.\n- Ưu tiên Tesseract PSM 11 phù hợp chữ CTA rải rác ở nhiều vị trí trên khung hình; PSM 6 và Otsu là các lượt dự phòng khi chưa đọc được từ khóa.\n- Khi OCR tách một từ thành nhiều mảnh nằm ở các block/dòng khác nhau, ghép theo vị trí hình học và đường cơ sở chữ; chỉ nối các mảnh nằm gần nhau để hạn chế ghép nhầm caption xa nhau.\n- Giữ giới hạn từ khóa LIKE, SHARE, SUBSCRIBE và các biến thể tiếng Việt; không phân loại cảnh phim, không phân tích lời nói/âm thanh.\n\n## Workflow\n- Ảnh bằng chứng và timestamp tiếp tục gắn với lần OCR thực sự tạo ra kết quả.\n- Kết quả vẫn là gợi ý để người dùng kiểm tra và duyệt thủ công; không tự động cắt.\n- Giữ Pause/Resume, Dừng, Quét tiếp và cache.\n",
   "files": [
     {
       "path": "cta_detector.py",
-      "size": 46819,
-      "sha256": "f042105f95e186fd87d03f2bc4986d5379d3027237ca32d3cb9d444124a45a0e",
+      "size": 49384,
+      "sha256": "96f4edb3f8f6c4c85cf01aea3d3f09b454585263cb60003a3733ebc3b71cb0e4",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 237377,
-      "sha256": "e42e5b27b8f37af2fd31f6b905658ba97cb6fc243c14aa77fe1d49c3e3dc3110",
+      "size": 236751,
+      "sha256": "cdb5507082b7ac8bd3cc2652b5ff328185dad0dc37316853b10346e86721bbb9",
       "action": "replace"
     },
     {
       "path": "PHIEN_BAN.txt",
-      "size": 108,
-      "sha256": "b70fed35e2ab608a151576fd54beaeec9b3ef386faa1ee10e4e40f01a125c960",
+      "size": 95,
+      "sha256": "8746a838afad391c212c6e73dd3e9d6892f22ee7394f37476601838f5624725a",
       "action": "replace"
     }
   ],
   "supported_base_versions": [
-    "1.5.6.36"
+    "1.5.6.36",
+    "1.5.6.37"
   ]
 }
