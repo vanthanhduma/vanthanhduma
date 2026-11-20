@@ -1,59 +1,59 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.8_UPDATE.zip",
-  "asset_sha256": "db8d86117a01ad6f13cef19246dc8c0254db29a55f215bc4308b90cf99d0be99",
-  "asset_size": 192614,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.8_UPDATE.zip",
-  "base_version": "1.5.9.7",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.9_UPDATE.zip",
+  "asset_sha256": "829a33f245abebd2581e0d82ef8cf9772fabf9fd016509d9bdd8dc6f7e6c21e6",
+  "asset_size": 193259,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.9_UPDATE.zip",
+  "base_version": "1.5.9.8",
   "channel": "stable",
   "files": [
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "2393f38d78c6a1ce2311adc2b730e9807b089dce27376a2ef79b8f3a08ca29b0",
+      "sha256": "9f0defe38f6114a5605d3a8b4a27a4e346af57e64a16c95b1c366e1e089368a6",
       "size": 344627
     },
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "d406f504fef53aa37e441d32fd20e79513b5f2d2e981046497dacf8f734b0471",
-      "size": 81
+      "sha256": "8adff3933ae33822f1db669c5e629783a95c505c7479f69b23a76fff388adc29",
+      "size": 78
     },
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "0c1fd775d1559ec0f382198c1dddc5eda15b75a03cc1f9d8c0a7acd7913ebf4e",
-      "size": 25981
+      "sha256": "da3c5ea596c9d30678751e204ff7a5a6b68603a88bdfa10102335224ff4f7b2b",
+      "size": 26155
     },
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "86d062bf98f7f86d16d601cea8d251f5291d63bc61208dab40e8b1e0c102c376",
-      "size": 9893
+      "sha256": "af1e1334fd2cbdfb12557ec5c82c754acb106b01d0951d84fe6236c7a537459d",
+      "size": 10720
     },
     {
       "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_8.md",
-      "sha256": "882709c05ec0a4c35aeccf61650488473015d014e29f37a736d5b5a1f612b78d",
-      "size": 1619
+      "path": "RELEASE_NOTES_V1_5_9_9.md",
+      "sha256": "c9785d1ef08f6fce243219e00301d51484d9ef37ada4009ce75d97951ee5833a",
+      "size": 1308
     },
     {
       "action": "replace",
       "path": "CAI_DAT_VA_CHAY.bat",
-      "sha256": "c8642c6cd0fe3b39c2779335274ecc1bdbbd086f41c07731f69ad179fb9b1fc7",
+      "sha256": "756ce3d6a03bf61fae0680acc237fb6a2272f048afb6e1fb23b9054851aefdb3",
       "size": 5239
     },
     {
       "action": "replace",
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "sha256": "3a345db0b1174932a7aab8b7b063e5016238eb50576ee16112e583d5d7e0f821",
+      "sha256": "d9f594e52fe407030684ce2c567c4e98fcc57ef9fec494a1fdb9c92b9f0c5065",
       "size": 2404
     },
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "04616e6fa0bbde1a020c9479852ac275d98293c94e450e313a0eeafdfd2a0c3e",
-      "size": 323901
+      "sha256": "3d2e152c4eaa6db1b353f772a1a56f3d02f956b462163cc8c68809f9d28da2ab",
+      "size": 326394
     },
     {
       "action": "replace",
@@ -74,15 +74,15 @@
       "size": 6749
     }
   ],
-  "minimum_supported_version": "1.5.9.7",
+  "minimum_supported_version": "1.5.9.8",
   "package_type": "UPDATE",
-  "release_notes": "# v1.5.9.8 — Download / Batch CTA Workspace Redesign\n\n## Studio Branding\n- Narrow the right control rail to 315–360 px; the preview receives more horizontal space.\n- Keep every existing control: logo visibility, scale, opacity, rotation, anchor placement, label content/style, show time, scene scope, presets, and Apply.\n\n## Download Video\n- Rebuild the settings section as four consistent option cards: quality, output format, browser cookies, and destination folder.\n- Put captions above controls and equalize field heights, card margins, and spacing.\n- Keep all existing quality values, format values, cookie-browser values, folder selection, and download queue/action callbacks.\n\n## Batch CTA Processing\n- Use a two-column layout: the main queue and video-management actions on the left; project output folder, queue progress, Start, and Stop in a compact right rail.\n- Add an empty-queue state and automatically switch to the queue table as soon as videos are added or a saved queue is restored.\n- Preserve sequential processing, per-video project saving, manual CTA review, resume behavior, and safe stop behavior.\n\n## Verification\n- Add regression tests for Branding sizing, Download option-card layout and values, Batch two-column layout, empty-state switching, and all existing callbacks/Engine commands.\n- Windows Qt workflow runs the new workspace tests with Branding preview, Export workspace, global UI theme, and Qt/Engine smoke tests.\n- Release workflow validates FULL/UPDATE archives, payload contents, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.7.\n",
+  "release_notes": "# v1.5.9.9 — Branding / Download Workspace Polish\n\n## Studio Branding\n- Narrow the right inspector rail to 290–325 px so the central preview receives more space.\n- Reduce logo anchor button dimensions and tighten spacing/margins across Logo, Label, Timing, and Preset groups.\n- Retain all existing controls, values, preview debounce, drag behavior, and Apply action.\n\n## Download Video\n- Arrange the four setting cards horizontally: title and helper text on the left; selector or destination path on the right.\n- Enforce minimum heights for each option card and the settings container so Qt cannot compress text and inputs into clipped rows.\n- Allow the download queue table to shrink before the settings panel when vertical room is limited.\n- Preserve all quality, format, browser-cookie, folder, download queue, progress, and action bindings.\n\n## Verification\n- Regression tests assert Branding sizing, compact groups, anchor buttons, Download card layout/minimum heights, and preserved callbacks.\n- Windows Qt CI runs Branding preview, Export workspace, global theme, Download/Batch/Branding layout tests, and UI/Engine smoke.\n- Release workflow validates Python compilation, FULL/UPDATE packages, payloads, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.8.\n",
   "schema_version": 1,
   "supported_base_versions": [
-    "1.5.9.7"
+    "1.5.9.8"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.8",
-  "published_at": "2026-11-20T17:42:07+00:00",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_8.md"
+  "version": "1.5.9.9",
+  "published_at": "2026-11-20T17:55:29+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_9.md"
 }
