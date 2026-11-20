@@ -4,85 +4,60 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.41",
-  "base_version": "1.5.6.39",
-  "minimum_supported_version": "1.5.6.39",
+  "version": "1.5.7.0",
+  "base_version": "1.5.6.41",
+  "minimum_supported_version": "1.5.6.41",
   "supported_base_versions": [
-    "1.5.6.39",
-    "1.5.6.40"
+    "1.5.6.41"
   ],
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.41_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.41_UPDATE.zip",
-  "asset_size": 183230,
-  "asset_sha256": "bdedb7be17c58ca87b0e437f35b45284c23b8d593c51e8af43f96f5ad594fe1a",
-  "published_at": "2026-11-20T05:39:49Z",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_6_41.md",
-  "release_notes": "# v1.5.6.41 — Project Workspace, CTA Archive & Boundary Merge\n\n## Thay đổi chính\n- Gỡ chức năng quét tự động Phát hiện lớp phủ (logo/chữ/watermark/banner) khỏi UI và worker; giữ nguyên Mask thủ công, Smart Mask, Brush/Eraser, Undo/Redo, Inpaint, Branding, Phân cảnh và Export.\n- Tổ chức dự án thành workspace riêng cạnh thư mục video nguồn: Media, Analysis/CTA, Assets, Exports, Backups.\n- Mặc định lưu dự án mới trong thư mục dự án lưu trữ/<Tên dự án>/<Tên dự án>.grproj; video xuất mặc định sang thư mục video xuất cạnh video nguồn.\n- Đồng bộ logo và logo theo phân cảnh vào Assets để dự án có tài nguyên đi kèm.\n- Lưu CTA results, checkpoint và thumbnail trong Analysis/CTA của dự án; cache gắn theo fingerprint nội dung video để tồn tại khi chuyển ổ đĩa/máy. Cache AppData cũ được di trú khi mở/lưu dự án.\n- Bổ sung đóng gói ZIP toàn bộ workspace vào thư mục dự án lưu trữ/Gói ZIP/<Tên dự án>; người dùng chọn kèm hoặc không kèm video nguồn.\n- Bổ sung khôi phục ZIP an toàn, không ghi đè dự án hiện có; kiểm tra đường dẫn ZIP chống path traversal.\n- Tạo bản sao lưu luân phiên tối đa 8 bản .grproj trước các lần lưu thủ công.\n- Làm rõ nút CTA: Quét toàn video để chạy từ đầu và Quét phần còn lại để tiếp tục từ checkpoint; giữ lựa chọn CTA đã duyệt khi lưu cache.\n- Nối ứng viên CTA cùng vị trí/từ khóa khi xuất hiện sát ranh giới giữa hai phiên quét, hạn chế tách đôi một sự kiện kéo dài qua checkpoint.\n- Sửa trạng thái hoàn tất CTA để phản ánh đúng thuật toán hiện tại: một lượt OCR lấy mẫu thưa, không hiển thị nhầm là quét hai lượt.\n- Sắp xếp thanh công cụ: Mở dự án có menu mở .grproj/khôi phục ZIP; có nút Đóng gói ZIP; Lưu thành/Tạo bản sao chuyển vào menu Thêm. Cập nhật nút và trạng thái CTA để thể hiện rõ đây là một lượt OCR lấy mẫu thưa, không còn ghi nhầm “quét 2 lượt”.\n\n## Tương thích và an toàn dữ liệu\n- Giữ schema dự án .grproj hiện tại (schema 4) và khả năng đọc schema 1–4 cũ.\n- Không xóa cache CTA cũ trong AppData sau khi di trú.\n- ZIP không chứa file tạm/lock/ZIP lồng; bản Backups được mang theo nhưng không bị nhầm là file dự án chính khi khôi phục.\n- Khi ZIP không kèm video, cần giữ video ở vị trí cũ hoặc liên kết lại khi mở trên máy khác. Thư mục xuất mặc định được thiết lập lại thành video xuất cạnh thư mục dự án lưu trữ sau khi khôi phục; thư mục xuất tùy chỉnh vẫn được giữ theo liên kết đã lưu.\n\n## Kiểm tra\n- py_compile: PASS cho app, worker, Qt UI, detector và module mới.\n- Kiểm tra workspace, thư mục lưu trữ, video xuất, asset copy, fingerprint khi di chuyển: PASS.\n- Kiểm tra ZIP có/không có video, cache CTA, thumbnail, backup, restore, tránh ghi đè và path traversal: PASS.\n- Kiểm tra thuật toán nối CTA cùng vị trí/từ khóa và từ chối ứng viên không liên quan: PASS.\n- Chưa kiểm thử Qt GUI trực tiếp trên Windows trong môi trường build do không có PySide6; cần nghiệm thu giao diện và FFmpeg/NVENC trên máy Windows.\n",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.7.0_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.7.0_UPDATE.zip",
+  "asset_size": 141080,
+  "asset_sha256": "4d1e02b6bd43ec8539019796f2789aa9913827972e07882a90f9eeb796a9f757",
+  "published_at": "2026-11-20T06:30:00Z",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_7_0.md",
+  "release_notes": "# v1.5.7.0 — Studio UI Refresh & MM:SS Timeline\n\n## Giao diện và điều hướng\n- Gom thanh công cụ trên theo luồng thao tác: Mở video; nhóm Dự án (Mở dự án/Khôi phục ZIP, Lưu dự án, Đóng gói ZIP); Hoàn tác/Làm lại; Xuất video.\n- Giữ nút Kiểm tra & cập nhật riêng trên header; menu Thêm chỉ còn thao tác Lưu thành/Tạo bản sao, không lặp các hành động đã có nút riêng.\n- Đổi mục sidebar Dự án thành Công cụ video, gom Tải video, Xử lý hàng loạt và Ghép video vào các tab cùng workspace.\n- Bỏ entry point Dựng video khỏi sidebar; không xóa pipeline xử lý hiện có.\n- Đưa Studio Branding vào trang làm việc trong cửa sổ chính, không mở cửa sổ phụ.\n- Đồng bộ màu Navy/Teal/Cyan và bố cục giữa Mask, Branding và Xuất & kiểm tra; tinh giản chú thích/hướng dẫn tĩnh, giữ trạng thái, tiến độ, lỗi và kết quả cần thiết.\n\n## Công cụ video — Ghép video\n- Bổ sung tab Ghép video trong Công cụ video, cho phép thêm/bỏ/sắp thứ tự clip, chọn tên file và thư mục đầu ra, theo dõi tiến độ và dừng tác vụ.\n- Dùng lại pipeline FFmpeg hiện có: stream-copy khi thông số tương thích; chuẩn hóa và mã hóa lại khi cần; ưu tiên NVENC khi máy hỗ trợ.\n- Khóa danh sách nguồn trong lúc ghép, ngăn đường dẫn đầu ra ghi đè một trong các video nguồn.\n\n## Định dạng thời gian\n- Chuẩn hóa các ô nhập và nhãn thời gian của Qt Studio sang MM:SS, ví dụ `01:30` và `125:30`.\n- Áp dụng cho vị trí phát, CTA, thời gian Branding và khoảng cắt trong Xuất & kiểm tra.\n- Giá trị nội bộ tiếp tục giữ độ chính xác số thực theo giây; chỉ chuỗi hiển thị được làm tròn tới giây.\n\n## Kiểm tra\n- `py_compile`: PASS cho các module Python chính.\n- Unit tests: 9/9 PASS, gồm kiểm tra định dạng MM:SS và parse mốc thời gian.\n- FFmpeg merge smoke test: PASS với hai video cùng thông số (stream-copy) và video khác độ phân giải (fallback encode), kết quả 6 giây đúng thứ tự.\n- Chưa kiểm thử GUI trực tiếp trên Windows trong môi trường build do môi trường này không có PySide6; cần nghiệm thu giao diện/DPI thực tế trên Windows.\n- NVENC phụ thuộc FFmpeg/driver trên máy người dùng; smoke test trong môi trường build đã dùng CPU fallback.\n",
   "files": [
     {
       "path": "PHIEN_BAN.txt",
-      "size": 90,
-      "sha256": "e3d11d48f1c0216df42370f921104d1e65d7cc2a7d9f55ec95f774b47b5a3741",
+      "size": 75,
+      "sha256": "ea3e983f3d77cbeb9ac38b1fb3e860b6115ede0245583447708613d9306e3571",
       "action": "replace"
     },
     {
-      "path": "RELEASE_NOTES_V1_5_6_40.md",
-      "size": 1203,
-      "sha256": "0ac2625766aa656cb87e59dd523efd7f2228784aac28b69c332c5f77df4805b0",
-      "action": "replace"
-    },
-    {
-      "path": "RELEASE_NOTES_V1_5_6_41.md",
-      "size": 3541,
-      "sha256": "03c361a38d3da48c872f721f81b1b0467e5e0335b314bf4592783b81bd4eb8fe",
+      "path": "RELEASE_NOTES_V1_5_7_0.md",
+      "size": 2535,
+      "sha256": "9a9d527fa5a8ae479ffb2041f51f2960d8288b633827e8fa2116a626bfff1c3f",
       "action": "replace"
     },
     {
       "path": "app.py",
-      "size": 338007,
-      "sha256": "ef824c0e145f26cccc0d2c55856396b9b220b45a546089c607fd7da8e4f74fc5",
-      "action": "replace"
-    },
-    {
-      "path": "cta_detector.py",
-      "size": 50474,
-      "sha256": "c0c51341246ed36daf9b074b8e08a9c1fa5733e437f5feef3941f079c932e665",
-      "action": "replace"
-    },
-    {
-      "path": "engine_worker.py",
-      "size": 73811,
-      "sha256": "855fd71634b239cdf852777a58b291f9630e04a5fc748e435de5f8fc845ae868",
+      "size": 338006,
+      "sha256": "e5baf4a9966a82f7cd98fd5595236eef7f6ca07401727682157a18f56102ea1a",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 249380,
-      "sha256": "192d59f0ec6fb01022e61c22f033b7be384dab15265464e5a0dad8a86c63fbf0",
+      "size": 260452,
+      "sha256": "f17baf10a10107d6c57eb794f696bbc11b05c6096f97b84d9f400fc8505f2b85",
       "action": "replace"
     },
     {
-      "path": "project_storage.py",
-      "size": 23448,
-      "sha256": "10e9695adcf3c75d7b3d0e5647906186c8ae2a22a29a5d33e502b87dfe3a53b1",
-      "action": "replace"
-    },
-    {
-      "path": "cta_merge.py",
-      "size": 3877,
-      "sha256": "66e3f5af4c245dacae282b548f1c0471590efb96ad91e9869be9941c54f4ae82",
+      "path": "timeline_seek.py",
+      "size": 2436,
+      "sha256": "fc0c6a09bd7e3a4a5e9ea972e8003e407180f3b0a5b7c355ea35921e66781a73",
       "action": "replace"
     },
     {
       "path": "CAI_DAT_VA_CHAY.bat",
-      "size": 5110,
-      "sha256": "ee9df722ec961a994eab959656035cb7749b6e1dc4233b1c938c2ccfa21350e4",
+      "size": 5108,
+      "sha256": "3569f9fb3ec863237e1fb328f01680e4c39135c9450015cfff2a586f6ab7ca73",
       "action": "replace"
     },
     {
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "size": 1325,
-      "sha256": "9311ea2128d1f017a9fa707a26fe89252af4f7dd5491d83e4ed8998cce69aa70",
+      "size": 1324,
+      "sha256": "5a273a86da0045b22828c27b65701f13d94170325519e63615e79901a93dd1b8",
       "action": "replace"
     }
   ]
