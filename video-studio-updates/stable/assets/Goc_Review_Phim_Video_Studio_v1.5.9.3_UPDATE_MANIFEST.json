@@ -1,0 +1,97 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.3_UPDATE.zip",
+  "asset_sha256": "479cc133b2b2a59775acd1f23e0d71531be1e66d2b5ee92e79e50fad605342f2",
+  "asset_size": 185878,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.3_UPDATE.zip",
+  "base_version": "1.5.9.2",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "2f85c56a5c7c662e6b1af6e024f918004e697beba9339aa7e77fd6ae67a96c29",
+      "size": 344627
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "4ee2a749524d2f584ce9e83681cde794f66ceee526dcc43b20c672b55844d641",
+      "size": 77
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "b53733513e9892ac02eaf903c94afce407fbc9471dc0cbde5da81a5c059f86a9",
+      "size": 24480
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "b79c09cfd818d8c1340fb61ace92bc64f4c8c6e72bce02e9a744c796a95eee32",
+      "size": 5898
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_3.md",
+      "sha256": "ed65e248fa4e077a0b09512b523bc43f335f9be8a3d5b03d77cee635a4ec3f2e",
+      "size": 1760
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "dcf2cea594aa89bf87b3f733b816244f679c66ef504c345fda1cc6b634498f6e",
+      "size": 5239
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "497ce50f1249536959541ffd907709fadf0ef804baea0b3fa7a9b339643d5535",
+      "size": 2404
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "badaa91f65d1b9d1f7dac341f8540cdb285d226f21bdbc49a6aa8afc302ffafd",
+      "size": 296157
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "a3437aa360e0fc44ec00b0c4f3c823e255e813fe3e9111ebd8841a56b7331be9",
+      "size": 86550
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "9d59f16c43c1f858909e6662e03725d4f482e4fa29124048b6a596442a2370b0",
+      "size": 6749
+    }
+  ],
+  "minimum_supported_version": "1.5.9.2",
+  "package_type": "UPDATE",
+  "release_notes": "# v1.5.9.3 — Studio Branding Preview Performance\n\n## Sửa điểm nghẽn Preview\n- Preview Branding trước đây dựng logo và nhãn ở độ phân giải gốc, có thể tới 4K, quét alpha trên toàn khung hình rồi dựng lại overlay lần thứ hai trước khi thu nhỏ để hiển thị.\n- Preview mới thu nhỏ khung hình xuống tối đa 1280×720 trước khi dựng lớp logo/nhãn.\n- Chỉ tạo lớp logo/nhãn một lần và dùng lại để ghép ảnh xem trước.\n- Giữ metadata kích thước gốc và quy đổi khung logo về tọa độ video ban đầu, nên thao tác kéo logo vẫn chính xác.\n- Chỉ coalescing preview trong giao diện, tối đa một yêu cầu đang chạy và chỉ gửi trạng thái mới nhất sau khi yêu cầu hiện tại hoàn tất.\n- Giảm debounce còn 120 ms; lỗi Preview hiển thị trong dòng trạng thái, không bật liên tiếp hộp thoại lỗi.\n\n## Không thay đổi\n- Độ phân giải, cấu hình overlay và chất lượng video xuất.\n- Cách áp dụng logo/nhãn, preset, vị trí kéo logo, phạm vi thời gian hoặc cấu hình riêng theo phân cảnh.\n- CTA Detector, Batch CTA, Mask/Before-After, lưu dự án, lịch sử backup và workflow xuất video.\n\n## Kiểm thử\n- Windows test với khung hình tổng hợp 4K: xác nhận lớp preview và compositing chỉ chạy ở 1280×720 một lần, tọa độ logo quy đổi đúng về khung gốc và file preview có kích thước chuẩn.\n- Qt/Engine smoke: kiểm tra yêu cầu preview được gom khi kéo slider, không tích lũy các request cũ.\n- Batch CTA Windows E2E và kiểm thử queue/project để bảo đảm không hồi quy.",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.9.2"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.3",
+  "published_at": "2026-11-20T15:54:20+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_3.md",
+  "full_package": {
+    "package_type": "FULL",
+    "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.3_FULL.zip",
+    "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.3_FULL.zip",
+    "asset_size": 1436298,
+    "asset_sha256": "4c87cc2bfa633f8df590fef95a05ff94cbd73430552a76fd81eb98a1d24d85d9",
+    "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.3_FULL_MANIFEST.json",
+    "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.3_FULL_MANIFEST.json"
+  }
+}
