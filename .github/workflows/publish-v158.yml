@@ -1,0 +1,127 @@
+name: Publish v1.5.8.0 Stable update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "video-studio-updates/upload-v1.5.8.0/READY"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble, verify and publish update
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, os, shutil, zipfile
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          root = Path(".")
+          stage = root / "video-studio-updates" / "upload-v1.5.8.0"
+          chunks = sorted(stage.glob("chunk*.b64"))
+          if len(chunks) != 14:
+              raise SystemExit(f"Expected 14 chunks, got {len(chunks)}")
+          encoded = "".join(p.read_text(encoding="ascii").strip() for p in chunks)
+          if len(encoded) != 163932:
+              raise SystemExit(f"Unexpected base64 length: {len(encoded)}")
+          archive_bytes = base64.b64decode(encoded, validate=True)
+          expected_size = 122949
+          expected_sha = "1b3445ccf079fc92c95d59b33238f7a69d493737bbf2821f5595d775ba7d221c"
+          actual_sha = hashlib.sha256(archive_bytes).hexdigest()
+          if len(archive_bytes) != expected_size or actual_sha != expected_sha:
+              raise SystemExit(f"Archive mismatch: size={len(archive_bytes)} sha256={actual_sha}")
+          asset_name = "Goc_Review_Phim_Video_Studio_v1.5.8.0_UPDATE.zip"
+          asset = root / "video-studio-updates" / "stable" / "assets" / asset_name
+          asset.parent.mkdir(parents=True, exist_ok=True)
+          asset.write_bytes(archive_bytes)
+
+          with zipfile.ZipFile(asset) as zf:
+              bad = zf.testzip()
+              if bad:
+                  raise SystemExit(f"Corrupt ZIP member: {bad}")
+              names = set(zf.namelist())
+              required = {
+                  "payload/PHIEN_BAN.txt",
+                  "payload/RELEASE_NOTES_V1_5_8_0.md",
+                  "payload/app.py",
+                  "payload/project_storage.py",
+                  "payload/qt_app.py",
+                  "payload/CAI_DAT_VA_CHAY.bat",
+                  "payload/HUONG_DAN_CAI_DAT.txt",
+              }
+              if not required.issubset(names):
+                  raise SystemExit(f"Missing payload entries: {sorted(required - names)}")
+              files = []
+              for name in sorted(required):
+                  data = zf.read(name)
+                  files.append({
+                      "path": name.removeprefix("payload/"),
+                      "size": len(data),
+                      "sha256": hashlib.sha256(data).hexdigest(),
+                      "action": "replace",
+                  })
+          notes = """# v1.5.8.0 — Project Workflow & Rolling Backups
+
+          ## Thanh thao tac tren cung
+          - Sap xep thanh thao tac theo dung 4 nhom: Hoan tac/Lam lai, Mo video, menu Du an, Xuat video.
+          - Gom Mo du an, Luu du an, Dong goi ZIP, Nhap du an tu ZIP va Lich su sao luu vao menu Du an.
+          - Bo nut Luu thanh/Tao ban sao khoi giao dien chinh.
+
+          ## Auto Save va sao luu luan phien
+          - Auto Save ghi vao file .grproj chinh; khong tao ban sao luu trong moi lan Auto Save.
+          - Luu du an thu cong tao moc du phong sau khi file chinh da ghi thanh cong.
+          - Bo qua moc trung lap neu noi dung khong thay doi; giu toi da 8 moc va tu dong loai moc cu nhat.
+          - Them hop thoai Lich su sao luu; phuc hoi moc duoc chon thanh mot du an moi, khong ghi de du an dang mo.
+
+          ## ZIP du an
+          - Dong goi ZIP tu dong su dung du an dang mo, luon kem video goc.
+          - Bao gom file .grproj, tai nguyen, Analysis/CTA, thumbnail va toi da 8 ban sao luu.
+          - Nhap ZIP tao mot du an moi va giu kiem tra an toan duong dan.
+
+          ## Kiem thu
+          - Unit tests: 12/12 PASS theo ket qua build.
+          - Chua kiem thu Qt GUI truc tiep tren Windows trong moi truong build do khong co PySide6; can nghiem thu giao dien/DPI tren Windows.
+          """
+          notes_path = root / "video-studio-updates" / "stable" / "RELEASE_NOTES_V1_5_8_0.md"
+          notes_path.write_text(notes.strip() + "\n", encoding="utf-8")
+          manifest = {
+              "schema_version": 1,
+              "app_id": "goc-review-phim-video-studio",
+              "channel": "stable",
+              "trust_mode": "https-sha256-v1",
+              "package_type": "UPDATE",
+              "version": "1.5.8.0",
+              "base_version": "1.5.7.0",
+              "minimum_supported_version": "1.5.7.0",
+              "supported_base_versions": ["1.5.7.0"],
+              "asset_name": asset_name,
+              "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/" + asset_name,
+              "asset_size": len(archive_bytes),
+              "asset_sha256": actual_sha,
+              "published_at": datetime.now(timezone.utc).isoformat(),
+              "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_8_0.md",
+              "release_notes": notes.strip(),
+              "files": files,
+          }
+          latest = root / "video-studio-updates" / "stable" / "latest.json"
+          latest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          shutil.rmtree(stage)
+          workflow = root / ".github" / "workflows" / "publish-v158.yml"
+          workflow.unlink(missing_ok=True)
+
+          os.system('git config user.name "github-actions[bot]"')
+          os.system('git config user.email "41898282+github-actions[bot]@users.noreply.github.com"')
+          os.system('git add "' + str(asset) + '" "' + str(notes_path) + '" "' + str(latest) + '" -A')
+          os.system('git add -A')
+          import subprocess
+          subprocess.run(["git", "commit", "-m", "Publish v1.5.8.0 Stable update"], check=True)
+          subprocess.run(["git", "push", "origin", "main"], check=True)
+          print(f"Published v1.5.8.0: {asset.stat().st_size} bytes, SHA256 {actual_sha}")
+          PY
