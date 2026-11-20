@@ -1,0 +1,88 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.5_UPDATE.zip",
+  "asset_sha256": "1356563edb5410221c11031712792554a43b7d75637afcee1fa733a19e03ba20",
+  "asset_size": 190179,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.5_UPDATE.zip",
+  "base_version": "1.5.9.4",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "49b219847c4d781a461c6c0f8d4e44905b0ed6cba8c65886693fc800128de0d6",
+      "size": 344627
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "296b0b6bcc73644a5c15a43dd669d47124a673e61408cd1f1a08d7aaf747f02a",
+      "size": 68
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "1b6f0c6f6e325eb78409f296534d1e24febb4efeadb6614abf4ff375557c98a6",
+      "size": 25035
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "76a2437c4426cf395253bcd2cfb2ab7ca1238fb509cf91ad0f80be4aa26caf8d",
+      "size": 7383
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_5.md",
+      "sha256": "a51b13751ed88c98c248dcb0e459ff1cefcdea5d48e9d9ad0ec470db1044d07b",
+      "size": 1866
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "3c4ed8ffcbb20cad5b0651deafaae2c195d18300ab0978431ad1ed784f7bf90c",
+      "size": 5239
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "7eb84cb52c71008749928af2df7c0221a0be119a185c04092297561fbacd0c14",
+      "size": 2404
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "f2c8699fb7fe4b6c93d3ede5e2ad9e3640c746034ea5da30b8c7f88dc2d6db9f",
+      "size": 314397
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "2ddb8ebbfa2a55e19c2ad6b9f01d04af88c526537c75fda722a1ad137f3fd0b6",
+      "size": 87063
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "9d59f16c43c1f858909e6662e03725d4f482e4fa29124048b6a596442a2370b0",
+      "size": 6749
+    }
+  ],
+  "minimum_supported_version": "1.5.9.4",
+  "package_type": "UPDATE",
+  "published_at": "2026-11-20T17:10:46+00:00",
+  "release_notes": "# v1.5.9.5 — Export & Quality Workspace\n\n## Giao diện Xuất & kiểm tra được tổ chức lại\n- Tạo workspace riêng cho Xuất video và Kiểm tra chất lượng.\n- Preview video và thanh vị trí phát nằm ở vùng trung tâm.\n- Chuyển điều khiển cắt thủ công Từ–Đến, danh sách khoảng cắt, xem video gốc và xem thử 12 giây ra khỏi panel cuộn bên phải.\n- Bổ sung timeline trực quan: cyan biểu thị phần giữ lại; vùng gạch chéo cam biểu thị khoảng sẽ bị loại. Nhấp timeline để seek tới vị trí tương ứng.\n- Cột phải tập trung vào thư mục xuất, xuất toàn bộ, cắt bỏ khoảng đã chọn, kiểm tra chất lượng và dừng tác vụ.\n\n## Bảo toàn chức năng\n- Giữ nguyên các lệnh Engine hiện có: export_full, cut_ranges, export_preview, open_qc, stop_export và choose_output.\n- Giữ nguyên định dạng thời gian, kiểm tra biên Từ–Đến, khả năng mở video gốc bằng ffplay và luồng xem thử.\n- Không thay đổi pipeline FFmpeg/encode, xử lý Mask, Branding, âm thanh, CTA Detector, Batch CTA, dự án, Auto Save, backup hoặc updater.\n- Không thêm điều khiển codec, độ phân giải, FPS hay preset giả khi backend Qt hiện chưa cung cấp những tuỳ chọn đó.\n\n## Kiểm thử\n- Static regression tests xác nhận workspace xuất riêng, preview, cut table, timeline, seek đồng bộ và các lệnh Engine cũ.\n- Windows CI chạy test layout cùng Branding preview regression và Qt/Engine smoke test.\n- Release workflow kiểm tra cú pháp Python, kiểm tra FULL/UPDATE ZIP, payload, preserve paths và SHA-256.\n\n## Cập nhật\n- UPDATE dành cho v1.5.9.4.\n- FULL package dành cho cài đặt mới hoặc máy không ở đúng bản nền.\n",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_5.md",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.9.4"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.5"
+}

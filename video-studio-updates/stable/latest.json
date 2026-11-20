@@ -1,59 +1,59 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.4_UPDATE.zip",
-  "asset_sha256": "0b61929463e22cc9d48ebc48465eb198c44649d58bac03b3152f1e74cb7c6864",
-  "asset_size": 186536,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.4_UPDATE.zip",
-  "base_version": "1.5.9.3",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.5_UPDATE.zip",
+  "asset_sha256": "1356563edb5410221c11031712792554a43b7d75637afcee1fa733a19e03ba20",
+  "asset_size": 190179,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.5_UPDATE.zip",
+  "base_version": "1.5.9.4",
   "channel": "stable",
   "files": [
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "ba558b69eccb9b37c2148c7856e7ba417429d7275ae3c7be5a438edeb377263d",
+      "sha256": "49b219847c4d781a461c6c0f8d4e44905b0ed6cba8c65886693fc800128de0d6",
       "size": 344627
     },
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "2194164c74f4c197aa4216dc5e288abb3a420a6ea791c8879e0887647cc94161",
-      "size": 62
+      "sha256": "296b0b6bcc73644a5c15a43dd669d47124a673e61408cd1f1a08d7aaf747f02a",
+      "size": 68
     },
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "4449de75dc0b343f1e7e1720c1839d3ca264a57e8d079e3729a6fa099ed03a76",
-      "size": 24653
+      "sha256": "1b6f0c6f6e325eb78409f296534d1e24febb4efeadb6614abf4ff375557c98a6",
+      "size": 25035
     },
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "d694cdc53e8478f067185e87163f2e25ecc71fd5a892a03f184e382b208522d7",
-      "size": 6414
+      "sha256": "76a2437c4426cf395253bcd2cfb2ab7ca1238fb509cf91ad0f80be4aa26caf8d",
+      "size": 7383
     },
     {
       "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_4.md",
-      "sha256": "207a3922bab21e5ad5233271514c5eb1aed9887a8394b19ce206baf303a5014e",
-      "size": 1321
+      "path": "RELEASE_NOTES_V1_5_9_5.md",
+      "sha256": "a51b13751ed88c98c248dcb0e459ff1cefcdea5d48e9d9ad0ec470db1044d07b",
+      "size": 1866
     },
     {
       "action": "replace",
       "path": "CAI_DAT_VA_CHAY.bat",
-      "sha256": "a8a5dfc98c5c06e9534f5bba27a3acb98a813ad0e8c7a453c8fc7beb9e793577",
+      "sha256": "3c4ed8ffcbb20cad5b0651deafaae2c195d18300ab0978431ad1ed784f7bf90c",
       "size": 5239
     },
     {
       "action": "replace",
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "sha256": "159f21f9c9546c2a12bd39282a87f3b4a5d583806d9a3cd2417331c6da6223c2",
+      "sha256": "7eb84cb52c71008749928af2df7c0221a0be119a185c04092297561fbacd0c14",
       "size": 2404
     },
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "f7fc173d07b36e8bd0d2e70011e41cf813010a779f7ea85cee30b076bf5e843a",
-      "size": 298537
+      "sha256": "f2c8699fb7fe4b6c93d3ede5e2ad9e3640c746034ea5da30b8c7f88dc2d6db9f",
+      "size": 314397
     },
     {
       "action": "replace",
@@ -74,15 +74,15 @@
       "size": 6749
     }
   ],
-  "minimum_supported_version": "1.5.9.3",
+  "minimum_supported_version": "1.5.9.4",
   "package_type": "UPDATE",
-  "release_notes": "# v1.5.9.4 — Smooth Studio Branding Drag\n\n## Sửa độ trễ khi kéo logo\n- Tách preview thành ảnh nền (video + nhãn) và lớp logo PNG trong suốt.\n- Canvas Qt vẽ lớp logo riêng và cập nhật vị trí ngay trong mouseMoveEvent; thao tác kéo không gửi lệnh render sang Engine.\n- Giữ nguyên điểm người dùng nắm trên logo, giới hạn logo trong khung hình và quy đổi tọa độ về video gốc.\n- Chỉ gửi một yêu cầu preview cuối cùng khi nhả chuột để đồng bộ trạng thái.\n\n## Không thay đổi\n- Pipeline áp dụng Branding và xuất video; độ phân giải, codec, chất lượng và preset.\n- Kích thước, độ mờ, góc xoay, vị trí preset và phạm vi thời gian hiển thị.\n- CTA Detector, Batch CTA, Mask/Before-After, lưu dự án, Auto Save, backup và updater.\n\n## Kiểm thử\n- Engine test 4K xác nhận preview render ở 1280×720, ảnh nền không chứa logo đã tách, lớp logo PNG có alpha và crop đúng kích thước.\n- Qt canvas test xác nhận logo di chuyển trực tiếp theo con trỏ và chỉ phát tín hiệu cập nhật một lần khi nhả chuột.\n- Release workflow chạy compile, Branding tests, Batch CTA tests, đóng gói FULL/UPDATE và xác minh SHA-256.\n",
+  "published_at": "2026-11-20T17:10:46+00:00",
+  "release_notes": "# v1.5.9.5 — Export & Quality Workspace\n\n## Giao diện Xuất & kiểm tra được tổ chức lại\n- Tạo workspace riêng cho Xuất video và Kiểm tra chất lượng.\n- Preview video và thanh vị trí phát nằm ở vùng trung tâm.\n- Chuyển điều khiển cắt thủ công Từ–Đến, danh sách khoảng cắt, xem video gốc và xem thử 12 giây ra khỏi panel cuộn bên phải.\n- Bổ sung timeline trực quan: cyan biểu thị phần giữ lại; vùng gạch chéo cam biểu thị khoảng sẽ bị loại. Nhấp timeline để seek tới vị trí tương ứng.\n- Cột phải tập trung vào thư mục xuất, xuất toàn bộ, cắt bỏ khoảng đã chọn, kiểm tra chất lượng và dừng tác vụ.\n\n## Bảo toàn chức năng\n- Giữ nguyên các lệnh Engine hiện có: export_full, cut_ranges, export_preview, open_qc, stop_export và choose_output.\n- Giữ nguyên định dạng thời gian, kiểm tra biên Từ–Đến, khả năng mở video gốc bằng ffplay và luồng xem thử.\n- Không thay đổi pipeline FFmpeg/encode, xử lý Mask, Branding, âm thanh, CTA Detector, Batch CTA, dự án, Auto Save, backup hoặc updater.\n- Không thêm điều khiển codec, độ phân giải, FPS hay preset giả khi backend Qt hiện chưa cung cấp những tuỳ chọn đó.\n\n## Kiểm thử\n- Static regression tests xác nhận workspace xuất riêng, preview, cut table, timeline, seek đồng bộ và các lệnh Engine cũ.\n- Windows CI chạy test layout cùng Branding preview regression và Qt/Engine smoke test.\n- Release workflow kiểm tra cú pháp Python, kiểm tra FULL/UPDATE ZIP, payload, preserve paths và SHA-256.\n\n## Cập nhật\n- UPDATE dành cho v1.5.9.4.\n- FULL package dành cho cài đặt mới hoặc máy không ở đúng bản nền.\n",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_5.md",
   "schema_version": 1,
   "supported_base_versions": [
-    "1.5.9.3"
+    "1.5.9.4"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.4",
-  "published_at": "2026-11-20T16:19:23+00:00",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_4.md"
+  "version": "1.5.9.5"
 }
