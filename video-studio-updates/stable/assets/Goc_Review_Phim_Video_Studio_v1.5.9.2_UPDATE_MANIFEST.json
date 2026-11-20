@@ -1,0 +1,97 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.2_UPDATE.zip",
+  "asset_sha256": "6c27a480599a3bd1734fd271ea0201eb19a8470589e50ab6a262fbf255c14cf4",
+  "asset_size": 184564,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.2_UPDATE.zip",
+  "base_version": "1.5.9.1",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "d0642740dca75219d1cf957bdd2f209866b9daf86df093d4b39093b8e27ffcd2",
+      "size": 344627
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "433ab4600dbe1eace34e98974e70b27179055c19a0049e221f7282b150c3c4cd",
+      "size": 84
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "7324a1412267bc3a49e5f34f7d7d743b968b4f9ccf371b0313c579d470acf84d",
+      "size": 24083
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "d726994b615861ccb6877e04788aff125a51c5eb50ff8f6ca99c1d81e8a7a67e",
+      "size": 5115
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_2.md",
+      "sha256": "90bf97683d857cd638247e84c76a5eeb9da1821603f1223e5bb3fb9617deffeb",
+      "size": 1840
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "0f6460b789680c5a792b1a0adc195f881aca4e418519030a1a6767e0612823e8",
+      "size": 5239
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "ecd9946b5b69dc5b71cf0349fd3e5567cbe3618163aa4989f92faea3ecb04c8a",
+      "size": 2404
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "8b95801595833c65d9be9ff3b422c86062ee19e3b04fecf19787c9aa1edcb13b",
+      "size": 293903
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "24fe04f987372c607d717701b1a38b06db981db6e4dc6c16ece2fab0e630ea1f",
+      "size": 85428
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "9d59f16c43c1f858909e6662e03725d4f482e4fa29124048b6a596442a2370b0",
+      "size": 6749
+    }
+  ],
+  "minimum_supported_version": "1.5.9.1",
+  "package_type": "UPDATE",
+  "release_notes": "# v1.5.9.2 — Project Toolbar & Backup History\n\n## Thanh công cụ dự án\n- Hiển thị riêng các thao tác Mở dự án, Lưu, Lưu thành, Lịch sử sao lưu, Nhập ZIP và Đóng gói ZIP ngay trên thanh công cụ phía trên.\n- Bỏ nút menu Dự án xổ xuống; các chức năng không còn bị giấu trong một ô.\n- Giữ nút Mở video và Xuất video ở thanh thao tác hiện tại.\n- Giữ nguyên quy trình lưu lần đầu chọn vị trí, các lần sau lưu nhanh; Lưu thành luôn tạo file dự án riêng.\n\n## Sidebar\n- Bỏ icon trang trí ở tiêu đề nhóm CÔNG CỤ VIDEO.\n- Đặt icon video ngay trên nút điều hướng Công cụ video, cùng phong cách với các mục CTA Detector, Làm sạch · Mask và Studio Branding.\n\n## Lịch sử sao lưu\n- Nút Lịch sử sao lưu luôn bấm được, không còn bị khóa chỉ vì dự án chưa có đường dẫn .grproj.\n- Nếu chưa có file dự án hoặc chưa có snapshot, hộp thoại vẫn mở và hiển thị hướng dẫn rõ lý do chưa có bản sao lưu.\n- Không có snapshot thì nút khôi phục tiếp tục bị khóa; khi có snapshot, người dùng phải chủ động chọn một dòng.\n- Khôi phục vẫn tạo một dự án mới, không ghi đè dự án hiện tại. Auto Save vẫn không tạo snapshot thủ công.\n\n## Tương thích và kiểm thử\n- Không thay đổi CTA Detector, Batch CTA, OCR, quy trình cắt duyệt thủ công hoặc engine xuất video.\n- Windows Qt/Engine smoke kiểm tra các nút dự án hiển thị trực tiếp trên thanh trên, icon Công cụ video nằm đúng nút điều hướng, và hộp thoại lịch sử rỗng có thông báo rõ ràng.\n- Gói UPDATE hỗ trợ nâng cấp trực tiếp từ v1.5.9.1.\n",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.9.1"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.2",
+  "published_at": "2026-11-20T15:27:09+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_2.md",
+  "full_package": {
+    "package_type": "FULL",
+    "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.2_FULL.zip",
+    "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.2_FULL.zip",
+    "asset_size": 1432162,
+    "asset_sha256": "5b0b72544d5bebaa260b245f254e994cf6a2501f55afd00f9092a0e4810675b8",
+    "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.2_FULL_MANIFEST.json",
+    "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.2_FULL_MANIFEST.json"
+  }
+}
