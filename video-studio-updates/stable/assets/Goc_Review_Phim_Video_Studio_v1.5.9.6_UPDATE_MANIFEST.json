@@ -1,0 +1,88 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.6_UPDATE.zip",
+  "asset_sha256": "04fc87d413e4a01ce111a7e96fcba471591179e30a98b64ecc3828f255b8d657",
+  "asset_size": 190442,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.6_UPDATE.zip",
+  "base_version": "1.5.9.5",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "130e64b595716869858bfe44dd803411a564a9983800be34a876abfe886f33a4",
+      "size": 344627
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "1578eff69b665989ab3539e417a1a74c71be672d963d6352c568b15cec57b995",
+      "size": 59
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "530294aa03c2cc3598258ee96c17f6323b9105088d24ea3cd7a4c5f3d0db30d3",
+      "size": 25208
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "b0f9cbea1312ce9a3f6e569eca4b53498356cf29a1066785d21b9a2d00661266",
+      "size": 8079
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_6.md",
+      "sha256": "58d43c587059b46e20b4651c940c4c5338c44dfa4b5522b17fd2b7e673d7de37",
+      "size": 1342
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "07fb22e6783af1628437c96ff2719aeeec22cd0a3cc0d2031c2913fc38d0fb84",
+      "size": 5239
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "00fe037441a22a761c8e252dd542ed3706f6a70f5f29491bb308e4fc13d39337",
+      "size": 2404
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "76509c152c5e750fd7fa38577d11ee2e4b53f304a3139c8fb5ae57f9a3140433",
+      "size": 315348
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "2ddb8ebbfa2a55e19c2ad6b9f01d04af88c526537c75fda722a1ad137f3fd0b6",
+      "size": 87063
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "9d59f16c43c1f858909e6662e03725d4f482e4fa29124048b6a596442a2370b0",
+      "size": 6749
+    }
+  ],
+  "minimum_supported_version": "1.5.9.5",
+  "package_type": "UPDATE",
+  "release_notes": "# v1.5.9.6 — Export Typography Polish\n\n## Typography and readability\n- Standardize the Qt UI font at 10.1 pt Medium using Segoe UI, with suitable installed-font fallback.\n- Make generic QLabel backgrounds transparent so section titles, field captions, and status labels inherit their parent card surface instead of showing black strips.\n- Normalize font sizes and weights for section headings, export metadata, timecodes, cut-range table cells/headers, and action buttons.\n- Escape the literal ampersand in “Cắt bỏ & xuất phần còn lại” so Qt does not treat it as a mnemonic.\n\n## Preserved behavior\n- No change to the Export workspace layout or its preview, seek, manual cut list, and cut timeline interactions.\n- No change to Engine commands, output folder behavior, manual cut validation, source preview, QC, or FFmpeg export pipeline.\n- No change to Branding, CTA Detector, Batch CTA, project persistence, Auto Save, backup, or updater behavior.\n\n## Verification\n- Add regression checks for transparent QLabel styling, the shared UI font, dedicated manual-cut table typography, and literal ampersand rendering.\n- Windows CI runs Export workspace tests and the existing Qt/Engine smoke test.\n- Release workflow validates FULL/UPDATE ZIP integrity and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.5.\n",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.9.5"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.6",
+  "published_at": "2026-11-20T17:18:39+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_6.md"
+}

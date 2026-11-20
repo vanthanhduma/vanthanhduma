@@ -1,59 +1,59 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.5_UPDATE.zip",
-  "asset_sha256": "1356563edb5410221c11031712792554a43b7d75637afcee1fa733a19e03ba20",
-  "asset_size": 190179,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.5_UPDATE.zip",
-  "base_version": "1.5.9.4",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.6_UPDATE.zip",
+  "asset_sha256": "04fc87d413e4a01ce111a7e96fcba471591179e30a98b64ecc3828f255b8d657",
+  "asset_size": 190442,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.6_UPDATE.zip",
+  "base_version": "1.5.9.5",
   "channel": "stable",
   "files": [
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "49b219847c4d781a461c6c0f8d4e44905b0ed6cba8c65886693fc800128de0d6",
+      "sha256": "130e64b595716869858bfe44dd803411a564a9983800be34a876abfe886f33a4",
       "size": 344627
     },
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "296b0b6bcc73644a5c15a43dd669d47124a673e61408cd1f1a08d7aaf747f02a",
-      "size": 68
+      "sha256": "1578eff69b665989ab3539e417a1a74c71be672d963d6352c568b15cec57b995",
+      "size": 59
     },
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "1b6f0c6f6e325eb78409f296534d1e24febb4efeadb6614abf4ff375557c98a6",
-      "size": 25035
+      "sha256": "530294aa03c2cc3598258ee96c17f6323b9105088d24ea3cd7a4c5f3d0db30d3",
+      "size": 25208
     },
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "76a2437c4426cf395253bcd2cfb2ab7ca1238fb509cf91ad0f80be4aa26caf8d",
-      "size": 7383
+      "sha256": "b0f9cbea1312ce9a3f6e569eca4b53498356cf29a1066785d21b9a2d00661266",
+      "size": 8079
     },
     {
       "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_5.md",
-      "sha256": "a51b13751ed88c98c248dcb0e459ff1cefcdea5d48e9d9ad0ec470db1044d07b",
-      "size": 1866
+      "path": "RELEASE_NOTES_V1_5_9_6.md",
+      "sha256": "58d43c587059b46e20b4651c940c4c5338c44dfa4b5522b17fd2b7e673d7de37",
+      "size": 1342
     },
     {
       "action": "replace",
       "path": "CAI_DAT_VA_CHAY.bat",
-      "sha256": "3c4ed8ffcbb20cad5b0651deafaae2c195d18300ab0978431ad1ed784f7bf90c",
+      "sha256": "07fb22e6783af1628437c96ff2719aeeec22cd0a3cc0d2031c2913fc38d0fb84",
       "size": 5239
     },
     {
       "action": "replace",
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "sha256": "7eb84cb52c71008749928af2df7c0221a0be119a185c04092297561fbacd0c14",
+      "sha256": "00fe037441a22a761c8e252dd542ed3706f6a70f5f29491bb308e4fc13d39337",
       "size": 2404
     },
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "f2c8699fb7fe4b6c93d3ede5e2ad9e3640c746034ea5da30b8c7f88dc2d6db9f",
-      "size": 314397
+      "sha256": "76509c152c5e750fd7fa38577d11ee2e4b53f304a3139c8fb5ae57f9a3140433",
+      "size": 315348
     },
     {
       "action": "replace",
@@ -74,15 +74,15 @@
       "size": 6749
     }
   ],
-  "minimum_supported_version": "1.5.9.4",
+  "minimum_supported_version": "1.5.9.5",
   "package_type": "UPDATE",
-  "published_at": "2026-11-20T17:10:46+00:00",
-  "release_notes": "# v1.5.9.5 — Export & Quality Workspace\n\n## Giao diện Xuất & kiểm tra được tổ chức lại\n- Tạo workspace riêng cho Xuất video và Kiểm tra chất lượng.\n- Preview video và thanh vị trí phát nằm ở vùng trung tâm.\n- Chuyển điều khiển cắt thủ công Từ–Đến, danh sách khoảng cắt, xem video gốc và xem thử 12 giây ra khỏi panel cuộn bên phải.\n- Bổ sung timeline trực quan: cyan biểu thị phần giữ lại; vùng gạch chéo cam biểu thị khoảng sẽ bị loại. Nhấp timeline để seek tới vị trí tương ứng.\n- Cột phải tập trung vào thư mục xuất, xuất toàn bộ, cắt bỏ khoảng đã chọn, kiểm tra chất lượng và dừng tác vụ.\n\n## Bảo toàn chức năng\n- Giữ nguyên các lệnh Engine hiện có: export_full, cut_ranges, export_preview, open_qc, stop_export và choose_output.\n- Giữ nguyên định dạng thời gian, kiểm tra biên Từ–Đến, khả năng mở video gốc bằng ffplay và luồng xem thử.\n- Không thay đổi pipeline FFmpeg/encode, xử lý Mask, Branding, âm thanh, CTA Detector, Batch CTA, dự án, Auto Save, backup hoặc updater.\n- Không thêm điều khiển codec, độ phân giải, FPS hay preset giả khi backend Qt hiện chưa cung cấp những tuỳ chọn đó.\n\n## Kiểm thử\n- Static regression tests xác nhận workspace xuất riêng, preview, cut table, timeline, seek đồng bộ và các lệnh Engine cũ.\n- Windows CI chạy test layout cùng Branding preview regression và Qt/Engine smoke test.\n- Release workflow kiểm tra cú pháp Python, kiểm tra FULL/UPDATE ZIP, payload, preserve paths và SHA-256.\n\n## Cập nhật\n- UPDATE dành cho v1.5.9.4.\n- FULL package dành cho cài đặt mới hoặc máy không ở đúng bản nền.\n",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_5.md",
+  "release_notes": "# v1.5.9.6 — Export Typography Polish\n\n## Typography and readability\n- Standardize the Qt UI font at 10.1 pt Medium using Segoe UI, with suitable installed-font fallback.\n- Make generic QLabel backgrounds transparent so section titles, field captions, and status labels inherit their parent card surface instead of showing black strips.\n- Normalize font sizes and weights for section headings, export metadata, timecodes, cut-range table cells/headers, and action buttons.\n- Escape the literal ampersand in “Cắt bỏ & xuất phần còn lại” so Qt does not treat it as a mnemonic.\n\n## Preserved behavior\n- No change to the Export workspace layout or its preview, seek, manual cut list, and cut timeline interactions.\n- No change to Engine commands, output folder behavior, manual cut validation, source preview, QC, or FFmpeg export pipeline.\n- No change to Branding, CTA Detector, Batch CTA, project persistence, Auto Save, backup, or updater behavior.\n\n## Verification\n- Add regression checks for transparent QLabel styling, the shared UI font, dedicated manual-cut table typography, and literal ampersand rendering.\n- Windows CI runs Export workspace tests and the existing Qt/Engine smoke test.\n- Release workflow validates FULL/UPDATE ZIP integrity and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.5.\n",
   "schema_version": 1,
   "supported_base_versions": [
-    "1.5.9.4"
+    "1.5.9.5"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.5"
+  "version": "1.5.9.6",
+  "published_at": "2026-11-20T17:18:39+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_6.md"
 }
