@@ -1,0 +1,41 @@
+﻿GOC REVIEW PHIM VIDEO STUDIO v1.5.8.0 - CAI DAT MAY MOI
+========================================================
+
+1. Giai nen toan bo file FULL ZIP vao mot thu muc, vi du:
+   D:\GocReviewVideoStudio
+
+2. Cai dat lan dau:
+   - Nhan dup CAI_DAT_VA_CHAY.bat
+   - May can Internet trong lan dau de tao .venv va cai thu vien Python/Qt.
+   - Khong dong cua so den khi hien thong bao cai dat xong.
+   - Script se tao shortcut Desktop neu thanh cong.
+
+3. Cai Tesseract OCR cho CTA:
+   - Chay CAI_TESSERACT_OCR.bat.
+   - Neu may chua co Tesseract va co winget, script se de nghi cai tu dong.
+   - Du lieu ngon ngu English + Vietnamese da duoc kem trong assets\tessdata.
+
+4. Mo ung dung:
+   - Dung shortcut "Goc Review Phim" tren Desktop, hoac
+   - Mo MO_GOC_REVIEW_PHIM.vbs.
+   - Khong can mo ChatGPT, khong can dang nhap GitHub.
+
+5. Cap nhat ve sau:
+   - Mo ung dung > Kiem tra & cap nhat.
+   - Khong giai nen goi UPDATE de de len thu muc app.
+   - FULL ZIP nay dung de cai moi tren may chua co ung dung.
+
+Luu y:
+- Khong xoa thu muc projects, autosave, downloads, renders neu da co du lieu.
+- Video Studio khong kem FFmpeg system; co the tai FFmpeg tu muc cong cu trong app neu can.
+- Neu cai dat bao loi, gui file CAI_DAT_LOG.txt de kiem tra.
+
+Yeu cau: Windows 10/11, Python 3.11+ (script se dung Python co san va tao .venv rieng).
+
+
+6. Quan ly du an trong v1.5.8.0:
+   - Thanh thao tac gom Hoan tac/Lam lai, Mo video, menu Du an va Xuat video.
+   - Menu Du an gom Mo du an, Luu du an, Dong goi ZIP (luon kem video goc), Nhap du an tu ZIP va Lich su sao luu.
+   - Auto Save ghi vao file du an chinh; khong tao them ban sao luu.
+   - Moi lan Luu du an thu cong tao mot moc du phong sau khi ghi thanh cong; toi da 8 moc, tu dong loai moc cu nhat.
+   - Lich su sao luu co the phuc hoi thanh mot du an moi, khong ghi de du an dang mo.
