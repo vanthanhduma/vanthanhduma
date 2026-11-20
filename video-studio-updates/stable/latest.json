@@ -1,59 +1,59 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.6_UPDATE.zip",
-  "asset_sha256": "04fc87d413e4a01ce111a7e96fcba471591179e30a98b64ecc3828f255b8d657",
-  "asset_size": 190442,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.6_UPDATE.zip",
-  "base_version": "1.5.9.5",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.7_UPDATE.zip",
+  "asset_sha256": "6e3b88e944685632b9ff1d175f4ecd593b4203fbd130fc5998517ef75800a8b3",
+  "asset_size": 190943,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.7_UPDATE.zip",
+  "base_version": "1.5.9.6",
   "channel": "stable",
   "files": [
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "130e64b595716869858bfe44dd803411a564a9983800be34a876abfe886f33a4",
+      "sha256": "23c5141e4bbb5f9ec4898d1806f2a3e8d23a58c518659b5d54c4522f835102c1",
       "size": 344627
     },
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "1578eff69b665989ab3539e417a1a74c71be672d963d6352c568b15cec57b995",
-      "size": 59
+      "sha256": "292b00d724d32840f4d56a90623d72ea7e61b5f2fce0c4e6699470653dbccd55",
+      "size": 58
     },
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "530294aa03c2cc3598258ee96c17f6323b9105088d24ea3cd7a4c5f3d0db30d3",
-      "size": 25208
+      "sha256": "7a72ae63772eba4ec95ad5818f611987c1d01dfe18934899d6fd2809d8f04638",
+      "size": 25566
     },
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "b0f9cbea1312ce9a3f6e569eca4b53498356cf29a1066785d21b9a2d00661266",
-      "size": 8079
+      "sha256": "dcccce450f5c8282f6ea91cef0e766f159fb06f0f788034b201a4e5ffb65df4e",
+      "size": 8906
     },
     {
       "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_6.md",
-      "sha256": "58d43c587059b46e20b4651c940c4c5338c44dfa4b5522b17fd2b7e673d7de37",
-      "size": 1342
+      "path": "RELEASE_NOTES_V1_5_9_7.md",
+      "sha256": "c9606aa364ccbb72c083a8f9f70915c085212d3020b86fcd04eb76d946b83046",
+      "size": 1428
     },
     {
       "action": "replace",
       "path": "CAI_DAT_VA_CHAY.bat",
-      "sha256": "07fb22e6783af1628437c96ff2719aeeec22cd0a3cc0d2031c2913fc38d0fb84",
+      "sha256": "0c777cf0b546264f0d182ad67823aa0da2015cd41a70fb96d3d24c408adf5a5c",
       "size": 5239
     },
     {
       "action": "replace",
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "sha256": "00fe037441a22a761c8e252dd542ed3706f6a70f5f29491bb308e4fc13d39337",
+      "sha256": "113fbdab979250dbcd6810ee40f20c1017db8c3f4341bd532a299ddd47366783",
       "size": 2404
     },
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "76509c152c5e750fd7fa38577d11ee2e4b53f304a3139c8fb5ae57f9a3140433",
-      "size": 315348
+      "sha256": "203d12db2aeaf8b6c62a1c9e512e5abe5c096e356fa4f7ee811fb3058afcbdfd",
+      "size": 315685
     },
     {
       "action": "replace",
@@ -74,15 +74,15 @@
       "size": 6749
     }
   ],
-  "minimum_supported_version": "1.5.9.5",
+  "minimum_supported_version": "1.5.9.6",
   "package_type": "UPDATE",
-  "release_notes": "# v1.5.9.6 — Export Typography Polish\n\n## Typography and readability\n- Standardize the Qt UI font at 10.1 pt Medium using Segoe UI, with suitable installed-font fallback.\n- Make generic QLabel backgrounds transparent so section titles, field captions, and status labels inherit their parent card surface instead of showing black strips.\n- Normalize font sizes and weights for section headings, export metadata, timecodes, cut-range table cells/headers, and action buttons.\n- Escape the literal ampersand in “Cắt bỏ & xuất phần còn lại” so Qt does not treat it as a mnemonic.\n\n## Preserved behavior\n- No change to the Export workspace layout or its preview, seek, manual cut list, and cut timeline interactions.\n- No change to Engine commands, output folder behavior, manual cut validation, source preview, QC, or FFmpeg export pipeline.\n- No change to Branding, CTA Detector, Batch CTA, project persistence, Auto Save, backup, or updater behavior.\n\n## Verification\n- Add regression checks for transparent QLabel styling, the shared UI font, dedicated manual-cut table typography, and literal ampersand rendering.\n- Windows CI runs Export workspace tests and the existing Qt/Engine smoke test.\n- Release workflow validates FULL/UPDATE ZIP integrity and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.5.\n",
+  "release_notes": "# v1.5.9.7 — Global UI Polish\n\n## UI consistency across all workspaces\n- Apply one readable type scale across Branding, Mask/Before-After, CTA Detector, Downloader, Batch CTA, Merge Video, and Export & Quality.\n- Base application font: 10.5 pt Medium; use Segoe UI with installed Vietnamese-capable fallback.\n- Increase and normalize section titles, button labels, tabs, input text, captions, table rows, and table headers.\n- Make content-only controls transparent so checkboxes, radio buttons, sliders, generic frames, group-boxes, and stack/tab containers do not paint dark rectangles behind their text.\n- Give the project/video identity area more width while retaining full path/name tooltips.\n\n## Preserved behavior\n- Keep every page's current layout, control order, and functionality.\n- No changes to Branding render/drag/apply, Mask selection/inpaint, CTA detection/review/cut, Downloader, Batch CTA queue, Merge Video, Export/QC, FFmpeg settings, projects, Auto Save, backups, or updater commands.\n- Keep the navy/teal/cyan Studio palette.\n\n## Verification\n- Add cross-workspace global theme regression tests.\n- Windows Qt workflow runs theme tests, Export workspace tests, Branding preview regression, and Qt/Engine smoke.\n- Release workflow runs Python compile/tests and validates FULL/UPDATE ZIP contents, payload hashes, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.6.\n",
   "schema_version": 1,
   "supported_base_versions": [
-    "1.5.9.5"
+    "1.5.9.6"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.6",
-  "published_at": "2026-11-20T17:18:39+00:00",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_6.md"
+  "version": "1.5.9.7",
+  "published_at": "2026-11-20T17:31:40+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_7.md"
 }

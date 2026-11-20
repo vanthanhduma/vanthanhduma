@@ -1,0 +1,88 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.7_UPDATE.zip",
+  "asset_sha256": "6e3b88e944685632b9ff1d175f4ecd593b4203fbd130fc5998517ef75800a8b3",
+  "asset_size": 190943,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.7_UPDATE.zip",
+  "base_version": "1.5.9.6",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "23c5141e4bbb5f9ec4898d1806f2a3e8d23a58c518659b5d54c4522f835102c1",
+      "size": 344627
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "292b00d724d32840f4d56a90623d72ea7e61b5f2fce0c4e6699470653dbccd55",
+      "size": 58
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "7a72ae63772eba4ec95ad5818f611987c1d01dfe18934899d6fd2809d8f04638",
+      "size": 25566
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "dcccce450f5c8282f6ea91cef0e766f159fb06f0f788034b201a4e5ffb65df4e",
+      "size": 8906
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_7.md",
+      "sha256": "c9606aa364ccbb72c083a8f9f70915c085212d3020b86fcd04eb76d946b83046",
+      "size": 1428
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "0c777cf0b546264f0d182ad67823aa0da2015cd41a70fb96d3d24c408adf5a5c",
+      "size": 5239
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "113fbdab979250dbcd6810ee40f20c1017db8c3f4341bd532a299ddd47366783",
+      "size": 2404
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "203d12db2aeaf8b6c62a1c9e512e5abe5c096e356fa4f7ee811fb3058afcbdfd",
+      "size": 315685
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "2ddb8ebbfa2a55e19c2ad6b9f01d04af88c526537c75fda722a1ad137f3fd0b6",
+      "size": 87063
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "9d59f16c43c1f858909e6662e03725d4f482e4fa29124048b6a596442a2370b0",
+      "size": 6749
+    }
+  ],
+  "minimum_supported_version": "1.5.9.6",
+  "package_type": "UPDATE",
+  "release_notes": "# v1.5.9.7 — Global UI Polish\n\n## UI consistency across all workspaces\n- Apply one readable type scale across Branding, Mask/Before-After, CTA Detector, Downloader, Batch CTA, Merge Video, and Export & Quality.\n- Base application font: 10.5 pt Medium; use Segoe UI with installed Vietnamese-capable fallback.\n- Increase and normalize section titles, button labels, tabs, input text, captions, table rows, and table headers.\n- Make content-only controls transparent so checkboxes, radio buttons, sliders, generic frames, group-boxes, and stack/tab containers do not paint dark rectangles behind their text.\n- Give the project/video identity area more width while retaining full path/name tooltips.\n\n## Preserved behavior\n- Keep every page's current layout, control order, and functionality.\n- No changes to Branding render/drag/apply, Mask selection/inpaint, CTA detection/review/cut, Downloader, Batch CTA queue, Merge Video, Export/QC, FFmpeg settings, projects, Auto Save, backups, or updater commands.\n- Keep the navy/teal/cyan Studio palette.\n\n## Verification\n- Add cross-workspace global theme regression tests.\n- Windows Qt workflow runs theme tests, Export workspace tests, Branding preview regression, and Qt/Engine smoke.\n- Release workflow runs Python compile/tests and validates FULL/UPDATE ZIP contents, payload hashes, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.6.\n",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.9.6"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.7",
+  "published_at": "2026-11-20T17:31:40+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_7.md"
+}
