@@ -1,0 +1,88 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.4_UPDATE.zip",
+  "asset_sha256": "0b61929463e22cc9d48ebc48465eb198c44649d58bac03b3152f1e74cb7c6864",
+  "asset_size": 186536,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.4_UPDATE.zip",
+  "base_version": "1.5.9.3",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "ba558b69eccb9b37c2148c7856e7ba417429d7275ae3c7be5a438edeb377263d",
+      "size": 344627
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "2194164c74f4c197aa4216dc5e288abb3a420a6ea791c8879e0887647cc94161",
+      "size": 62
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "4449de75dc0b343f1e7e1720c1839d3ca264a57e8d079e3729a6fa099ed03a76",
+      "size": 24653
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "d694cdc53e8478f067185e87163f2e25ecc71fd5a892a03f184e382b208522d7",
+      "size": 6414
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_4.md",
+      "sha256": "207a3922bab21e5ad5233271514c5eb1aed9887a8394b19ce206baf303a5014e",
+      "size": 1321
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "a8a5dfc98c5c06e9534f5bba27a3acb98a813ad0e8c7a453c8fc7beb9e793577",
+      "size": 5239
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "159f21f9c9546c2a12bd39282a87f3b4a5d583806d9a3cd2417331c6da6223c2",
+      "size": 2404
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "f7fc173d07b36e8bd0d2e70011e41cf813010a779f7ea85cee30b076bf5e843a",
+      "size": 298537
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "2ddb8ebbfa2a55e19c2ad6b9f01d04af88c526537c75fda722a1ad137f3fd0b6",
+      "size": 87063
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "9d59f16c43c1f858909e6662e03725d4f482e4fa29124048b6a596442a2370b0",
+      "size": 6749
+    }
+  ],
+  "minimum_supported_version": "1.5.9.3",
+  "package_type": "UPDATE",
+  "release_notes": "# v1.5.9.4 — Smooth Studio Branding Drag\n\n## Sửa độ trễ khi kéo logo\n- Tách preview thành ảnh nền (video + nhãn) và lớp logo PNG trong suốt.\n- Canvas Qt vẽ lớp logo riêng và cập nhật vị trí ngay trong mouseMoveEvent; thao tác kéo không gửi lệnh render sang Engine.\n- Giữ nguyên điểm người dùng nắm trên logo, giới hạn logo trong khung hình và quy đổi tọa độ về video gốc.\n- Chỉ gửi một yêu cầu preview cuối cùng khi nhả chuột để đồng bộ trạng thái.\n\n## Không thay đổi\n- Pipeline áp dụng Branding và xuất video; độ phân giải, codec, chất lượng và preset.\n- Kích thước, độ mờ, góc xoay, vị trí preset và phạm vi thời gian hiển thị.\n- CTA Detector, Batch CTA, Mask/Before-After, lưu dự án, Auto Save, backup và updater.\n\n## Kiểm thử\n- Engine test 4K xác nhận preview render ở 1280×720, ảnh nền không chứa logo đã tách, lớp logo PNG có alpha và crop đúng kích thước.\n- Qt canvas test xác nhận logo di chuyển trực tiếp theo con trỏ và chỉ phát tín hiệu cập nhật một lần khi nhả chuột.\n- Release workflow chạy compile, Branding tests, Batch CTA tests, đóng gói FULL/UPDATE và xác minh SHA-256.\n",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.9.3"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.4",
+  "published_at": "2026-11-20T16:19:23+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_4.md"
+}
