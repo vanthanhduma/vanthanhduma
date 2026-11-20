@@ -1,0 +1,24 @@
+# v1.5.8.0 — Project Workflow & Rolling Backups
+
+## Thanh thao tac tren cung
+- Sap xep thanh thao tac theo dung 4 nhom: Hoan tac/Lam lai, Mo video, menu Du an, Xuat video.
+- Gom Mo du an, Luu du an, Dong goi ZIP, Nhap du an tu ZIP va Lich su sao luu vao menu Du an.
+- Bo nut Luu thanh/Tao ban sao khoi giao dien chinh va bo shortcut Save As rieng.
+
+## Auto Save va sao luu luan phien
+- Auto Save tiep tuc ghi vao file `.grproj` chinh bang co che file tam + thay the an toan; khong tao ban sao luu trong moi lan Auto Save.
+- Luu du an thu cong tao moc du phong sau khi file chinh da ghi thanh cong, bao gom ca lan luu dau tien.
+- Bo qua moc trung lap neu noi dung khong thay doi; giu toi da 8 moc moi nhat va tu dong xoa moc cu nhat.
+- Them hop thoai Lich su sao luu; phuc hoi moc duoc chon thanh mot thu muc/du an moi, khong ghi de du an dang mo.
+- Khi tao du an phuc hoi tu moc cu, sao chep lai du lieu Analysis/CTA va dong goi lai tai nguyen logo vao workspace moi.
+
+## ZIP du an
+- Dong goi ZIP tu dong su dung du an dang mo, khong hoi chon lai du an.
+- Luon kem video goc, file `.grproj`, tai nguyen, Analysis/CTA, thumbnail va toi da 8 ban sao luu.
+- Tu dong dat ten va luu ZIP trong thu muc `Goi ZIP` theo du an; khong hien hop thoai hoi co kem video goc hay khong.
+- Nhap du an tu ZIP tiep tuc giai nen thanh mot du an moi; kiem tra an toan duong dan trong ZIP duoc giu nguyen.
+
+## Kiem thu
+- `py_compile`: PASS cho cac module Python va test.
+- Unit tests: 12/12 PASS, gom archive mac dinh kem video, gioi han 8 ban, bo qua ban trung lap va khoi phuc ban du phong thanh du an moi.
+- Chua the chay Qt GUI trong moi truong build do khong co PySide6; can nghiem thu giao dien va DPI tren Windows.
