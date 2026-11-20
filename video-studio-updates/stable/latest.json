@@ -1,59 +1,59 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.7_UPDATE.zip",
-  "asset_sha256": "6e3b88e944685632b9ff1d175f4ecd593b4203fbd130fc5998517ef75800a8b3",
-  "asset_size": 190943,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.7_UPDATE.zip",
-  "base_version": "1.5.9.6",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.8_UPDATE.zip",
+  "asset_sha256": "db8d86117a01ad6f13cef19246dc8c0254db29a55f215bc4308b90cf99d0be99",
+  "asset_size": 192614,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.8_UPDATE.zip",
+  "base_version": "1.5.9.7",
   "channel": "stable",
   "files": [
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "23c5141e4bbb5f9ec4898d1806f2a3e8d23a58c518659b5d54c4522f835102c1",
+      "sha256": "2393f38d78c6a1ce2311adc2b730e9807b089dce27376a2ef79b8f3a08ca29b0",
       "size": 344627
     },
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "292b00d724d32840f4d56a90623d72ea7e61b5f2fce0c4e6699470653dbccd55",
-      "size": 58
+      "sha256": "d406f504fef53aa37e441d32fd20e79513b5f2d2e981046497dacf8f734b0471",
+      "size": 81
     },
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "7a72ae63772eba4ec95ad5818f611987c1d01dfe18934899d6fd2809d8f04638",
-      "size": 25566
+      "sha256": "0c1fd775d1559ec0f382198c1dddc5eda15b75a03cc1f9d8c0a7acd7913ebf4e",
+      "size": 25981
     },
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "dcccce450f5c8282f6ea91cef0e766f159fb06f0f788034b201a4e5ffb65df4e",
-      "size": 8906
+      "sha256": "86d062bf98f7f86d16d601cea8d251f5291d63bc61208dab40e8b1e0c102c376",
+      "size": 9893
     },
     {
       "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_7.md",
-      "sha256": "c9606aa364ccbb72c083a8f9f70915c085212d3020b86fcd04eb76d946b83046",
-      "size": 1428
+      "path": "RELEASE_NOTES_V1_5_9_8.md",
+      "sha256": "882709c05ec0a4c35aeccf61650488473015d014e29f37a736d5b5a1f612b78d",
+      "size": 1619
     },
     {
       "action": "replace",
       "path": "CAI_DAT_VA_CHAY.bat",
-      "sha256": "0c777cf0b546264f0d182ad67823aa0da2015cd41a70fb96d3d24c408adf5a5c",
+      "sha256": "c8642c6cd0fe3b39c2779335274ecc1bdbbd086f41c07731f69ad179fb9b1fc7",
       "size": 5239
     },
     {
       "action": "replace",
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "sha256": "113fbdab979250dbcd6810ee40f20c1017db8c3f4341bd532a299ddd47366783",
+      "sha256": "3a345db0b1174932a7aab8b7b063e5016238eb50576ee16112e583d5d7e0f821",
       "size": 2404
     },
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "203d12db2aeaf8b6c62a1c9e512e5abe5c096e356fa4f7ee811fb3058afcbdfd",
-      "size": 315685
+      "sha256": "04616e6fa0bbde1a020c9479852ac275d98293c94e450e313a0eeafdfd2a0c3e",
+      "size": 323901
     },
     {
       "action": "replace",
@@ -74,15 +74,15 @@
       "size": 6749
     }
   ],
-  "minimum_supported_version": "1.5.9.6",
+  "minimum_supported_version": "1.5.9.7",
   "package_type": "UPDATE",
-  "release_notes": "# v1.5.9.7 — Global UI Polish\n\n## UI consistency across all workspaces\n- Apply one readable type scale across Branding, Mask/Before-After, CTA Detector, Downloader, Batch CTA, Merge Video, and Export & Quality.\n- Base application font: 10.5 pt Medium; use Segoe UI with installed Vietnamese-capable fallback.\n- Increase and normalize section titles, button labels, tabs, input text, captions, table rows, and table headers.\n- Make content-only controls transparent so checkboxes, radio buttons, sliders, generic frames, group-boxes, and stack/tab containers do not paint dark rectangles behind their text.\n- Give the project/video identity area more width while retaining full path/name tooltips.\n\n## Preserved behavior\n- Keep every page's current layout, control order, and functionality.\n- No changes to Branding render/drag/apply, Mask selection/inpaint, CTA detection/review/cut, Downloader, Batch CTA queue, Merge Video, Export/QC, FFmpeg settings, projects, Auto Save, backups, or updater commands.\n- Keep the navy/teal/cyan Studio palette.\n\n## Verification\n- Add cross-workspace global theme regression tests.\n- Windows Qt workflow runs theme tests, Export workspace tests, Branding preview regression, and Qt/Engine smoke.\n- Release workflow runs Python compile/tests and validates FULL/UPDATE ZIP contents, payload hashes, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.6.\n",
+  "release_notes": "# v1.5.9.8 — Download / Batch CTA Workspace Redesign\n\n## Studio Branding\n- Narrow the right control rail to 315–360 px; the preview receives more horizontal space.\n- Keep every existing control: logo visibility, scale, opacity, rotation, anchor placement, label content/style, show time, scene scope, presets, and Apply.\n\n## Download Video\n- Rebuild the settings section as four consistent option cards: quality, output format, browser cookies, and destination folder.\n- Put captions above controls and equalize field heights, card margins, and spacing.\n- Keep all existing quality values, format values, cookie-browser values, folder selection, and download queue/action callbacks.\n\n## Batch CTA Processing\n- Use a two-column layout: the main queue and video-management actions on the left; project output folder, queue progress, Start, and Stop in a compact right rail.\n- Add an empty-queue state and automatically switch to the queue table as soon as videos are added or a saved queue is restored.\n- Preserve sequential processing, per-video project saving, manual CTA review, resume behavior, and safe stop behavior.\n\n## Verification\n- Add regression tests for Branding sizing, Download option-card layout and values, Batch two-column layout, empty-state switching, and all existing callbacks/Engine commands.\n- Windows Qt workflow runs the new workspace tests with Branding preview, Export workspace, global UI theme, and Qt/Engine smoke tests.\n- Release workflow validates FULL/UPDATE archives, payload contents, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.7.\n",
   "schema_version": 1,
   "supported_base_versions": [
-    "1.5.9.6"
+    "1.5.9.7"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.7",
-  "published_at": "2026-11-20T17:31:40+00:00",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_7.md"
+  "version": "1.5.9.8",
+  "published_at": "2026-11-20T17:42:07+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_8.md"
 }
