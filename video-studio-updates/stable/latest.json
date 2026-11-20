@@ -4,36 +4,49 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.6.38",
-  "base_version": "1.5.6.36",
-  "minimum_supported_version": "1.5.6.36",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.38_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.38_UPDATE.zip",
-  "asset_size": 286602,
-  "asset_sha256": "85d67b0c4727c998157bb24c9edec363c93b3ce69009407efb8f2e3427c3ccb9",
-  "release_notes": "# v1.5.6.38 – CTA OCR đọc chữ tốt hơn, không quét dày hơn\n\n## Tập trung chất lượng đọc chữ\n- Giữ cố định lấy mẫu 1 ảnh mỗi 2 giây; bỏ lựa chọn 0,5 giây/ảnh vì tăng thời gian nhưng không cải thiện khả năng đọc của OCR trên từng ảnh.\n- Ưu tiên Tesseract PSM 11 phù hợp chữ CTA rải rác ở nhiều vị trí trên khung hình; PSM 6 và Otsu là các lượt dự phòng khi chưa đọc được từ khóa.\n- Khi OCR tách một từ thành nhiều mảnh nằm ở các block/dòng khác nhau, ghép theo vị trí hình học và đường cơ sở chữ; chỉ nối các mảnh nằm gần nhau để hạn chế ghép nhầm caption xa nhau.\n- Giữ giới hạn từ khóa LIKE, SHARE, SUBSCRIBE và các biến thể tiếng Việt; không phân loại cảnh phim, không phân tích lời nói/âm thanh.\n\n## Workflow\n- Ảnh bằng chứng và timestamp tiếp tục gắn với lần OCR thực sự tạo ra kết quả.\n- Kết quả vẫn là gợi ý để người dùng kiểm tra và duyệt thủ công; không tự động cắt.\n- Giữ Pause/Resume, Dừng, Quét tiếp và cache.\n",
+  "version": "1.5.6.39",
+  "base_version": "1.5.6.38",
+  "minimum_supported_version": "1.5.6.38",
+  "supported_base_versions": [
+    "1.5.6.38"
+  ],
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.6.39_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.6.39_UPDATE.zip",
+  "asset_size": 75072,
+  "asset_sha256": "d69068db3893f6aa276afdad87ed284ab10728e92c06747e410576fb010fd98b",
+  "published_at": "2026-11-20T00:00:00Z",
+  "release_notes_url": "https://github.com/vanthanhduma/Goc-Review-Phim-Video-Studio/blob/main/RELEASE_NOTES_V1_5_6_39.md",
+  "release_notes": "# v1.5.6.39 — CTA Resume Checkpoint & OCR Timeout Recovery\n\n- Resume tiếp tục đúng khung hình kế tiếp; không quét lại từ đầu và không reset tiến độ theo phiên.\n- Lưu checkpoint chính xác sau mỗi mẫu và ghi ngay xuống cache khi Pause.\n- Giữ checkpoint ngay cả khi chưa tìm thấy CTA nào; có thể tiếp tục sau khi engine hoặc ứng dụng gặp lỗi.\n- Nếu Tesseract OCR Timeout trên một khung hình, bỏ qua khung hình đó và tiếp tục quét các khung hình sau.\n- Giữ nguyên các CTA đã phát hiện; không tự động cắt kết quả.\n- Kiểm thử hồi quy: OCR Timeout recovery và Pause/Resume sample ordering đều PASS.\n",
   "files": [
     {
+      "path": "PHIEN_BAN.txt",
+      "size": 86,
+      "sha256": "c73a7a758c36164c18cc2cce1042af69c26ccb5e9940fc02aef45e19ed12d554",
+      "action": "replace"
+    },
+    {
+      "path": "RELEASE_NOTES_V1_5_6_39.md",
+      "size": 1362,
+      "sha256": "72b8287b9023cf1939690db073db3d5667b69d1ef2258f8afd97e421eca8345f",
+      "action": "replace"
+    },
+    {
       "path": "cta_detector.py",
-      "size": 49384,
-      "sha256": "96f4edb3f8f6c4c85cf01aea3d3f09b454585263cb60003a3733ebc3b71cb0e4",
+      "size": 50464,
+      "sha256": "88d375cea9b422f603346d19669ad857f6be1ce832aa70d62f2d26246da09a23",
+      "action": "replace"
+    },
+    {
+      "path": "engine_worker.py",
+      "size": 80274,
+      "sha256": "8ce7c0ed7f9b7d43e35e5e513f3463d1754c75e5522b3b949562873546131c9b",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 236751,
-      "sha256": "cdb5507082b7ac8bd3cc2652b5ff328185dad0dc37316853b10346e86721bbb9",
-      "action": "replace"
-    },
-    {
-      "path": "PHIEN_BAN.txt",
-      "size": 95,
-      "sha256": "8746a838afad391c212c6e73dd3e9d6892f22ee7394f37476601838f5624725a",
+      "size": 240422,
+      "sha256": "f0c39984c011fe45945feb5458e02359b93224126627f081ce0eefb9e7bc39b3",
       "action": "replace"
     }
-  ],
-  "supported_base_versions": [
-    "1.5.6.36",
-    "1.5.6.37"
   ]
 }
