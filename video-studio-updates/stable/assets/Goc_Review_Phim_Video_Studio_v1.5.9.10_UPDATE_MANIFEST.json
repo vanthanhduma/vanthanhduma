@@ -1,0 +1,88 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.10_UPDATE.zip",
+  "asset_sha256": "ef1f63f8331ce30043297616d7ca362f59ed678e1265d33ca9adef0cf18143a4",
+  "asset_size": 194972,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.10_UPDATE.zip",
+  "base_version": "1.5.9.9",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "06ade2ec4705e4d79fa2c36982c5d6408fdae9adb5e76046f062efcc6daa072e",
+      "size": 344628
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "4921abb654a51b30e7dfac4e199f8c5c069fb916866b3108c45e1087bc098134",
+      "size": 66
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "8c34b5d3db7a9c34da65a8f55eb5d5c759bf2bda32274d1aa2cb9216d0aa5bcd",
+      "size": 26333
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "cd115d4d812460cd97af2b5aa058533e36347325b07805c4f58f855aaf11444b",
+      "size": 11544
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_10.md",
+      "sha256": "643db6e9b943169fc0b0cae773f81304cebf7c0af19041fede0da1f7da51042f",
+      "size": 1771
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "2984e62ac45575d8635641edd1bfd9723474d7b38f903e972ba0b1e9e3031905",
+      "size": 5241
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "532a5c543e0e937e9487b51af658fd8770c2292eccac2fbe1071f58a78c0928f",
+      "size": 2406
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "fe594006e35eead6e2f61e96ebcea752db92253d49d21b7ebd6ee5e8e54400f2",
+      "size": 333258
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "2ddb8ebbfa2a55e19c2ad6b9f01d04af88c526537c75fda722a1ad137f3fd0b6",
+      "size": 87063
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "9d59f16c43c1f858909e6662e03725d4f482e4fa29124048b6a596442a2370b0",
+      "size": 6749
+    }
+  ],
+  "minimum_supported_version": "1.5.9.9",
+  "package_type": "UPDATE",
+  "release_notes": "# v1.5.9.10 — Branding Inspector Tabs\n\n## Redesigned Studio Branding workspace\n- Replace the long, continuously scrolling control column with four focused tabs: Logo, Nhãn, Thời gian, and Preset.\n- Logo tab: file selection, visibility, scale, opacity, rotation, and 3×3 position controls with pointer-drag hint.\n- Nhãn tab: visibility, label text, size, opacity, position, text color, and background color.\n- Thời gian tab: start/end time and scene-specific scope.\n- Preset tab: select, save, load, and delete Branding presets.\n- Keep the preview as the primary workspace, use a stable-width inspector, allow each tab content to scroll independently, and keep Apply/status fixed below the tab panel.\n\n## Preserved behavior\n- Keep all existing widget attributes and state keys used by load_state, preset loading, preview generation, and Apply.\n- Preserve direct logo dragging, debounced/coalesced preview requests, opacity/scale/rotation, anchors, scene scope, colors, and preset callbacks.\n- No changes to Engine commands, render pipeline, export, downloader, Batch CTA, project persistence, Auto Save, backups, or updater logic.\n\n## Verification\n- Static regression tests assert four tab labels, inspector sizing, and preservation of all Branding controls/callbacks.\n- Windows Qt smoke test creates BrandingDialog, verifies all four tabs, switches through every tab, checks controls and fixed Apply action, and retains preview coalescing test.\n- Windows CI also runs Branding preview performance, Export layout, global theme, Download/Batch/Branding regression, and Qt/Engine smoke.\n- Release workflow compiles and validates FULL/UPDATE packages, payload contents, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.9.\n",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.9.9"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.10",
+  "published_at": "2026-11-20T18:04:19+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_10.md"
+}

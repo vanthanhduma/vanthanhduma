@@ -1,59 +1,59 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.9_UPDATE.zip",
-  "asset_sha256": "829a33f245abebd2581e0d82ef8cf9772fabf9fd016509d9bdd8dc6f7e6c21e6",
-  "asset_size": 193259,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.9_UPDATE.zip",
-  "base_version": "1.5.9.8",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.10_UPDATE.zip",
+  "asset_sha256": "ef1f63f8331ce30043297616d7ca362f59ed678e1265d33ca9adef0cf18143a4",
+  "asset_size": 194972,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.10_UPDATE.zip",
+  "base_version": "1.5.9.9",
   "channel": "stable",
   "files": [
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "9f0defe38f6114a5605d3a8b4a27a4e346af57e64a16c95b1c366e1e089368a6",
-      "size": 344627
+      "sha256": "06ade2ec4705e4d79fa2c36982c5d6408fdae9adb5e76046f062efcc6daa072e",
+      "size": 344628
     },
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "8adff3933ae33822f1db669c5e629783a95c505c7479f69b23a76fff388adc29",
-      "size": 78
+      "sha256": "4921abb654a51b30e7dfac4e199f8c5c069fb916866b3108c45e1087bc098134",
+      "size": 66
     },
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "da3c5ea596c9d30678751e204ff7a5a6b68603a88bdfa10102335224ff4f7b2b",
-      "size": 26155
+      "sha256": "8c34b5d3db7a9c34da65a8f55eb5d5c759bf2bda32274d1aa2cb9216d0aa5bcd",
+      "size": 26333
     },
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "af1e1334fd2cbdfb12557ec5c82c754acb106b01d0951d84fe6236c7a537459d",
-      "size": 10720
+      "sha256": "cd115d4d812460cd97af2b5aa058533e36347325b07805c4f58f855aaf11444b",
+      "size": 11544
     },
     {
       "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_9.md",
-      "sha256": "c9785d1ef08f6fce243219e00301d51484d9ef37ada4009ce75d97951ee5833a",
-      "size": 1308
+      "path": "RELEASE_NOTES_V1_5_9_10.md",
+      "sha256": "643db6e9b943169fc0b0cae773f81304cebf7c0af19041fede0da1f7da51042f",
+      "size": 1771
     },
     {
       "action": "replace",
       "path": "CAI_DAT_VA_CHAY.bat",
-      "sha256": "756ce3d6a03bf61fae0680acc237fb6a2272f048afb6e1fb23b9054851aefdb3",
-      "size": 5239
+      "sha256": "2984e62ac45575d8635641edd1bfd9723474d7b38f903e972ba0b1e9e3031905",
+      "size": 5241
     },
     {
       "action": "replace",
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "sha256": "d9f594e52fe407030684ce2c567c4e98fcc57ef9fec494a1fdb9c92b9f0c5065",
-      "size": 2404
+      "sha256": "532a5c543e0e937e9487b51af658fd8770c2292eccac2fbe1071f58a78c0928f",
+      "size": 2406
     },
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "3d2e152c4eaa6db1b353f772a1a56f3d02f956b462163cc8c68809f9d28da2ab",
-      "size": 326394
+      "sha256": "fe594006e35eead6e2f61e96ebcea752db92253d49d21b7ebd6ee5e8e54400f2",
+      "size": 333258
     },
     {
       "action": "replace",
@@ -74,15 +74,15 @@
       "size": 6749
     }
   ],
-  "minimum_supported_version": "1.5.9.8",
+  "minimum_supported_version": "1.5.9.9",
   "package_type": "UPDATE",
-  "release_notes": "# v1.5.9.9 — Branding / Download Workspace Polish\n\n## Studio Branding\n- Narrow the right inspector rail to 290–325 px so the central preview receives more space.\n- Reduce logo anchor button dimensions and tighten spacing/margins across Logo, Label, Timing, and Preset groups.\n- Retain all existing controls, values, preview debounce, drag behavior, and Apply action.\n\n## Download Video\n- Arrange the four setting cards horizontally: title and helper text on the left; selector or destination path on the right.\n- Enforce minimum heights for each option card and the settings container so Qt cannot compress text and inputs into clipped rows.\n- Allow the download queue table to shrink before the settings panel when vertical room is limited.\n- Preserve all quality, format, browser-cookie, folder, download queue, progress, and action bindings.\n\n## Verification\n- Regression tests assert Branding sizing, compact groups, anchor buttons, Download card layout/minimum heights, and preserved callbacks.\n- Windows Qt CI runs Branding preview, Export workspace, global theme, Download/Batch/Branding layout tests, and UI/Engine smoke.\n- Release workflow validates Python compilation, FULL/UPDATE packages, payloads, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.8.\n",
+  "release_notes": "# v1.5.9.10 — Branding Inspector Tabs\n\n## Redesigned Studio Branding workspace\n- Replace the long, continuously scrolling control column with four focused tabs: Logo, Nhãn, Thời gian, and Preset.\n- Logo tab: file selection, visibility, scale, opacity, rotation, and 3×3 position controls with pointer-drag hint.\n- Nhãn tab: visibility, label text, size, opacity, position, text color, and background color.\n- Thời gian tab: start/end time and scene-specific scope.\n- Preset tab: select, save, load, and delete Branding presets.\n- Keep the preview as the primary workspace, use a stable-width inspector, allow each tab content to scroll independently, and keep Apply/status fixed below the tab panel.\n\n## Preserved behavior\n- Keep all existing widget attributes and state keys used by load_state, preset loading, preview generation, and Apply.\n- Preserve direct logo dragging, debounced/coalesced preview requests, opacity/scale/rotation, anchors, scene scope, colors, and preset callbacks.\n- No changes to Engine commands, render pipeline, export, downloader, Batch CTA, project persistence, Auto Save, backups, or updater logic.\n\n## Verification\n- Static regression tests assert four tab labels, inspector sizing, and preservation of all Branding controls/callbacks.\n- Windows Qt smoke test creates BrandingDialog, verifies all four tabs, switches through every tab, checks controls and fixed Apply action, and retains preview coalescing test.\n- Windows CI also runs Branding preview performance, Export layout, global theme, Download/Batch/Branding regression, and Qt/Engine smoke.\n- Release workflow compiles and validates FULL/UPDATE packages, payload contents, preserve rules, and SHA-256.\n\n## Update\n- UPDATE package base: v1.5.9.9.\n",
   "schema_version": 1,
   "supported_base_versions": [
-    "1.5.9.8"
+    "1.5.9.9"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.9",
-  "published_at": "2026-11-20T17:55:29+00:00",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_9.md"
+  "version": "1.5.9.10",
+  "published_at": "2026-11-20T18:04:19+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_10.md"
 }
