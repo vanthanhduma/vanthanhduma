@@ -4,60 +4,60 @@
   "channel": "stable",
   "trust_mode": "https-sha256-v1",
   "package_type": "UPDATE",
-  "version": "1.5.7.0",
-  "base_version": "1.5.6.41",
-  "minimum_supported_version": "1.5.6.41",
+  "version": "1.5.8.0",
+  "base_version": "1.5.7.0",
+  "minimum_supported_version": "1.5.7.0",
   "supported_base_versions": [
-    "1.5.6.41"
+    "1.5.7.0"
   ],
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.7.0_UPDATE.zip",
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.7.0_UPDATE.zip",
-  "asset_size": 141080,
-  "asset_sha256": "4d1e02b6bd43ec8539019796f2789aa9913827972e07882a90f9eeb796a9f757",
-  "published_at": "2026-11-20T06:30:00Z",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_7_0.md",
-  "release_notes": "# v1.5.7.0 — Studio UI Refresh & MM:SS Timeline\n\n## Giao diện và điều hướng\n- Gom thanh công cụ trên theo luồng thao tác: Mở video; nhóm Dự án (Mở dự án/Khôi phục ZIP, Lưu dự án, Đóng gói ZIP); Hoàn tác/Làm lại; Xuất video.\n- Giữ nút Kiểm tra & cập nhật riêng trên header; menu Thêm chỉ còn thao tác Lưu thành/Tạo bản sao, không lặp các hành động đã có nút riêng.\n- Đổi mục sidebar Dự án thành Công cụ video, gom Tải video, Xử lý hàng loạt và Ghép video vào các tab cùng workspace.\n- Bỏ entry point Dựng video khỏi sidebar; không xóa pipeline xử lý hiện có.\n- Đưa Studio Branding vào trang làm việc trong cửa sổ chính, không mở cửa sổ phụ.\n- Đồng bộ màu Navy/Teal/Cyan và bố cục giữa Mask, Branding và Xuất & kiểm tra; tinh giản chú thích/hướng dẫn tĩnh, giữ trạng thái, tiến độ, lỗi và kết quả cần thiết.\n\n## Công cụ video — Ghép video\n- Bổ sung tab Ghép video trong Công cụ video, cho phép thêm/bỏ/sắp thứ tự clip, chọn tên file và thư mục đầu ra, theo dõi tiến độ và dừng tác vụ.\n- Dùng lại pipeline FFmpeg hiện có: stream-copy khi thông số tương thích; chuẩn hóa và mã hóa lại khi cần; ưu tiên NVENC khi máy hỗ trợ.\n- Khóa danh sách nguồn trong lúc ghép, ngăn đường dẫn đầu ra ghi đè một trong các video nguồn.\n\n## Định dạng thời gian\n- Chuẩn hóa các ô nhập và nhãn thời gian của Qt Studio sang MM:SS, ví dụ `01:30` và `125:30`.\n- Áp dụng cho vị trí phát, CTA, thời gian Branding và khoảng cắt trong Xuất & kiểm tra.\n- Giá trị nội bộ tiếp tục giữ độ chính xác số thực theo giây; chỉ chuỗi hiển thị được làm tròn tới giây.\n\n## Kiểm tra\n- `py_compile`: PASS cho các module Python chính.\n- Unit tests: 9/9 PASS, gồm kiểm tra định dạng MM:SS và parse mốc thời gian.\n- FFmpeg merge smoke test: PASS với hai video cùng thông số (stream-copy) và video khác độ phân giải (fallback encode), kết quả 6 giây đúng thứ tự.\n- Chưa kiểm thử GUI trực tiếp trên Windows trong môi trường build do môi trường này không có PySide6; cần nghiệm thu giao diện/DPI thực tế trên Windows.\n- NVENC phụ thuộc FFmpeg/driver trên máy người dùng; smoke test trong môi trường build đã dùng CPU fallback.\n",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.8.0_UPDATE.zip",
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.8.0_UPDATE.zip",
+  "asset_size": 148297,
+  "asset_sha256": "762e99c7919f18ab34f81f4d2e854ea447db89537c1be7b497e7b9734b35e701",
+  "published_at": "2026-11-20T09:22:47.936640+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_8_0.md",
+  "release_notes": "# v1.5.8.0 — Project Workflow & Rolling Backups\n\n## Thanh thao tac tren cung\n- Sap xep thanh thao tac theo dung 4 nhom: Hoan tac/Lam lai, Mo video, menu Du an, Xuat video.\n- Gom Mo du an, Luu du an, Dong goi ZIP, Nhap du an tu ZIP va Lich su sao luu vao menu Du an.\n- Bo nut Luu thanh/Tao ban sao khoi giao dien chinh va bo shortcut Save As rieng.\n\n## Auto Save va sao luu luan phien\n- Auto Save tiep tuc ghi vao file `.grproj` chinh bang co che file tam + thay the an toan; khong tao ban sao luu trong moi lan Auto Save.\n- Luu du an thu cong tao moc du phong sau khi file chinh da ghi thanh cong, bao gom ca lan luu dau tien.\n- Bo qua moc trung lap neu noi dung khong thay doi; giu toi da 8 moc moi nhat va tu dong xoa moc cu nhat.\n- Them hop thoai Lich su sao luu; phuc hoi moc duoc chon thanh mot thu muc/du an moi, khong ghi de du an dang mo.\n- Khi tao du an phuc hoi tu moc cu, sao chep lai du lieu Analysis/CTA va dong goi lai tai nguyen logo vao workspace moi.\n\n## ZIP du an\n- Dong goi ZIP tu dong su dung du an dang mo, khong hoi chon lai du an.\n- Luon kem video goc, file `.grproj`, tai nguyen, Analysis/CTA, thumbnail va toi da 8 ban sao luu.\n- Tu dong dat ten va luu ZIP trong thu muc `Goi ZIP` theo du an; khong hien hop thoai hoi co kem video goc hay khong.\n- Nhap du an tu ZIP tiep tuc giai nen thanh mot du an moi; kiem tra an toan duong dan trong ZIP duoc giu nguyen.\n\n## Kiem thu\n- `py_compile`: PASS cho cac module Python va test.\n- Unit tests: 12/12 PASS, gom archive mac dinh kem video, gioi han 8 ban, bo qua ban trung lap va khoi phuc ban du phong thanh du an moi.\n- Chua the chay Qt GUI trong moi truong build do khong co PySide6; can nghiem thu giao dien va DPI tren Windows.",
   "files": [
     {
       "path": "PHIEN_BAN.txt",
       "size": 75,
-      "sha256": "ea3e983f3d77cbeb9ac38b1fb3e860b6115ede0245583447708613d9306e3571",
+      "sha256": "620413a642c0346d0a374e321ebaa51322d56d0cba52b9cfda157150fc70b841",
       "action": "replace"
     },
     {
-      "path": "RELEASE_NOTES_V1_5_7_0.md",
-      "size": 2535,
-      "sha256": "9a9d527fa5a8ae479ffb2041f51f2960d8288b633827e8fa2116a626bfff1c3f",
+      "path": "RELEASE_NOTES_V1_5_8_0.md",
+      "size": 1702,
+      "sha256": "786cf384cda932bd3c083437ff82b1e1eae94168178494bd1c89da091eda3800",
       "action": "replace"
     },
     {
       "path": "app.py",
-      "size": 338006,
-      "sha256": "e5baf4a9966a82f7cd98fd5595236eef7f6ca07401727682157a18f56102ea1a",
+      "size": 338359,
+      "sha256": "30952bd8377919988f0f49231cdf690f5223c34aa67db9ea8131210f4065eb0a",
+      "action": "replace"
+    },
+    {
+      "path": "project_storage.py",
+      "size": 28781,
+      "sha256": "8ac5ed75ec2375b69dd69f523a7643530bdf3bc34d7f8800d358f19e4c2317cb",
       "action": "replace"
     },
     {
       "path": "qt_app.py",
-      "size": 260452,
-      "sha256": "f17baf10a10107d6c57eb794f696bbc11b05c6096f97b84d9f400fc8505f2b85",
-      "action": "replace"
-    },
-    {
-      "path": "timeline_seek.py",
-      "size": 2436,
-      "sha256": "fc0c6a09bd7e3a4a5e9ea972e8003e407180f3b0a5b7c355ea35921e66781a73",
+      "size": 264988,
+      "sha256": "92c6ec622a26cc66439de5a005e9a10aa7c4be4085d60377b00dede556dff96f",
       "action": "replace"
     },
     {
       "path": "CAI_DAT_VA_CHAY.bat",
       "size": 5108,
-      "sha256": "3569f9fb3ec863237e1fb328f01680e4c39135c9450015cfff2a586f6ab7ca73",
+      "sha256": "a1d275f6b694d486ec2f73c2e417b2493222b2c7b17391c3f78e83e15b2a631d",
       "action": "replace"
     },
     {
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "size": 1324,
-      "sha256": "5a273a86da0045b22828c27b65701f13d94170325519e63615e79901a93dd1b8",
+      "size": 1826,
+      "sha256": "70bc526f709fd14b268d81755acbbb0fd497c98f56f5ec76ef236ec705b5ef90",
       "action": "replace"
     }
   ]
