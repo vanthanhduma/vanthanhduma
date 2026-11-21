@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "video-studio-updates/staging/v1.5.9.18/READY.txt"
+      - "video-studio-updates/staging/v1.5.9.19/READY.txt"
 
 permissions:
   contents: write
@@ -34,7 +34,7 @@ jobs:
           import zipfile
           from pathlib import Path
 
-          stage = Path("video-studio-updates/staging/v1.5.9.18")
+          stage = Path("video-studio-updates/staging/v1.5.9.19")
           stable = Path("video-studio-updates/stable")
           assets_dir = stable / "assets"
           meta = json.loads((stage / "meta.json").read_text(encoding="utf-8"))
@@ -42,7 +42,7 @@ jobs:
           update_manifest = json.loads((stage / "update-manifest.json").read_text(encoding="utf-8"))
           full_manifest = json.loads((stage / "full-manifest.json").read_text(encoding="utf-8"))
 
-          assert meta["version"] == latest["version"] == "1.5.9.18"
+          assert meta["version"] == latest["version"] == "1.5.9.19"
           assert update_manifest["version"] == latest["version"]
           assets_dir.mkdir(parents=True, exist_ok=True)
 
@@ -98,7 +98,7 @@ jobs:
 
           # The staging area contains only short-lived base64 transfer chunks.
           shutil.rmtree(stage)
-          print("Stable v1.5.9.18 package integrity PASS")
+          print("Stable v1.5.9.19 package integrity PASS")
           print(json.dumps(built, indent=2))
           PY
 
@@ -108,6 +108,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A video-studio-updates/stable
-          git add -A video-studio-updates/staging/v1.5.9.18
-          git commit -m "Publish corrected v1.5.9.18 Python 3.15-compatible packages"
+          git add -A video-studio-updates/staging/v1.5.9.19
+          git commit -m "Publish corrected v1.5.9.19 Python 3.15-compatible packages"
           git push origin HEAD:main
