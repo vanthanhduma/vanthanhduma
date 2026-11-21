@@ -1,0 +1,1 @@
+Ready to publish Video Studio v1.5.9.23 after validating FULL and UPDATE package chunks against SHA-256.
