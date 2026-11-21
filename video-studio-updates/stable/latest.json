@@ -1,9 +1,9 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.13_UPDATE.zip",
-  "asset_sha256": "e014cbb97d6391debc7a536416b12e7158fd7da9818f360c2286bc7a9c5e1cff",
-  "asset_size": 1464712,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.13_UPDATE.zip",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.14_UPDATE.zip",
+  "asset_sha256": "98db0827e9ac2d3fd46cb9a604df4fc99e1abcc94bf37daf6905867a0818b3d7",
+  "asset_size": 1466594,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.14_UPDATE.zip",
   "base_version": "1.5.6.41",
   "channel": "stable",
   "files": [
@@ -34,7 +34,7 @@
     {
       "action": "replace",
       "path": ".github/workflows/release-build.yml",
-      "sha256": "6c0c295a375a78722d3c0a6bf2a827b388f8aa8c3e9b349980301ff949de16ae",
+      "sha256": "250cb9f4b81bdd49536efb76d18227d0f1d585f6b5199e96831987e1720c67d4",
       "size": 12034
     },
     {
@@ -46,7 +46,7 @@
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "6437e20373364dcdda6590caa7692f602147394f217baf37fb07de94d097310e",
+      "sha256": "fbdf407aa150590cd8006a8370cfc58fa5acec3635bb8acdad5ff56dfefa5995",
       "size": 344628
     },
     {
@@ -310,8 +310,8 @@
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "e146e4a81aaee2ff9dea572e51c8f0083a16ce66ea03ab6f42f91d83219b196f",
-      "size": 74
+      "sha256": "c9d2aa96c47d59f1ddaf8768c3cc7b2e060c0996b14559fdc0a44532d09f8e65",
+      "size": 69
     },
     {
       "action": "replace",
@@ -322,14 +322,14 @@
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "a5867e47c9faba2c91e4232b5b0ec3c591be5f3d09f0c2d1790c8dbca0fed13d",
-      "size": 333631
+      "sha256": "f8995936e2a84cb0e6a1c64eb00b9a0c6705df903447493aadd996a831a1b9a1",
+      "size": 337446
     },
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "0b9a320386dd6494117ab7e9908df99252ef14081ba320a85101c69ca6f2dcba",
-      "size": 13337
+      "sha256": "118396e729bd96d7275bcd73ddfe8d95744aca77c97d8036769fd74683af4e74",
+      "size": 13836
     },
     {
       "action": "replace",
@@ -669,6 +669,12 @@
     },
     {
       "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_14.md",
+      "sha256": "f8e495126a66a45649976f8bd95e6ecfcce35a6ebfa50c4492852954f8fd0398",
+      "size": 904
+    },
+    {
+      "action": "replace",
       "path": "RELEASE_NOTES_V1_5_9_2.md",
       "sha256": "90bf97683d857cd638247e84c76a5eeb9da1821603f1223e5bb3fb9617deffeb",
       "size": 1840
@@ -790,8 +796,8 @@
     {
       "action": "replace",
       "path": "tests/test_download_batch_branding_workspaces.py",
-      "sha256": "4b712b343acd5382029bd93cb90f449b458e88c04bbd4a76090379c39487512d",
-      "size": 8695
+      "sha256": "2245747aa8f03eb85bc83dc659117ac34eccd2d6c8e68c97e04b2b02892b86b5",
+      "size": 9496
     },
     {
       "action": "replace",
@@ -934,24 +940,24 @@
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "d3fd2a3fd52246a8bacb63d41235f2aa6d3a504d49f8e5a76205601f46eb3180",
-      "size": 26862
+      "sha256": "16840b35b11609c1767ce8277b60d76af0a8876c4bf6a3496abd1537f27b8d49",
+      "size": 27037
     }
   ],
   "full_package": {
-    "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL.zip",
-    "asset_sha256": "a439b998e7f0becbce0ccaeffd208ff7fc9c87ab9c7f5ebd919103f77e03393d",
-    "asset_size": 1462167,
-    "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL.zip",
-    "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL_MANIFEST.json",
-    "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL_MANIFEST.json",
+    "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.14_FULL.zip",
+    "asset_sha256": "17332a28c3e605958c2fe79e66cdb3326ecf9646d06b40cd4537f7cee962e45e",
+    "asset_size": 1464033,
+    "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.14_FULL.zip",
+    "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.14_FULL_MANIFEST.json",
+    "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.14_FULL_MANIFEST.json",
     "package_type": "FULL"
   },
   "minimum_supported_version": "1.5.6.41",
   "package_type": "UPDATE",
-  "published_at": "2026-11-21T02:54:02+00:00",
+  "published_at": "2026-11-21T03:13:35+00:00",
   "release_notes": "# v1.5.9.13 — Export & Branding UI Refinement\n\n## Export workspace\n- Bỏ nút Xuất video trên thanh thao tác dự án vì đã có nút Xuất toàn bộ video trong workspace Xuất & kiểm tra.\n- Chuẩn hóa chiều cao các nút Xuất toàn bộ, Cắt bỏ & xuất phần còn lại, Kiểm tra chất lượng và Dừng tác vụ xuất.\n- Nới nhẹ bề rộng bảng thiết lập xuất để tránh nhãn/nút bị chật ở độ phân giải desktop phổ biến.\n\n## Studio Branding\n- Làm rõ tiêu đề và phân cấp bảng điều khiển.\n- Tăng bề rộng inspector để các trường, tab và nút chọn file thoáng hơn.\n- Làm mới tab và card điều khiển theo tông navy/teal, thống nhất bo góc, viền và khoảng cách.\n- Footer trạng thái và nút Áp dụng được tách rõ, nút áp dụng có kích thước nhất quán.\n- Giữ nguyên các điều khiển logo, nhãn, thời gian, phạm vi cảnh, preset, preview debounce và lệnh áp dụng.\n\n## Bảo toàn\n- Không thay đổi engine xuất video, project schema, dữ liệu dự án, Auto Save hoặc cấu hình Branding.\n- Không xóa hoặc thay đổi bất kỳ callback xử lý nghiệp vụ nào.\n",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_13.md",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_14.md",
   "schema_version": 1,
   "supported_base_versions": [
     "1.5.6.41",
@@ -969,8 +975,10 @@
     "1.5.9.9",
     "1.5.9.10",
     "1.5.9.11",
-    "1.5.9.12"
+    "1.5.9.12",
+    "1.5.9.13",
+    "1.5.9.14"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.13"
+  "version": "1.5.9.14"
 }
