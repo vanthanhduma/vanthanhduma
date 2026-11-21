@@ -1,0 +1,1 @@
+Publish corrected v1.5.9.15 packages only after archive, manifest, and SHA-256 verification.
