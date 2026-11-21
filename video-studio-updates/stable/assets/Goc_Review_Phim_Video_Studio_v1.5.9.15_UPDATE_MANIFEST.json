@@ -1,8 +1,8 @@
 {
   "app_id": "goc-review-phim-video-studio",
   "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.15_UPDATE.zip",
-  "asset_sha256": "6203df36ef55a648e42b61f044e36a6b8a66dfb8a64188ec412ab4876261aa4e",
-  "asset_size": 1469247,
+  "asset_sha256": "243ed75842702e9fb11d0b8f0d043a96727125baebbc387a66b1edbc3c6a8583",
+  "asset_size": 1470490,
   "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.15_UPDATE.zip",
   "base_version": "1.5.6.41",
   "channel": "stable",
@@ -34,8 +34,8 @@
     {
       "action": "replace",
       "path": ".github/workflows/release-build.yml",
-      "sha256": "7e02cf1d7363d0fa27afe532978e78b1d6f04fb08db015c4e0dc93fa42c8f730",
-      "size": 12118
+      "sha256": "a8a3f3f2e5286de651793e6d9ee74c16d551af2a87e4e195283be7c56cfbaccf",
+      "size": 12230
     },
     {
       "action": "replace",
@@ -46,8 +46,8 @@
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "f12ed1723dc272a4f2a474b4b4bc00122789713be66efb369bbc128dbd72d579",
-      "size": 344918
+      "sha256": "99014c53ba8ce533484e7fbb1a5563d06325599ae3d923be8fac58b0280a4f7f",
+      "size": 345210
     },
     {
       "action": "replace",
@@ -160,14 +160,14 @@
     {
       "action": "replace",
       "path": "download_engine.py",
-      "sha256": "84c60099a8f9e8a48d7cfecbc284971dca3aa528ac0413a7bbe9b3791fdcd025",
-      "size": 8180
+      "sha256": "7678ba0466dd48a299839a892aa02756710588f2972f8578e84602bd5e54211a",
+      "size": 8472
     },
     {
       "action": "replace",
       "path": "engine_worker.py",
-      "sha256": "344a983f3e76dd9ec14c3f708a0d61dadc87450df92e561236c37a1f0d6d3c80",
-      "size": 87353
+      "sha256": "f925ed87116f7f1acd455b07a4dad22ef84eae906e804420c3bf77417b563bf2",
+      "size": 87645
     },
     {
       "action": "replace",
@@ -322,8 +322,8 @@
     {
       "action": "replace",
       "path": "qt_app.py",
-      "sha256": "389a1e10ce6bd72348f061e2d6c71615ddfba389b282ec706817ad9ec5b6a9b5",
-      "size": 337736
+      "sha256": "c2327a89866d99340a271c2550eca52b917ae84883c7c99928111aae5a8f533a",
+      "size": 338028
     },
     {
       "action": "replace",
@@ -676,8 +676,8 @@
     {
       "action": "replace",
       "path": "RELEASE_NOTES_V1_5_9_15.md",
-      "sha256": "a6d1cb6bfa89155a4bb3021da44c0c832bd6316a45684f9f696f8a196f5fdda0",
-      "size": 926
+      "sha256": "4f2bf7dba837d8adbd9b670b12acaf0b0632a53e3b13a1cb5584c75d103eaa1f",
+      "size": 1615
     },
     {
       "action": "replace",
@@ -832,8 +832,8 @@
     {
       "action": "replace",
       "path": "tests/test_python315_lazy_import_compat.py",
-      "sha256": "dd76e68cef49eed8c992411b32140e77564355c80ee4edb419d85bfe29ce7534",
-      "size": 1668
+      "sha256": "16e4831c7f1f13f1354da1a1c19335e8d6b3455b121ea8b474aca4739cb8982c",
+      "size": 3368
     },
     {
       "action": "replace",
@@ -952,13 +952,13 @@
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "7a5c9da90eb884d7cd7d64e8135fc0ef20afc8ba23126c3d4fc5e7f2918164af",
-      "size": 27436
+      "sha256": "75d13ef3071bb2e36d21c783d2e83f2b6b1220b84d2ab0b6357fcab0ab6dd7b2",
+      "size": 27437
     }
   ],
   "minimum_supported_version": "1.5.6.41",
   "package_type": "UPDATE",
-  "release_notes": "# v1.5.9.13 — Export & Branding UI Refinement\n\n## Export workspace\n- Bỏ nút Xuất video trên thanh thao tác dự án vì đã có nút Xuất toàn bộ video trong workspace Xuất & kiểm tra.\n- Chuẩn hóa chiều cao các nút Xuất toàn bộ, Cắt bỏ & xuất phần còn lại, Kiểm tra chất lượng và Dừng tác vụ xuất.\n- Nới nhẹ bề rộng bảng thiết lập xuất để tránh nhãn/nút bị chật ở độ phân giải desktop phổ biến.\n\n## Studio Branding\n- Làm rõ tiêu đề và phân cấp bảng điều khiển.\n- Tăng bề rộng inspector để các trường, tab và nút chọn file thoáng hơn.\n- Làm mới tab và card điều khiển theo tông navy/teal, thống nhất bo góc, viền và khoảng cách.\n- Footer trạng thái và nút Áp dụng được tách rõ, nút áp dụng có kích thước nhất quán.\n- Giữ nguyên các điều khiển logo, nhãn, thời gian, phạm vi cảnh, preset, preview debounce và lệnh áp dụng.\n\n## Bảo toàn\n- Không thay đổi engine xuất video, project schema, dữ liệu dự án, Auto Save hoặc cấu hình Branding.\n- Không xóa hoặc thay đổi bất kỳ callback xử lý nghiệp vụ nào.\n",
+  "release_notes": "# v1.5.9.15 — Python 3.15 / PySide6 Lazy Import Compatibility\n\n## Nguyên nhân\nPython 3.15 bổ sung PEP 810 lazy imports. Khi PySide6 cài import hook, lazy proxy trong thư viện có thể chưa được resolve đúng và gây lỗi trong các luồng concurrent/thread.\n\n## Sửa lỗi tương thích\n- Dùng `sys.set_lazy_imports(\"normal\")`, là chế độ được CPython 3.15 hiện hành chấp nhận. Các import thông thường của ứng dụng vẫn được thực thi eager.\n- Dùng `sys.set_lazy_imports_filter(...False)` để cả import được đánh dấu `lazy` cũng được resolve ngay.\n- Đặt guard trước khi import Qt, OpenCV và thư viện bên thứ ba trong Qt shell, processing engine, engine worker và downloader.\n- Bổ sung regression test xác nhận chỉ dùng mode hợp lệ và bộ lọc eager hoạt động; kiểm tra cả thứ tự trước các import quan trọng.\n\n## Giữ nguyên\n- Không thay đổi URL validation, yt-dlp options, chất lượng video, định dạng MP4, cookie cục bộ, hàng đợi hay thư mục tải.\n- Không thay đổi engine xuất video, project schema, Auto Save, giao diện hoặc dữ liệu dự án.\n- Không thay đổi quy tắc người dùng duyệt CTA và chọn khoảng cắt thủ công.\n\n## Kiểm thử\n- Kiểm tra guard trên cả bốn entrypoint.\n- Kiểm tra bằng mô phỏng API CPython 3.15 trên runner cũ để không bỏ sót lỗi tham số.\n- Trên Python 3.15, test bổ sung gọi API runtime thật và khôi phục trạng thái ban đầu sau kiểm tra.\n",
   "schema_version": 1,
   "supported_base_versions": [
     "1.5.6.41",
@@ -983,14 +983,14 @@
   ],
   "trust_mode": "https-sha256-v1",
   "version": "1.5.9.15",
-  "published_at": "2026-11-21T03:46:00+00:00",
+  "published_at": "2026-11-21T05:24:17+00:00",
   "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_15.md",
   "full_package": {
     "package_type": "FULL",
     "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.15_FULL.zip",
     "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.15_FULL.zip",
-    "asset_size": 1466652,
-    "asset_sha256": "ff17d39d51c6bcd2b62e004688e716e6bc98753b09bf8aaae710a93b740a81bd",
+    "asset_size": 1467897,
+    "asset_sha256": "96921d00efd55be041a554da8e0a2f32d4eba97657bcdff61fc4e9dabb1ff1d2",
     "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.15_FULL_MANIFEST.json",
     "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.15_FULL_MANIFEST.json"
   }
