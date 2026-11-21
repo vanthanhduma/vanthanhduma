@@ -1,3 +1,0 @@
-Ready to publish Stable Video Studio v1.5.9.16.
-Source release branch: release-artifacts/v1.5.9.16
-Version: 1.5.9.16
