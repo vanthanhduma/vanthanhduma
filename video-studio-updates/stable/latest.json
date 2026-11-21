@@ -1,8 +1,8 @@
 {
   "app_id": "goc-review-phim-video-studio",
   "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.13_UPDATE.zip",
-  "asset_sha256": "ac722fa1c30633fad19acf49e8efd7bb1059520a46c0a82bbde23714167ae6bb",
-  "asset_size": 1464713,
+  "asset_sha256": "e014cbb97d6391debc7a536416b12e7158fd7da9818f360c2286bc7a9c5e1cff",
+  "asset_size": 1464712,
   "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.13_UPDATE.zip",
   "base_version": "1.5.6.41",
   "channel": "stable",
@@ -34,7 +34,7 @@
     {
       "action": "replace",
       "path": ".github/workflows/release-build.yml",
-      "sha256": "7235c5719b4c65a7ddf1a68fa0f692533e57bd1f35d254eb577c4a36c605677d",
+      "sha256": "6c0c295a375a78722d3c0a6bf2a827b388f8aa8c3e9b349980301ff949de16ae",
       "size": 12034
     },
     {
@@ -934,14 +934,14 @@
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "b89402b3c3d25d9a37b682d402924a188430f20d76a271988dd4561f4cbc2bad",
+      "sha256": "d3fd2a3fd52246a8bacb63d41235f2aa6d3a504d49f8e5a76205601f46eb3180",
       "size": 26862
     }
   ],
   "full_package": {
     "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL.zip",
-    "asset_sha256": "f3e0fa694e99816a4a875a482770f037e8369aefc5d345f86ddbf257337d9eb3",
-    "asset_size": 1462166,
+    "asset_sha256": "a439b998e7f0becbce0ccaeffd208ff7fc9c87ab9c7f5ebd919103f77e03393d",
+    "asset_size": 1462167,
     "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL.zip",
     "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL_MANIFEST.json",
     "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.13_FULL_MANIFEST.json",
@@ -949,7 +949,7 @@
   },
   "minimum_supported_version": "1.5.6.41",
   "package_type": "UPDATE",
-  "published_at": "2026-11-21T02:43:43+00:00",
+  "published_at": "2026-11-21T02:54:02+00:00",
   "release_notes": "# v1.5.9.13 — Export & Branding UI Refinement\n\n## Export workspace\n- Bỏ nút Xuất video trên thanh thao tác dự án vì đã có nút Xuất toàn bộ video trong workspace Xuất & kiểm tra.\n- Chuẩn hóa chiều cao các nút Xuất toàn bộ, Cắt bỏ & xuất phần còn lại, Kiểm tra chất lượng và Dừng tác vụ xuất.\n- Nới nhẹ bề rộng bảng thiết lập xuất để tránh nhãn/nút bị chật ở độ phân giải desktop phổ biến.\n\n## Studio Branding\n- Làm rõ tiêu đề và phân cấp bảng điều khiển.\n- Tăng bề rộng inspector để các trường, tab và nút chọn file thoáng hơn.\n- Làm mới tab và card điều khiển theo tông navy/teal, thống nhất bo góc, viền và khoảng cách.\n- Footer trạng thái và nút Áp dụng được tách rõ, nút áp dụng có kích thước nhất quán.\n- Giữ nguyên các điều khiển logo, nhãn, thời gian, phạm vi cảnh, preset, preview debounce và lệnh áp dụng.\n\n## Bảo toàn\n- Không thay đổi engine xuất video, project schema, dữ liệu dự án, Auto Save hoặc cấu hình Branding.\n- Không xóa hoặc thay đổi bất kỳ callback xử lý nghiệp vụ nào.\n",
   "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_13.md",
   "schema_version": 1,
@@ -968,7 +968,8 @@
     "1.5.9.8",
     "1.5.9.9",
     "1.5.9.10",
-    "1.5.9.11"
+    "1.5.9.11",
+    "1.5.9.12"
   ],
   "trust_mode": "https-sha256-v1",
   "version": "1.5.9.13"

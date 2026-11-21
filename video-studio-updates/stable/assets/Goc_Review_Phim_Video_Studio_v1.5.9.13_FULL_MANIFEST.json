@@ -322,7 +322,7 @@
     ".github/workflows/batch-cta-processing.yml": "991b5cf56710239e4b6dccae048dc062583b2d9985168290d7fcd736f4532dde",
     ".github/workflows/batch-cta-windows.yml": "c06983acdd86624f26eb1cfa2fe788b0ccceb77c321fc3694880afa38b0ea4c3",
     ".github/workflows/cta-regression.yml": "3460dc0974c47d6c5ee9ca42a343a33afa679e40a8562f500e111296b507a1a6",
-    ".github/workflows/release-build.yml": "7235c5719b4c65a7ddf1a68fa0f692533e57bd1f35d254eb577c4a36c605677d",
+    ".github/workflows/release-build.yml": "6c0c295a375a78722d3c0a6bf2a827b388f8aa8c3e9b349980301ff949de16ae",
     ".gitignore": "9735dbde873a0ca092af6bccb9f27382f41f4a062445db45cba2f2322749a577",
     "app.py": "6437e20373364dcdda6590caa7692f602147394f217baf37fb07de94d097310e",
     "assets/app_icon.ico": "6dbc6f581eda9f54b096787e7c916825109b09de090e1d7118180baf599f261a",
@@ -473,6 +473,6 @@
     "updater/qt_ui.py": "6f8353af435d1494e29d9610d314b93075548f863ed86a7592512c4e85d99dc9",
     "updater/state.py": "8688e017fcd618f6f421036f2ef19e8bd298683f76182eb12a79c9e50d4e6874"
   },
-  "archive_size": 1462166,
-  "archive_sha256": "f3e0fa694e99816a4a875a482770f037e8369aefc5d345f86ddbf257337d9eb3"
+  "archive_size": 1462167,
+  "archive_sha256": "a439b998e7f0becbce0ccaeffd208ff7fc9c87ab9c7f5ebd919103f77e03393d"
 }
