@@ -1,23 +1,23 @@
 {
   "app_id": "goc-review-phim-video-studio",
-  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.21_UPDATE.zip",
-  "asset_sha256": "e885fffba69e8e501858a178a9f5a5a7df73b11fcd8cb30b7ad10ec5aeadaa33",
-  "asset_size": 1483250,
-  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.21_UPDATE.zip",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.22_UPDATE.zip",
+  "asset_sha256": "6b0b859356897bc5c66d669a4e0063d104a19ede52fcad1dbab9f2f59054245c",
+  "asset_size": 1487800,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.22_UPDATE.zip",
   "base_version": "1.5.6.41",
   "channel": "stable",
   "files": [
     {
       "action": "replace",
       "path": ".github/workflows/batch-cta-e2e.yml",
-      "sha256": "5c7f4e0f72d56e1c1798bb11e368940a87319cbea553932724d3ddbba545c7c9",
-      "size": 1633
+      "sha256": "ae86959e766394d835cb93fb66f527a07f77c8d8b2263d677ca4dedf3dabf5e4",
+      "size": 1651
     },
     {
       "action": "replace",
       "path": ".github/workflows/batch-cta-processing.yml",
-      "sha256": "991b5cf56710239e4b6dccae048dc062583b2d9985168290d7fcd736f4532dde",
-      "size": 1353
+      "sha256": "36aa6570fc1c8184d923d73934605e1a7856eeea7d1ab45c822e2b040ef7e8bd",
+      "size": 1371
     },
     {
       "action": "replace",
@@ -34,7 +34,7 @@
     {
       "action": "replace",
       "path": ".github/workflows/release-build.yml",
-      "sha256": "a98a5de1a59bc36cdc363c6491ae3104d29662c07e4697e17b9df54fe83ece2c",
+      "sha256": "1b264a6a3e217ea387067368d4e28808d3a9c63d867a4eacefd7c42b777d427e",
       "size": 12390
     },
     {
@@ -46,8 +46,8 @@
     {
       "action": "replace",
       "path": "app.py",
-      "sha256": "41140f7d4b0e22f505baa9907ddd3664ee87926459c7eec04964aed5abefdea6",
-      "size": 346518
+      "sha256": "2ab9e86c688c9c5e41cdb89ebea81742a1ea526048a949d097c5cd67d70d051d",
+      "size": 348937
     },
     {
       "action": "replace",
@@ -160,8 +160,8 @@
     {
       "action": "replace",
       "path": "download_engine.py",
-      "sha256": "4aa025fe85202f3dc753304323425c0f7b2d14c50e24213964a490f03ead3fd6",
-      "size": 10926
+      "sha256": "a58ef1560c683e8cf8e1be11402ae75a39aa5bc49f03f893e3c1544675627f58",
+      "size": 15306
     },
     {
       "action": "replace",
@@ -310,8 +310,8 @@
     {
       "action": "replace",
       "path": "PHIEN_BAN.txt",
-      "sha256": "c9aefb3d8fbab0794b1c771a4340cc907d4a65af5e8f5c977e230e5f3373d2b6",
-      "size": 75
+      "sha256": "80fcf60bdf8e60a533db9a2ce9cb3d36f3958344973b15f6aa25ac1dd858cbab",
+      "size": 82
     },
     {
       "action": "replace",
@@ -328,8 +328,8 @@
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "2763b00c32287d438318929244145f212ec51802bfde679d86c7e3d7ff230f95",
-      "size": 16376
+      "sha256": "f5adfe1f2f650ec9cc807cf6923d8e6380e04cb91579741fddbf75c5352b6be4",
+      "size": 16773
     },
     {
       "action": "replace",
@@ -723,6 +723,12 @@
     },
     {
       "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_22.md",
+      "sha256": "5a43bf125447a5ce8dbb84c138883cf0e7359519290e17de9a93aa30927cfd6a",
+      "size": 2074
+    },
+    {
+      "action": "replace",
       "path": "RELEASE_NOTES_V1_5_9_3.md",
       "sha256": "ed65e248fa4e077a0b09512b523bc43f335f9be8a3d5b03d77cee635a4ec3f2e",
       "size": 1760
@@ -814,8 +820,8 @@
     {
       "action": "replace",
       "path": "tests/test_branding_preview_performance.py",
-      "sha256": "2fa59fb47d25609bc0c6d061d0c7820fea0bafd617b719cdfef964e515814a13",
-      "size": 6129
+      "sha256": "2af9f53d5db64c8132522cd9fc6f01dba62153918fa5a13865cb96b8b6e02704",
+      "size": 7269
     },
     {
       "action": "replace",
@@ -844,8 +850,8 @@
     {
       "action": "replace",
       "path": "tests/test_download_engine.py",
-      "sha256": "fb003df762e88e5e19756ab46ea7f55fd9bb20c3db7bad5de5417a67aa62a29f",
-      "size": 8484
+      "sha256": "7755d492ab73c7b74506a536759379cb9fadd265140720c94a56290c65d446ae",
+      "size": 13628
     },
     {
       "action": "replace",
@@ -988,13 +994,13 @@
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "7e2a92eb1a2e4e5d51ac4e6ad7fe1269ec3affaae68502088ace346d604e6164",
-      "size": 28495
+      "sha256": "0c4bcac55fa48b741d76e67976d70ff55cdbb9c7d201cd51c4a738feb27cdab2",
+      "size": 28672
     }
   ],
   "minimum_supported_version": "1.5.6.41",
   "package_type": "UPDATE",
-  "release_notes": "# v1.5.9.21 — Tăng tốc hàng đợi tải video\n\n## Cải tiến\n- Bổ sung tải đồng thời tối đa 2 video trong trang Tải video.\n- Cho phép chọn 1 video hoặc 2 video cùng lúc; mặc định là 2.\n- Giữ nguyên chất lượng Cao nhất (tự động), giới hạn 1080p/720p, định dạng MP4, cookie trình duyệt và thư mục lưu theo từng mục đã thêm.\n- Tiến độ, tốc độ, ETA và kết quả tiếp tục được cập nhật riêng cho từng video.\n\n## Dừng và tiếp tục an toàn\n- Khi nhấn Dừng tải, các video đang chạy nhận yêu cầu hủy; mục chưa được bắt đầu vẫn ở trạng thái chờ.\n- Video đã dừng vẫn giữ dữ liệu tạm để có thể tiếp tục; mục lỗi vẫn có thao tác Thử lại riêng.\n- Giới hạn song song tối đa 2 để tránh mở quá nhiều kết nối và tiêu thụ tài nguyên không cần thiết.\n\n## Lưu ý\n- Tải đồng thời giúp xử lý nhiều mục trong hàng đợi, không làm tăng băng thông Internet tối đa của máy.\n- Với video dung lượng lớn, lựa chọn Cao nhất (tự động) có thể cần nhiều thời gian hơn. Có thể chọn 1080p hoặc 720p khi muốn giới hạn dung lượng.\n\n## Kiểm thử\n- Kiểm tra hai tác vụ có thể chạy đồng thời.\n- Kiểm tra chế độ một tác vụ vẫn tuần tự.\n- Kiểm tra Dừng tải không khởi chạy các mục còn đang chờ.\n- Kiểm tra giao diện và tham số song song được truyền vào worker.\n",
+  "release_notes": "# v1.5.9.22 — Download & Branding reliability\n\n## Tăng tốc tải, giữ nguyên lựa chọn chất lượng\n- Tăng số phân đoạn DASH/HLS tải đồng thời từ 4 lên 8.\n- Bật HTTP chunk 10 MiB để thử tăng thông lượng trên máy chủ hỗ trợ HTTP range; đây là tính năng thử nghiệm của yt-dlp và có thể không tăng tốc với mọi nguồn.\n- Bật kiểm tra định dạng trước khi tải. Không đặt giới hạn 720p/1080p; bộ chọn Cao nhất (tự động) được giữ nguyên.\n- Khi cần ghép video/audio, dùng MP4 trước nếu người dùng chọn Ưu tiên MP4; nếu không thì MKV trước. Không encode lại, không giảm chất lượng nguồn.\n\n## Sửa lỗi file chỉ có âm thanh\n- Nếu FFprobe có sẵn, kiểm tra file đầu ra sau hậu xử lý.\n- File không có luồng hình sẽ không được đánh dấu hoàn tất; ứng dụng hiển thị thông báo lỗi thay vì báo tải thành công sai.\n- Trả về đường dẫn file và codec hình để hỗ trợ chẩn đoán.\n\n## Sửa Studio Branding\n- Nền nhãn tự động tính theo kích thước chữ thay vì dùng bề rộng cố định.\n- Chữ dài được thu cỡ hoặc xuống dòng trong giới hạn khung hình, tránh tràn khỏi nền.\n- Vẫn giữ màu, độ mờ, vị trí, kích thước nhãn và nội dung người dùng đặt.\n\n## Tác vụ hàng đợi\n- Giữ cơ chế hàng đợi tối đa 2 video, tiếp tục tải và thử lại từng mục.\n- Các kiểm thử hàng đợi tải và Batch CTA được chạy cùng bộ kiểm tra Windows/Qt trước phát hành.\n- Không thay đổi schema dự án và dữ liệu cá nhân.\n\n## Kiểm thử bổ sung\n- File audio-only không được đánh dấu là video tải thành công.\n- File có luồng hình được FFprobe chấp nhận.\n- Cấu hình 8 phân đoạn/HTTP chunk không thay đổi bộ chọn Cao nhất.\n- Nền nhãn bao hết chữ tiếng Việt ở nhãn dài.\n",
   "schema_version": 1,
   "supported_base_versions": [
     "1.5.6.41",
@@ -1020,19 +1026,20 @@
     "1.5.9.17",
     "1.5.9.18",
     "1.5.9.19",
-    "1.5.9.20"
+    "1.5.9.20",
+    "1.5.9.21"
   ],
   "trust_mode": "https-sha256-v1",
-  "version": "1.5.9.21",
-  "published_at": "2026-11-21T11:22:00+00:00",
-  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_21.md",
+  "version": "1.5.9.22",
+  "published_at": "2026-11-21T11:47:49+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_22.md",
   "full_package": {
     "package_type": "FULL",
-    "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.21_FULL.zip",
-    "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.21_FULL.zip",
-    "asset_size": 1480559,
-    "asset_sha256": "56ac1ac93d48b6a332b8bf4fa1fb9facbe3f4f5423cc7336570fd0771685248e",
-    "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.21_FULL_MANIFEST.json",
-    "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.21_FULL_MANIFEST.json"
+    "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.22_FULL.zip",
+    "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.22_FULL.zip",
+    "asset_size": 1485093,
+    "asset_sha256": "036614f46dec9c1ba77d5d8d2f0782c12814d37a2428417b70020afe4b2865f6",
+    "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.22_FULL_MANIFEST.json",
+    "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.22_FULL_MANIFEST.json"
   }
 }
