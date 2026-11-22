@@ -1,0 +1,34 @@
+{
+  "version": "1.5.9.31",
+  "base_version": "1.5.6.41",
+  "assets": [
+    {
+      "key": "update",
+      "name": "Goc_Review_Phim_Video_Studio_v1.5.9.31_UPDATE.zip",
+      "size": 1340236,
+      "sha256": "4f3ac00cefa0bcf6f120556f89f661241907f09b901660065b2f6cce58151d25",
+      "chunks": [
+        "update_0000.b64",
+        "update_0001.b64",
+        "update_0002.b64"
+      ]
+    },
+    {
+      "key": "full",
+      "name": "Goc_Review_Phim_Video_Studio_v1.5.9.31_FULL.zip",
+      "size": 1339533,
+      "sha256": "95e46fe6720e03a4abf7796856e2c024b0018a38a1858c519695168b3444720c",
+      "chunks": [
+        "full_0000.b64",
+        "full_0001.b64",
+        "full_0002.b64"
+      ]
+    }
+  ],
+  "text_files": [
+    "latest.json",
+    "update-manifest.json",
+    "full-manifest.json",
+    "RELEASE_NOTES_V1_5_9_31.md"
+  ]
+}
