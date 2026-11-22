@@ -1,5 +1,0 @@
-READY
-Video Studio Stable v1.5.9.33
-Release source: vanthanhduma/Goc-Review-Phim-Video-Studio@39946465045080737a592e285c16ca94285d3351
-Packages: FULL + UPDATE
-All staging manifests and six base64 chunks have been uploaded.
