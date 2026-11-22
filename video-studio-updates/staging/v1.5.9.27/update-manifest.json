@@ -1,0 +1,294 @@
+{
+  "app_id": "goc-review-phim-video-studio",
+  "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.27_UPDATE.zip",
+  "asset_sha256": "60974b3b9734525077ab02718f487a3a163f1245cbabda0e0cffdad7e24bb9d2",
+  "asset_size": 1327127,
+  "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.27_UPDATE.zip",
+  "base_version": "1.5.6.41",
+  "channel": "stable",
+  "files": [
+    {
+      "action": "replace",
+      "path": "app.py",
+      "sha256": "b53a451b46ec4130e9d9d9213d848b3073b532e29217fac10102ca0f8180edc1",
+      "size": 348937
+    },
+    {
+      "action": "replace",
+      "path": "assets/app_icon.ico",
+      "sha256": "6dbc6f581eda9f54b096787e7c916825109b09de090e1d7118180baf599f261a",
+      "size": 52509
+    },
+    {
+      "action": "replace",
+      "path": "assets/Goc_Review_Phim_Logo.png",
+      "sha256": "1691b109a995e99706d9bb1fc59ab9a67cbdbec23c46072df28df17f7013d738",
+      "size": 69065
+    },
+    {
+      "action": "replace",
+      "path": "assets/tessdata/eng.traineddata",
+      "sha256": "7a79f0d5eb44db48ae5abd2dca35c602d6d3a8667cc401ad61479cbfa8139ee8",
+      "size": 786443
+    },
+    {
+      "action": "replace",
+      "path": "assets/tessdata/LICENSE-Apache-2.0.txt",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "size": 11560
+    },
+    {
+      "action": "replace",
+      "path": "assets/tessdata/vie.traineddata",
+      "sha256": "79df64caf7bcfb2a27df5042ecb6121e196eada34da774956995747636d5bfa1",
+      "size": 531275
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_projects.py",
+      "sha256": "b0779293a11a9b37385c39777c8db811aa04497fb94bc28970451aaedd0664de",
+      "size": 9328
+    },
+    {
+      "action": "replace",
+      "path": "batch_cta_queue.py",
+      "sha256": "f9aac6cdb316de6286c76b4c36c3784b9f997c44686729a420c5e219beb4597b",
+      "size": 8355
+    },
+    {
+      "action": "replace",
+      "path": "CAI_DAT_VA_CHAY.bat",
+      "sha256": "8960855e45b42be7c034095789fcfe0a6e58134747c4c40ea14b30e607dd1095",
+      "size": 5249
+    },
+    {
+      "action": "replace",
+      "path": "CAI_TESSERACT_OCR.bat",
+      "sha256": "f0e638e4d2522a037654392b67425da4af537ad340975aa9e1702d3a26454bba",
+      "size": 1633
+    },
+    {
+      "action": "replace",
+      "path": "CAP_NHAT_THU_VIEN.bat",
+      "sha256": "1713b61e1f18e2a75ab669e34f88a18601d8b6f4852b48371e0065718d121be5",
+      "size": 750
+    },
+    {
+      "action": "replace",
+      "path": "CHAY_TOOL.bat",
+      "sha256": "dbc176d767cfd8be436c5f54524d605a35e2f6a4e7cc841115d48630e73870d6",
+      "size": 434
+    },
+    {
+      "action": "replace",
+      "path": "cta_detector.py",
+      "sha256": "1dd98de43e32f3ff34d4e96c5aeb585e1549dbd9cd58232d882ebe68a1afdb9b",
+      "size": 51584
+    },
+    {
+      "action": "replace",
+      "path": "cta_merge.py",
+      "sha256": "40f923a236e56633d27280c1596b5b867ea3398038ad8668a561eb5322d6ebc7",
+      "size": 3944
+    },
+    {
+      "action": "replace",
+      "path": "download_engine.py",
+      "sha256": "a58ef1560c683e8cf8e1be11402ae75a39aa5bc49f03f893e3c1544675627f58",
+      "size": 15306
+    },
+    {
+      "action": "replace",
+      "path": "engine_worker.py",
+      "sha256": "457b7bfae149d8e59c142241f4295d86e514bb18c2323ef985ad34da5b116a67",
+      "size": 89210
+    },
+    {
+      "action": "replace",
+      "path": "gpu_check.py",
+      "sha256": "e21def3dfcc5db5a43fd06fd906dd19c9a0e7f3a3ecd8b96220b6e8c78051319",
+      "size": 1516
+    },
+    {
+      "action": "replace",
+      "path": "HUONG_DAN_CAI_DAT.txt",
+      "sha256": "7ae5370af948b234ac3b86abcf5c5dbabd8d727a2e3e87286fc193528bd9652a",
+      "size": 2581
+    },
+    {
+      "action": "replace",
+      "path": "KIEM_TRA_TANG_TOC_GPU.bat",
+      "sha256": "9add8f621181a28d67cad6819c2895d5b1e3715c0bfbd435c702cf88a8fb6bf9",
+      "size": 340
+    },
+    {
+      "action": "replace",
+      "path": "launcher.py",
+      "sha256": "51798ef6b7a44b0b99dc423432229bceaf2f1f4aacc59e2f410f25e06cbb60d3",
+      "size": 2758
+    },
+    {
+      "action": "replace",
+      "path": "MO_GOC_REVIEW_PHIM.vbs",
+      "sha256": "f6a502720cb67bd706c9d1400e2fc7dc9f40942b32dcd19d944e71d74d2e08a9",
+      "size": 1377
+    },
+    {
+      "action": "replace",
+      "path": "MO_TRANG_TAI_FFMPEG_GPU.bat",
+      "sha256": "ba53833eebcfa25d54ba51d5788e1c6724e6fa7a59e32175892732f46e2a22d8",
+      "size": 59
+    },
+    {
+      "action": "replace",
+      "path": "PHIEN_BAN.txt",
+      "sha256": "03d4d2b358d8715edc6c48028b6e48137b262b7bf1d47e6a6cefd61a31539ffb",
+      "size": 66
+    },
+    {
+      "action": "replace",
+      "path": "project_storage.py",
+      "sha256": "879ba398167aa07f535a4ed085fa7ba32daddc40d1e1715cff570000efe0c64f",
+      "size": 29375
+    },
+    {
+      "action": "replace",
+      "path": "qt_app.py",
+      "sha256": "bbd97ddaaba0f76b08e909cfef5f00f85e5501f87c31f613ed36be5b9e7e59cc",
+      "size": 373396
+    },
+    {
+      "action": "replace",
+      "path": "README.md",
+      "sha256": "42daab40ca6e77a76345bad679deb878ced33da90a0515e9602f16785ab3ffff",
+      "size": 6231
+    },
+    {
+      "action": "replace",
+      "path": "RELEASE_NOTES_V1_5_9_27.md",
+      "sha256": "9314069aa11bb03cd915f5b0a89a03c83076d94b8cdcb8daacb4a02331a94069",
+      "size": 1127
+    },
+    {
+      "action": "replace",
+      "path": "requirements.txt",
+      "sha256": "cde1d38ac00c7be19be2090f7fb007f0adc2d1a3a7ae8867bee38836698f202f",
+      "size": 205
+    },
+    {
+      "action": "replace",
+      "path": "TAO_LOI_TAT_DESKTOP.vbs",
+      "sha256": "dc0ba26109e2c4ef1d977abb14f56dddda6efc3aa46a5a70b4dfe49f635a196f",
+      "size": 1318
+    },
+    {
+      "action": "replace",
+      "path": "TESSDATA_NOTICE.md",
+      "sha256": "301e5630a9b7dd0392079a694567067f601faaa0e5ac2afb7d65d67f51ba0c4f",
+      "size": 626
+    },
+    {
+      "action": "replace",
+      "path": "timeline_seek.py",
+      "sha256": "ff2d717a5170f6d6311e4da113d9e95a1ea4ac891986b26ef2649669f54efa39",
+      "size": 2499
+    },
+    {
+      "action": "replace",
+      "path": "updater/__init__.py",
+      "sha256": "cd6cebd18ff088d82721118afea36347b714a5f73029e36ceeea0f482b4d44c8",
+      "size": 93
+    },
+    {
+      "action": "replace",
+      "path": "updater/apply_helper.py",
+      "sha256": "edb49ac5d4fd49fb8620f42316377972c25854c6ddf94dcf524de2acdb284df6",
+      "size": 16451
+    },
+    {
+      "action": "replace",
+      "path": "updater/core.py",
+      "sha256": "9426c5446ae23d310c623258b5b2d1d49651a9e3978cb411d443463f57ace41c",
+      "size": 21580
+    },
+    {
+      "action": "replace",
+      "path": "updater/keys/update-public-key-legacy.pem",
+      "sha256": "a08d7002cc36a17294e899afcaf433ae34f3422107fdef440704d7fb51727a4c",
+      "size": 116
+    },
+    {
+      "action": "replace",
+      "path": "updater/keys/update-public-key.pem",
+      "sha256": "ff130e6ce15fb7d64cca3e9cb84fea66bc41f2ec64f9e07abd0219b551fca9ce",
+      "size": 116
+    },
+    {
+      "action": "replace",
+      "path": "updater/qt_ui.py",
+      "sha256": "6f8353af435d1494e29d9610d314b93075548f863ed86a7592512c4e85d99dc9",
+      "size": 11728
+    },
+    {
+      "action": "replace",
+      "path": "updater/state.py",
+      "sha256": "8688e017fcd618f6f421036f2ef19e8bd298683f76182eb12a79c9e50d4e6874",
+      "size": 1304
+    },
+    {
+      "action": "replace",
+      "path": "MANIFEST.json",
+      "sha256": "67b1f537e316811e02abaf1271d7c62b6c5890735c510c10418f08cf4d20728a",
+      "size": 6381
+    }
+  ],
+  "minimum_supported_version": "1.5.6.41",
+  "package_type": "UPDATE",
+  "release_notes": "# v1.5.9.27 — Exact Cut Range Preview\n\n## Xem thử khoảng cắt\n- Reuse the existing Bắt đầu and Kết thúc inputs; no duplicate time controls.\n- Render only the selected interval to a temporary H.264/AAC MP4 clip.\n- Open the temporary clip with the operating system's default media player.\n- Run FFmpeg on a cancellable background QThread so the Qt interface remains responsive.\n- Preserve the source video and project data. Temporary preview clips older than seven days are pruned when the next preview is created.\n- Stop an in-flight FFmpeg process safely when the application is closing.\n\n## Studio Branding\n- Keep the Studio Branding refinements delivered in v1.5.9.26: compact inspector, evenly expanded Logo/Nhãn/Thời gian/Preset tabs, and improved fields, sliders, cards, and spacing.\n- Preserve all existing branding controls and project behavior.\n\n## Regression coverage\n- Verify the selected time range is passed through the preview worker and encoded to the expected duration.\n- Verify default-player integration, background execution, cancellation, and stale temporary-file cleanup.\n",
+  "schema_version": 1,
+  "supported_base_versions": [
+    "1.5.6.41",
+    "1.5.7.0",
+    "1.5.8.0",
+    "1.5.9.0",
+    "1.5.9.1",
+    "1.5.9.2",
+    "1.5.9.3",
+    "1.5.9.4",
+    "1.5.9.5",
+    "1.5.9.6",
+    "1.5.9.7",
+    "1.5.9.8",
+    "1.5.9.9",
+    "1.5.9.10",
+    "1.5.9.11",
+    "1.5.9.12",
+    "1.5.9.13",
+    "1.5.9.14",
+    "1.5.9.15",
+    "1.5.9.16",
+    "1.5.9.17",
+    "1.5.9.18",
+    "1.5.9.19",
+    "1.5.9.20",
+    "1.5.9.21",
+    "1.5.9.22",
+    "1.5.9.23",
+    "1.5.9.24",
+    "1.5.9.25",
+    "1.5.9.26"
+  ],
+  "trust_mode": "https-sha256-v1",
+  "version": "1.5.9.27",
+  "published_at": "2026-11-22T06:51:29+00:00",
+  "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_27.md",
+  "full_package": {
+    "package_type": "FULL",
+    "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.27_FULL.zip",
+    "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.27_FULL.zip",
+    "asset_size": 1326441,
+    "asset_sha256": "dd3e1eb6483c9c44d8b57aa4d85db6474e6ccb99432c45b71cc9450486c6469f",
+    "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.27_FULL_MANIFEST.json",
+    "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.27_FULL_MANIFEST.json"
+  }
+}
