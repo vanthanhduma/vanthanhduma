@@ -1,48 +1,12 @@
 {
   "app_id": "goc-review-phim-video-studio",
   "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.25_UPDATE.zip",
-  "asset_sha256": "4d29699ab34f5d19a54225f5978d8739b8b24bc803ca4ec00ba19221db8fcadb",
-  "asset_size": 1494970,
+  "asset_sha256": "a20dfe90a918d747496296c830157cd278bf2cda0b3f70b29054050654dbd41f",
+  "asset_size": 1324748,
   "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.25_UPDATE.zip",
   "base_version": "1.5.6.41",
   "channel": "stable",
   "files": [
-    {
-      "action": "replace",
-      "path": ".github/workflows/batch-cta-e2e.yml",
-      "sha256": "ae86959e766394d835cb93fb66f527a07f77c8d8b2263d677ca4dedf3dabf5e4",
-      "size": 1651
-    },
-    {
-      "action": "replace",
-      "path": ".github/workflows/batch-cta-processing.yml",
-      "sha256": "36aa6570fc1c8184d923d73934605e1a7856eeea7d1ab45c822e2b040ef7e8bd",
-      "size": 1371
-    },
-    {
-      "action": "replace",
-      "path": ".github/workflows/batch-cta-windows.yml",
-      "sha256": "4a7a417010f406c0a64b9889c70c5b20a6bca5203e81b24bb7beaa314c139781",
-      "size": 2606
-    },
-    {
-      "action": "replace",
-      "path": ".github/workflows/cta-regression.yml",
-      "sha256": "3460dc0974c47d6c5ee9ca42a343a33afa679e40a8562f500e111296b507a1a6",
-      "size": 1417
-    },
-    {
-      "action": "replace",
-      "path": ".github/workflows/release-build.yml",
-      "sha256": "0e1bea47bb31f60cbb937f5c59ddfc1c2b6b60e56e9494029398d5af7d14e486",
-      "size": 12390
-    },
-    {
-      "action": "replace",
-      "path": ".gitignore",
-      "sha256": "9735dbde873a0ca092af6bccb9f27382f41f4a062445db45cba2f2322749a577",
-      "size": 135
-    },
     {
       "action": "replace",
       "path": "app.py",
@@ -94,8 +58,8 @@
     {
       "action": "replace",
       "path": "CAI_DAT_VA_CHAY.bat",
-      "sha256": "2984e62ac45575d8635641edd1bfd9723474d7b38f903e972ba0b1e9e3031905",
-      "size": 5241
+      "sha256": "3661e67feefa0e54819daee6b11be70346637e98318bc0cfb7dedbaa6e58776a",
+      "size": 5249
     },
     {
       "action": "replace",
@@ -129,36 +93,6 @@
     },
     {
       "action": "replace",
-      "path": "docs/BATCH_CTA_PROCESSING_SPEC.md",
-      "sha256": "9ef7ea5b7d4ae5eb8f87fba65d356e138a1eaf9b50e47882b07d454ad937ffea",
-      "size": 3652
-    },
-    {
-      "action": "replace",
-      "path": "docs/IN_APP_UPDATER_UX.md",
-      "sha256": "490673f8c4468aee54d6f64e5cb7a94e072be9af113772a202ac0acc8057d5bd",
-      "size": 10413
-    },
-    {
-      "action": "replace",
-      "path": "docs/RELEASE_WORKFLOW_V1_5_5_7.md",
-      "sha256": "33358e7f1fe5c9532eee291eba8a50cacd6b9dcb77a2afc4727255897949bd47",
-      "size": 1815
-    },
-    {
-      "action": "replace",
-      "path": "docs/UPDATER_DESIGN.md",
-      "sha256": "348d8ed854e61feb3edfaec9fb6e0383f82fff435cf7df4eff6263cab24962b2",
-      "size": 11311
-    },
-    {
-      "action": "replace",
-      "path": "docs/UPDATER_IMPLEMENTATION_STATUS.md",
-      "sha256": "8c38ed052c7d95dbc843c4381c695c5c83f0997ac0b111fda904f4d9ac7d1edc",
-      "size": 1921
-    },
-    {
-      "action": "replace",
       "path": "download_engine.py",
       "sha256": "a58ef1560c683e8cf8e1be11402ae75a39aa5bc49f03f893e3c1544675627f58",
       "size": 15306
@@ -178,104 +112,8 @@
     {
       "action": "replace",
       "path": "HUONG_DAN_CAI_DAT.txt",
-      "sha256": "532a5c543e0e937e9487b51af658fd8770c2292eccac2fbe1071f58a78c0928f",
-      "size": 2406
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_4_2_0.md",
-      "sha256": "6cb809abbdd36769b111553ba04f7f52e6d6f202a6d0146cd96bc6fa2d977f4f",
-      "size": 2546
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_4_3_0.md",
-      "sha256": "c0ec2ea9a88d926f071471868c01d3d0e1eb82c9e31fd27c122320c0440b1055",
-      "size": 3900
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_4_3_1.md",
-      "sha256": "fb1c3ecc551a4bd5f8dad6b32d7036259475312084d844e899ee391af4ed871b",
-      "size": 3214
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_4_4_0.md",
-      "sha256": "2375aaa020441428725a58c50ad7d35ed96b156a20ba237bedb9e7b894ae9764",
-      "size": 2218
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_4_5_0.md",
-      "sha256": "65836b6c0d83533cc5a7945f20c6c8c7fe867846d10cfca86eb37bbd834e285a",
-      "size": 3424
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_0_0.md",
-      "sha256": "55034e6030a12fec66b7dfd8819f75595c8012cd04312372459249f8463e835d",
-      "size": 1945
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_1_0.md",
-      "sha256": "9671c416d1ad9ea73a4e7bc7867b67f1a1a35063f7743cc78d3bc0e2805449b2",
-      "size": 1515
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_2_0.md",
-      "sha256": "278e66ed030bb21b5d52c10553b43ff622997353a4a06eeed1254de78eac92f8",
-      "size": 1784
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_3_0.md",
-      "sha256": "fa6523ea0261b6a14f4ce2fa2b96cbff520a4d045042ed1041084738824d0a45",
-      "size": 1529
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_4_0.md",
-      "sha256": "4e8692bf29de033b953b70b55bc394a14f1b46f3ae9194c0bd18961530af5a82",
-      "size": 2754
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_5_0.md",
-      "sha256": "1c80d37964181eb8b5c2498cebfcd85f690e9935ac9bdd328db0aa93b1ba6596",
-      "size": 1763
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_5_2.md",
-      "sha256": "87623389ad0396f28e81018f53d1203567813ed6512dd4d5912fc068e4bb78bf",
-      "size": 2082
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_5_3.md",
-      "sha256": "49885f2c2cc1cbe6df0129ee10d8cf3fae23886cc71f70d921ce254e8a4e57c6",
-      "size": 2166
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_5_4.md",
-      "sha256": "48b922b1ff41bb6bdfe28b9420ed4589b4579bc05c47c4f373567734391e4bb2",
-      "size": 2409
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_5_5.md",
-      "sha256": "3bd80c6dd51413bb10508735e72fc40f4de3a6dfbe93225db8eb80b6069b0d69",
-      "size": 1346
-    },
-    {
-      "action": "replace",
-      "path": "KIEM_THU_V1_5_5_6.md",
-      "sha256": "b6b55473685f3dfc62dcdbf47487cf5d143d5472c388f6eb5e79b2b9fe97f565",
-      "size": 1135
+      "sha256": "7ae5370af948b234ac3b86abcf5c5dbabd8d727a2e3e87286fc193528bd9652a",
+      "size": 2581
     },
     {
       "action": "replace",
@@ -294,12 +132,6 @@
       "path": "MO_GOC_REVIEW_PHIM.vbs",
       "sha256": "f6a502720cb67bd706c9d1400e2fc7dc9f40942b32dcd19d944e71d74d2e08a9",
       "size": 1377
-    },
-    {
-      "action": "replace",
-      "path": "MO_GOC_REVIEW_PHIM_LEGACY.vbs",
-      "sha256": "84b79212980b30082cf9c7b0479a53c1c261fe2af5bdfe74db0e854f933f3094",
-      "size": 619
     },
     {
       "action": "replace",
@@ -328,464 +160,14 @@
     {
       "action": "replace",
       "path": "README.md",
-      "sha256": "a72b3255cb56bb764adc7412ebe60681699fc06f7f90a059ecc7f08efcbb8dd1",
-      "size": 18234
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_4_4_0.md",
-      "sha256": "91b98da317f7fb7d16927b78970b8f99cd5c0a7f095852306e061a1f3fd0338f",
-      "size": 1334
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_4_5_0.md",
-      "sha256": "018cf149df034fc4d542cfa653a4825c54fee31f348a6ca6ddee229449450048",
-      "size": 2694
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_0_0.md",
-      "sha256": "8e58c5bd2cfebb8658a739de44d9cc204dc639eca7b3931c1d7ed4fc7ec7754f",
-      "size": 1645
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_1_0.md",
-      "sha256": "92977e22099d47b0bd7905426a025ea4d4a334808e7ba745c633d946d18baa5e",
-      "size": 1666
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_2_0.md",
-      "sha256": "336bd14137804e2abfa3e24cfb0b4337cb4a8505e35581f5bbabd6f1dc0dbb87",
-      "size": 1556
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_3_0.md",
-      "sha256": "5faf460d342a505d8e15db37fe48d1763f2fe2808cb584893c16e073fef3d58f",
-      "size": 1175
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_4_0.md",
-      "sha256": "8d51d76aabaf8266bcbc9347140f370e131f3265df4ce71984dbee49306ad39a",
-      "size": 1737
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_0.md",
-      "sha256": "87cb81df47cc309b408cfd37f02386a6568123e1ad1a3eea49038c49f2817100",
-      "size": 1814
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_2.md",
-      "sha256": "4eacccd0119931f65ae1187576a596e3beabb2e5973f713acd5acbb85b650c69",
-      "size": 779
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_3.md",
-      "sha256": "64267eb24b66f77be40f4a798f830a755c26c6e8de646e6f51aa95e9966a87cf",
-      "size": 684
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_4.md",
-      "sha256": "ef4c1da05aeebc74896143f1561fab84337cbca846548ecdb3dcda1922b1b584",
-      "size": 1130
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_5.md",
-      "sha256": "d23aeeeaceaa75e7f7d664fa34cd5794bfedae3cb04d0f762cf6b96bc082bcaa",
-      "size": 964
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_6.md",
-      "sha256": "fcc472d3eb80c5d1063170ca6e2736ecf749e73f30ca5b1b24e3ccb96076bf89",
-      "size": 727
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_7.md",
-      "sha256": "0082ff1351779bc9bbd4d3ce05dcf7b1c952fc6300cba6ef7bacd8019561f006",
-      "size": 589
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_5_8.md",
-      "sha256": "fc3022b236c3f244ed61934ed2e7ec9e2892d76021e94e9b17f708cef3328711",
-      "size": 473
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_10.md",
-      "sha256": "23553622762e6a84a1109ca560ff6639ec988c7f6b9a6d65264c33b45bd20691",
-      "size": 620
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_11.md",
-      "sha256": "131622531789d5d54b4967e72f935cf47b0179f1e81e204acef7002a19d00fbe",
-      "size": 498
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_12.md",
-      "sha256": "6e2cbf4d622d6279532e575a4e6ca7dc6c900a31a06e9180690cff4e6e075a7d",
-      "size": 497
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_13.md",
-      "sha256": "eaa24ac3a0f047693497f7cee2d59a3aa6928cb900883d05675780c247ccef82",
-      "size": 524
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_14.md",
-      "sha256": "ed7886f37278be19188a95b894aa80981c82bdc27280c39427c78945785a7377",
-      "size": 545
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_15.md",
-      "sha256": "df08a2b12753ca27a88788d9b39ca08b169390594b6f5be14ee02dffe54a7120",
-      "size": 404
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_16.md",
-      "sha256": "44c4d6c2d52a79c8b5c7bc7e42e07a6c34f3993141af0da0943e0d27b2b9b7dd",
-      "size": 703
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_17.md",
-      "sha256": "120f24648920eca79d158ee0d74c3dd90afa191fe1854eb8693273602e0b435a",
-      "size": 307
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_18.md",
-      "sha256": "cbb63221c3087f8d4731cbf8b1a58a88b3075c0761424ed8a2040664d2fb2fc4",
-      "size": 351
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_19.md",
-      "sha256": "76353d2fd43913303f89c5d196dd37d3fe1a64947b28d4b95885ff693e37378d",
-      "size": 527
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_20.md",
-      "sha256": "f8bd302dc995bef4ebbfabf2b36ce83c2a3ca3fa25a4ca65a8c86db668ad3adb",
-      "size": 469
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_21.md",
-      "sha256": "e8002c85120c4f7d1fe98aab4e1c4dadc1bb36f63332f0d0b05d6fa31a170de6",
-      "size": 432
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_22.md",
-      "sha256": "eff77a4b8d29b823e6b487baa145210e891e4c247d1bb52f86560ca8ceea90e0",
-      "size": 972
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_23.md",
-      "sha256": "1018f44fe75e0e11cfa3dcdf709962e37e88db9f1ac5f8fe84adb30b10ff326c",
-      "size": 465
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_24.md",
-      "sha256": "4b8743d9849899ef475edbc74558fad87d3a0650b985468829e33d504f0c62c5",
-      "size": 660
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_25.md",
-      "sha256": "25c80d8f33361b7748c086f6962bd08d9f755cd209001a9e6dd233d197658cb9",
-      "size": 589
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_26.md",
-      "sha256": "6f0279dbd7fea57042e96174a047a8af09ffa561a4689110b8bfe5db2cbac112",
-      "size": 860
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_27.md",
-      "sha256": "851d99f79fd4e58d989bf487f1706d11a67e44618362911500142708ec06dde8",
-      "size": 625
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_28.md",
-      "sha256": "258cbbf6b1fb096e860023df8c5816954438faca4ee05049c204a530f8a84f8c",
-      "size": 507
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_29.md",
-      "sha256": "ff40e9db22a11de0e37b12838ad1b155a2b4ede904e5fca6e43658b7e254fbb5",
-      "size": 350
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_30.md",
-      "sha256": "0d557c25fa9980cc23cdf94357285ac423c34d7b68f41d20c8730fe48efe693e",
-      "size": 1650
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_31.md",
-      "sha256": "c1ce5023db2520a566ea1f8b82afad610841327de42b0d2839df4c64f80db4f9",
-      "size": 1297
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_32.md",
-      "sha256": "ff2d6a49cbf3c183311d918866ccf90ea7876c6a35a68ed4ba301570b05df258",
-      "size": 1771
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_33.md",
-      "sha256": "839458a9b3ebc867062971710855ebebd710c8b705d53afeac6764a21a7bdc5e",
-      "size": 1882
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_36.md",
-      "sha256": "a6f5340cab4b6c54876106add1cf4060b1ca03807e3ada94c70cfa398e9a403b",
-      "size": 2095
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_37.md",
-      "sha256": "00387f0f65ce70f84ebba42549c3dd3d5d5e6b6bd823da1ab0d6ac75482fab61",
-      "size": 1141
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_38.md",
-      "sha256": "7b122441741f839c87ce538306b3bc8e1d5f44c26e468367e75a3d204bbc98af",
-      "size": 1199
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_39.md",
-      "sha256": "cde9021bcc010ef81d80d138a51c7f2e8a7a3565f2ca6d4b98be70280d293609",
-      "size": 1378
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_40.md",
-      "sha256": "1dfff720d68e0923593850cf3d48a50361198ae4fdd2c47b7550e61f69db7683",
-      "size": 1221
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_41.md",
-      "sha256": "243898221663691235a35b95bbf4825dcaebd448d401bc8abf19ef2c62a9e3db",
-      "size": 3569
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_7.md",
-      "sha256": "c508071848384db62ae3f9c568204534cc90d3a5be062fb8ef6c8e43d2c24f47",
-      "size": 589
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_8.md",
-      "sha256": "931ee3a8860bf18761c581f8bdd857490eecbd4dc6f16436785b1c955c97376a",
-      "size": 1260
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_6_9.md",
-      "sha256": "2f3811793d8676d20b6e1f68f36b9a8b711dc560b7f343830b6a79e872a4a23b",
-      "size": 918
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_7_0.md",
-      "sha256": "17aa871684a930cd4916bcddadc663de26702c3a393d824ebf63589ada2a4cd2",
-      "size": 2561
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_8_0.md",
-      "sha256": "aa5ec2a8ed41e2b8bd073e2c678dd6cacca35c1db177d3638948088272fbc733",
-      "size": 1726
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_0.md",
-      "sha256": "7afa66adcc5dffa6a69f8dcf9f85c144e7ab4a657e539e787dd82820f8f4ed26",
-      "size": 2791
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_1.md",
-      "sha256": "f1a5922b3f6c18be8554b3a508caee29ca22c439916d6bf9ec5d1c74d28f3bad",
-      "size": 2403
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_10.md",
-      "sha256": "643db6e9b943169fc0b0cae773f81304cebf7c0af19041fede0da1f7da51042f",
-      "size": 1771
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_11.md",
-      "sha256": "a3d8267ac1b18f00bbff631496713416ff80e26f5f9150db761dfcacb9a1c53b",
-      "size": 1452
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_12.md",
-      "sha256": "efdefb5bdfe5980efdd816dfbcd79a0ca0e5463975e6f0584adcbdce89f9eb2a",
-      "size": 1224
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_13.md",
-      "sha256": "0c35d31650ed5550280da743b2616ea7e88d3dd97a2feb8f05a623aebf8ce0f9",
-      "size": 1254
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_14.md",
-      "sha256": "f8e495126a66a45649976f8bd95e6ecfcce35a6ebfa50c4492852954f8fd0398",
-      "size": 904
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_15.md",
-      "sha256": "4f2bf7dba837d8adbd9b670b12acaf0b0632a53e3b13a1cb5584c75d103eaa1f",
-      "size": 1615
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_16.md",
-      "sha256": "d93ac8247fe48588ec9bb05165621316a6df29ae49fe1a19acab365334733e16",
-      "size": 1416
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_17.md",
-      "sha256": "ff14bc1f4ab1d9816211d7e6825667111f0b1ad230f8d8f8f682309249e40cb6",
-      "size": 1468
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_18.md",
-      "sha256": "eb5ef2d68f2bd229f5b3846a36ac6f2e87b33cd01d7e0ee1e7f7657d0771bd9f",
-      "size": 1534
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_19.md",
-      "sha256": "f10d3e4b040914f473693caec5e29f2a986ac19a12313eeb9ebacba7fac13157",
-      "size": 1389
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_2.md",
-      "sha256": "90bf97683d857cd638247e84c76a5eeb9da1821603f1223e5bb3fb9617deffeb",
-      "size": 1840
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_20.md",
-      "sha256": "01822b8506409406fbf01911604d8db2555eeb2a79cc3c5588bf5408b30e805c",
-      "size": 1130
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_21.md",
-      "sha256": "072957a47177fa2b1adbad44a030fa88e70d65bd7ba3ebff28cba1a5c8aba450",
-      "size": 1598
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_22.md",
-      "sha256": "5a43bf125447a5ce8dbb84c138883cf0e7359519290e17de9a93aa30927cfd6a",
-      "size": 2074
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_23.md",
-      "sha256": "e4eda280f42495454b0c905469ea918a94c5d75368174c71b01ad36c061a0690",
-      "size": 860
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_24.md",
-      "sha256": "e6ea0477e4e49947e2c08dfe37126e90b0706ef77c551c84bc862fb645d9d3a4",
-      "size": 1040
+      "sha256": "9e5a941999468cd0b336d3409beb3d0cd37a15cf58240907be83e28fd44db97b",
+      "size": 5227
     },
     {
       "action": "replace",
       "path": "RELEASE_NOTES_V1_5_9_25.md",
       "sha256": "f268291c58da68eca338fcfcd9a633d740a4ad31d66430ada2b9293cfb96d52c",
       "size": 1520
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_3.md",
-      "sha256": "ed65e248fa4e077a0b09512b523bc43f335f9be8a3d5b03d77cee635a4ec3f2e",
-      "size": 1760
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_4.md",
-      "sha256": "207a3922bab21e5ad5233271514c5eb1aed9887a8394b19ce206baf303a5014e",
-      "size": 1321
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_5.md",
-      "sha256": "a51b13751ed88c98c248dcb0e459ff1cefcdea5d48e9d9ad0ec470db1044d07b",
-      "size": 1866
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_6.md",
-      "sha256": "58d43c587059b46e20b4651c940c4c5338c44dfa4b5522b17fd2b7e673d7de37",
-      "size": 1342
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_7.md",
-      "sha256": "c9606aa364ccbb72c083a8f9f70915c085212d3020b86fcd04eb76d946b83046",
-      "size": 1428
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_8.md",
-      "sha256": "882709c05ec0a4c35aeccf61650488473015d014e29f37a736d5b5a1f612b78d",
-      "size": 1619
-    },
-    {
-      "action": "replace",
-      "path": "RELEASE_NOTES_V1_5_9_9.md",
-      "sha256": "c9785d1ef08f6fce243219e00301d51484d9ef37ada4009ce75d97951ee5833a",
-      "size": 1308
     },
     {
       "action": "replace",
@@ -796,8 +178,8 @@
     {
       "action": "replace",
       "path": "TAO_LOI_TAT_DESKTOP.vbs",
-      "sha256": "d01035ca74867cfa3d99ddd8861b8c72dd654b9504e992317a49dcacf3687755",
-      "size": 1317
+      "sha256": "dc0ba26109e2c4ef1d977abb14f56dddda6efc3aa46a5a70b4dfe49f635a196f",
+      "size": 1318
     },
     {
       "action": "replace",
@@ -807,165 +189,9 @@
     },
     {
       "action": "replace",
-      "path": "TESSERACT_OCR_FIX.md",
-      "sha256": "8daa7fa7453a495b18b960a6216adbc8e6c6bfe871cb8b219b7f8873439288e3",
-      "size": 984
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_batch_cta_e2e.py",
-      "sha256": "d22cb1a2e061184167fa40b7be901333e2de5bba9df1fbd2c9658b17fff82276",
-      "size": 13083
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_batch_cta_projects.py",
-      "sha256": "3a46177c1cfa989896abf4cc09d769e8e470efb70f9032138c27d3e41c1c4e53",
-      "size": 5137
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_batch_cta_qt_smoke.py",
-      "sha256": "d1992ca6e4219ac3b0d5d26ada89e690d187ee4a95b80f5720f66d102f8cd5be",
-      "size": 16102
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_batch_cta_queue.py",
-      "sha256": "371140315c6c06cc37f22f292fd0b27616087c3f4a2f84cb3f16050ec0a4ecf5",
-      "size": 3676
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_branding_preview_performance.py",
-      "sha256": "2af9f53d5db64c8132522cd9fc6f01dba62153918fa5a13865cb96b8b6e02704",
-      "size": 7269
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_cta_cut_export.py",
-      "sha256": "ef1a6dcf28be7123821f76ff6edbfcff7a308e35ab9115da3e88ca9556e4258d",
-      "size": 2211
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_cta_detector.py",
-      "sha256": "447e26ac1c5b6e22ba0c50695027d5e949bfdcfa624335a949f46baea0f24583",
-      "size": 29429
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_cta_resume_recovery.py",
-      "sha256": "65940d5976155e566abb6e6248b5904778f19915bfc8797d932cda791822b7b7",
-      "size": 4381
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_download_batch_branding_workspaces.py",
-      "sha256": "bd0effc6b4750ed00f941e582b60a4ff9bea5c3e56ce1e3decb43fa99a6d4668",
-      "size": 12414
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_download_engine.py",
-      "sha256": "7755d492ab73c7b74506a536759379cb9fadd265140720c94a56290c65d446ae",
-      "size": 13628
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_export_workspace_layout.py",
-      "sha256": "c7e666dcf9972ac3e46c1829cac352dcce7a1008c621d660dbe7605dc5cc879f",
-      "size": 8697
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_global_ui_theme.py",
-      "sha256": "51a8ff76251f50c5ef2766dcc7ca8511ccc927a9b2444160861d35aea41e8876",
-      "size": 2383
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_project_storage_cta.py",
-      "sha256": "256e1c0daf70e2eb4fc7004c6b323e5c965c6cce5e7de6a4b8d09cac7a37a7fd",
-      "size": 10618
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_python315_lazy_import_compat.py",
-      "sha256": "16e4831c7f1f13f1354da1a1c19335e8d6b3455b121ea8b474aca4739cb8982c",
-      "size": 3368
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_release_v1554_regressions.py",
-      "sha256": "817055b0fa203fd4e79a40951103b2998d0849144f77145d88dcfd48e5206e79",
-      "size": 2689
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_timecode_ui.py",
-      "sha256": "e0b87bac911dcf2b84e259caba69167eff667260ca6ffada27fcd57d7bf763d9",
-      "size": 580
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_timeline_seek.py",
-      "sha256": "f0ccba93009742f59c25455fad58ca960b3a36a4044d0159d749e63b114f15c1",
-      "size": 1035
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_updater.py",
-      "sha256": "71f0dad41a9c265ddb20f58ec808a1c2912d62ce585b5a3eee895a08be2c0bb1",
-      "size": 14481
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_updater_handoff.py",
-      "sha256": "3b7511d6c8f986f43098277fa199b3b11fb36e85bbdc2ff32c88baf339668c49",
-      "size": 975
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_v151_workspace.py",
-      "sha256": "2c8a305a7256a438d19e272f0aa47af31c8545eafe955c6b585474d8f9e73c17",
-      "size": 14867
-    },
-    {
-      "action": "replace",
-      "path": "tests/test_v1553_ui_regressions.py",
-      "sha256": "85d74c94dfbd77a49f5d599d18805f18d916c80030475a8e9806712304b20296",
-      "size": 807
-    },
-    {
-      "action": "replace",
       "path": "timeline_seek.py",
       "sha256": "ff2d717a5170f6d6311e4da113d9e95a1ea4ac891986b26ef2649669f54efa39",
       "size": 2499
-    },
-    {
-      "action": "replace",
-      "path": "tools/build_full.py",
-      "sha256": "9596b4e0ee2d701c8105cb9c5752e1dc454ce8862c8c59032449263b0dec83f1",
-      "size": 3921
-    },
-    {
-      "action": "replace",
-      "path": "tools/build_update.py",
-      "sha256": "faecb9bbd66d10584d3e73f4583dca03639ea3ac97331377084ecffe84347c0c",
-      "size": 5185
-    },
-    {
-      "action": "replace",
-      "path": "tools/README_UPDATER_RELEASE.md",
-      "sha256": "8f1c2c76a380ad86ebfcefe4e564c5b0f69113c7f2d8d8a6a6a63c111aaa4e4a",
-      "size": 2716
-    },
-    {
-      "action": "replace",
-      "path": "UPDATE_KEY_MIGRATION.md",
-      "sha256": "02725b18052a68d047822ce62146ac00685fb7e09a855064d0cc8b7480eb7610",
-      "size": 1106
     },
     {
       "action": "replace",
@@ -1012,8 +238,8 @@
     {
       "action": "replace",
       "path": "MANIFEST.json",
-      "sha256": "7a78179ddf7886d62fd4c1f1c1497c7920a645cd5375ba70de0fa76d71ca4e28",
-      "size": 29199
+      "sha256": "6b6ad8cd453e956648afebe3b8e56e2160d457195d69580bdc34c2b2f3775915",
+      "size": 6381
     }
   ],
   "minimum_supported_version": "1.5.6.41",
@@ -1052,14 +278,14 @@
   ],
   "trust_mode": "https-sha256-v1",
   "version": "1.5.9.25",
-  "published_at": "2026-11-22T03:07:26+00:00",
+  "published_at": "2026-11-22T03:55:42+00:00",
   "release_notes_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/RELEASE_NOTES_V1_5_9_25.md",
   "full_package": {
     "package_type": "FULL",
     "asset_name": "Goc_Review_Phim_Video_Studio_v1.5.9.25_FULL.zip",
     "asset_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.25_FULL.zip",
-    "asset_size": 1492213,
-    "asset_sha256": "fd6d2df49891931c22d2747512b0e390961c2b91d96a93a2f9794b54f02bdbd3",
+    "asset_size": 1324063,
+    "asset_sha256": "0876696f61816e3463899b50004008e72c9754410a823c373807f38f1d36c75a",
     "manifest_name": "Goc_Review_Phim_Video_Studio_v1.5.9.25_FULL_MANIFEST.json",
     "manifest_url": "https://raw.githubusercontent.com/vanthanhduma/vanthanhduma/main/video-studio-updates/stable/assets/Goc_Review_Phim_Video_Studio_v1.5.9.25_FULL_MANIFEST.json"
   }
