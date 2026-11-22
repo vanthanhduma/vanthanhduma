@@ -1,7 +1,0 @@
-READY FOR STABLE PUBLISH
-Version: 1.5.9.35
-Source repository: vanthanhduma/Goc-Review-Phim-Video-Studio
-Source branch: release-artifacts/v1.5.9.35-0bf184b
-Source commit: 0bf184bc56f60de32222e53199943e4580cac4b6
-Preflight: source build workflow verified FULL/UPDATE package ZIPs, manifests, file hashes and SHA-256.
-Final package SHA-256 and ZIP integrity verification is performed again by the Stable publisher workflow before publication.
