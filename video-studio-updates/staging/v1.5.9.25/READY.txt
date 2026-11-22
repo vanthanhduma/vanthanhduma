@@ -1,1 +1,0 @@
-Video Studio v1.5.9.25 staging complete. Verify package chunks, ZIP integrity and SHA-256 before publishing Stable.
