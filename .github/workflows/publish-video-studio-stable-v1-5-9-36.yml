@@ -1,0 +1,113 @@
+name: Publish staged Video Studio Stable package v1.5.9.36
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "video-studio-updates/staging/v1.5.9.36/READY.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: video-studio-stable-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout stable feed repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify package chunks and publish Stable assets
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import shutil
+          import zipfile
+          from pathlib import Path
+
+          stage = Path("video-studio-updates/staging/v1.5.9.36")
+          stable = Path("video-studio-updates/stable")
+          assets_dir = stable / "assets"
+          meta = json.loads((stage / "meta.json").read_text(encoding="utf-8"))
+          latest = json.loads((stage / "latest.json").read_text(encoding="utf-8"))
+          update_manifest = json.loads((stage / "update-manifest.json").read_text(encoding="utf-8"))
+          full_manifest = json.loads((stage / "full-manifest.json").read_text(encoding="utf-8"))
+
+          assert meta["version"] == latest["version"] == "1.5.9.36"
+          assert update_manifest["version"] == latest["version"]
+          assets_dir.mkdir(parents=True, exist_ok=True)
+
+          built = {}
+          for asset in meta["assets"]:
+              encoded = "".join((stage / name).read_text(encoding="ascii").strip()
+                                for name in asset["chunks"])
+              data = base64.b64decode(encoded, validate=True)
+              digest = hashlib.sha256(data).hexdigest()
+              assert len(data) == asset["size"], asset["name"]
+              assert digest == asset["sha256"], asset["name"]
+              assert data[:4] == b"PK\x03\x04", asset["name"]
+              archive_path = assets_dir / asset["name"]
+              archive_path.write_bytes(data)
+              with zipfile.ZipFile(archive_path) as archive:
+                  assert archive.testzip() is None, asset["name"]
+                  names = set(archive.namelist())
+                  if asset["key"] == "update":
+                      for item in update_manifest["files"]:
+                          rel = "payload/" + item["path"]
+                          payload = archive.read(rel)
+                          assert len(payload) == item["size"], rel
+                          assert hashlib.sha256(payload).hexdigest() == item["sha256"], rel
+                  elif asset["key"] == "full":
+                      embedded = json.loads(archive.read("MANIFEST.json"))
+                      for rel in embedded["files"]:
+                          payload = archive.read(rel)
+                          assert len(payload) == embedded["sizes"][rel], rel
+                          assert hashlib.sha256(payload).hexdigest() == embedded["sha256"][rel], rel
+              built[asset["key"]] = {"size": len(data), "sha256": digest}
+
+          update_asset = next(x for x in meta["assets"] if x["key"] == "update")
+          full_asset = next(x for x in meta["assets"] if x["key"] == "full")
+          assert latest["asset_name"] == update_asset["name"]
+          assert latest["asset_size"] == update_asset["size"]
+          assert latest["asset_sha256"] == update_asset["sha256"]
+          assert latest["full_package"]["asset_name"] == full_asset["name"]
+          assert latest["full_package"]["asset_size"] == full_asset["size"]
+          assert latest["full_package"]["asset_sha256"] == full_asset["sha256"]
+
+          # Publish the stable feed and the two package manifests alongside the ZIPs.
+          (stable / "latest.json").write_text(
+              json.dumps(latest, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n",
+              encoding="utf-8")
+          update_manifest_name = update_manifest["asset_name"].removesuffix(".zip") + "_MANIFEST.json"
+          (assets_dir / update_manifest_name).write_text(
+              json.dumps(update_manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          full_manifest_name = latest["full_package"]["manifest_name"]
+          (assets_dir / full_manifest_name).write_text(
+              json.dumps(full_manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          notes_name = latest["release_notes_url"].rsplit("/", 1)[-1]
+          shutil.copy2(stage / notes_name, stable / notes_name)
+
+          # The staging area contains only short-lived base64 transfer chunks.
+          shutil.rmtree(stage)
+          print("Stable v1.5.9.36 package integrity PASS")
+          print(json.dumps(built, indent=2))
+          PY
+
+      - name: Commit and publish Stable feed
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A video-studio-updates/stable
+          git add -A video-studio-updates/staging/v1.5.9.36
+          git commit -m "Publish corrected v1.5.9.36 Python 3.15-compatible packages"
+          git push origin HEAD:main
